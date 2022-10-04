@@ -1,3 +1,3 @@
-# An introduction
+# Киришме
 
-About the JavaScript language and the environment to develop with it.
+JavaScript тили жана аны менен иштеп чыгуу үчүн чөйрө жөнүндө.
