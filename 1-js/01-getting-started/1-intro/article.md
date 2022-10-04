@@ -1,69 +1,69 @@
-# An Introduction to JavaScript
+# JavaScript'ке кирүү
 
-Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+Келгиле, JavaScript'тин өзгөчөлүгү эмнеде экенин, аны менен эмнеге жетише аларыбызды жана аны менен кандай башка технологиялар жакшы ойноорун карап көрөлү.
 
-## What is JavaScript?
+## JavaScript деген эмне?
 
-*JavaScript* was initially created to "make web pages alive".
+*JavaScript* башында "веб-баракчаларды жандандыруу" үчүн түзүгөн.
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+Бул тилдеги программалар *скрипттер* деп аталат. Алар HTML'де жазылышы мүмкүн жана веб-баракча жүктөлгөн сайын автоматтык түрдө иштетилет.
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+Скрипттер жөнөкөй текст катары жайылат жана аткарылат. Аларды иштетүү үчүн атайын даярдыктын же компиляциянын кереги жок.
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+Бул жагынан JavaScript [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) деп аталган башка тилинен абдан айырмаланат.
 
-```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+```smart header="Эмнеге ал <u>Java</u>Script деп аталат?"
+JavaScript түзүлгөндө, анын башка "LiveScript" деген аталышы болгон. Бирок Java ошол убакта абдан популярдуу болгондугунан, жаңы тилди Java тилинин "кичүү иниси" катары жайгаштыруу пайдалуу болорун чечишкен.
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+Бирок ал өнүккөн сайын JavaScript [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript) деп аталган өзүнүн спецификациясы менен толук өз алдынча тил болуп калды жана азыр анын Java менен эч кандай байланышы жок.
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Бүгүн JavaScript браузерде гана эмес, серверде же чындыгында [JavaScript кыймылдаткычы](https://en.wikipedia.org/wiki/JavaScript_engine) деп аталган атайын программасы бар каалаган түзмөктө аткарылышы мүмкүн.
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+Браузерде кээде "JavaScript виртуалдык машинеси" деп аталган орнотулган кыймылдаткычы бар.
 
-Different engines have different "codenames". For example:
+Ар кандай кыймылдаткычтардын ар кандай "коддук аттары" бар. Мисалы:
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome, Opera and Edge.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- Chrome, Opera жана Edge'де.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- Firefox'то.
+- ...IE үчүн "Chakra" жана Safari үчүн "JavaScriptCore", "Nitro", "SquirrelFish" ж.б. код аттары бар.
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome, Opera and Edge.
+Жогорудагы аталыштарды эстеп калуу жакшы, анткени алар иштеп чыгуучулардын макалаларында көп колдонулат. Биз аларды да колдонобуз. Мисалы, "X функционалдуулугу V8 тарабынан колдоого алынса", анда ал Chrome, Opera жана Edge'де иштеши мүмкүн.
 
-```smart header="How do engines work?"
+```smart header="Кыймылдаткычтар кантип иштейт?"
 
-Engines are complicated. But the basics are easy.
+Кыймылдаткычтар татаал нерсе. Бирок негиздери оңой.
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to machine code.
-3. And then the machine code runs, pretty fast.
+1. Кыймылдаткыч (камтылган, эгер ал браузер болсо) скриптти окуйт ("талдайт").
+2. Кийин ал скриптти машине тилине айлантат ("компиляциялайт").
+3. Андан кийин машине коду иштетилет жана абдан тез иштейт.
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+Кыймылдаткыч ар бир этапта оптималдаштырууну колдонот. Ал тургай, ал компиляцияланган скриптти иштеп жатканда карап, ал аркылуу өткөн маалыматтарды талдап, алган билиминин негизинде машине кодуна оптималдаштырууларды колдонот. Натыйжада, скрипттер абдан тез иштейт.
 ```
 
-## What can in-browser JavaScript do?
+## JavaScript браузерде эмне кыла алат?
 
-Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or the CPU, because it was initially created for browsers which do not require it.
+Заманбап JavaScript - бул "коопсуз" программалоо тили. Ал эстутумга же процессорго төмөнкү деңгээлде кирүү мүмкүнчүлүгүн камсыз кылбайт, анткени ал алгач аны талап кылбаган браузерлер үчүн түзүлгөн.
 
-JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+JavaScript'тин мүмкүнчүлүктөрү ал иштеген чөйрөгө өтө көз каранды. Мисалы, [Node.js](https://wikipedia.org/wiki/Node.js) ыктыярдуу файлдарды окууга/жазууга, тармак сурамдарын аткарууга ж.б. функцияларды колдойт.
 
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+Браузердеги JavaScript веб-баракчаны манипуляциялоого, колдонуучу менен өз ара аракеттешүүгө жана веб-серверге байланыштуу баарын жасай алат.
 
-For instance, in-browser JavaScript is able to:
+Мисалы:
 
-- Add new HTML to the page, change the existing content, modify styles.
-- React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
-- Get and set cookies, ask questions to the visitor, show messages.
-- Remember the data on the client-side ("local storage").
+- Баракчага жаңы HTML-кодду кошуу, учурдагы мазмунду өзгөртүү, стилдерди өзгөртүү.
+- Колдонуучунун аракетине, чычкандын чыкылдатканына, көрсөткүчтүн кыймылына, баскычтын басуусуна.
+- Тармак аркылуу алыскы серверлерге сурамдарды жөнөтүү, файлдарды жүктөп алуу жана жүктөө ([AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) жана [COMET](https://en.wikipedia.org/wiki/Comet_(программалоо)) технологиялары).
+- Кукилерди алуу жана орнотуу, келүүчүгө суроолорду берүү, билдирүүлөрдү көрсөтүү.
+- Кардар тараптагы берилмелерди эстеп калуу ("local storage").
 
-## What CAN'T in-browser JavaScript do?
+## Браузердеги JavaScript эмне кыла АЛБАЙТ?
 
-JavaScript's abilities in the browser are limited to protect the user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+JavaScript'тин браузердеги мүмкүнчүлүктөрү колдонуучунун коопсуздугун коргоо үчүн чектелген. Максаты - жаман веб-баракчанын жеке маалыматка кирүүсүнө же колдонуучунун маалыматтарына зыян келтирүүгө жол бербөө.
 
-Examples of such restrictions include:
+Мындай чектөөлөрдүн мисалдары кирет:
 
-- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+- Веб-баракчадагы JavaScript катуу дисктеги каалаган файлдарды окуй/жаза албайт, аларды көчүрө албайт же программаларды аткара албайт. Анын OS функцияларына түз кирүү мүмкүнчүлүгү жок.
 
     Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
 
