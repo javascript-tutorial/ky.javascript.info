@@ -73,12 +73,13 @@ JavaScript'тин браузердеги мүмкүнчүлүктөрү колд
 
     Бул "Бирдей булак саясаты" (Same Origin Policy) деп аталат. Бул чектөөдөн өтүү үчүн, эки баракча тең буга макул болушу керек жана берилмелерди атайын жол менен алмашкан JavaScript кодун камтышы керек.
 
-    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com`, for example, and steal information from there.
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+    Бул чектөө, дагы бир жолу, колдонуучунун коопсуздугу үчүн кажет. Колдонуучу ачкан `https://anysite.com` баракчасы `https://gmail.com` URL дареги бар башка браузер салмасына кире албашы керек жана ал жерден маалыматты уурдай албашы керек.
+
+- JavaScript учурдагы баракча келген серверге желе аркылуу оңой байланыша алат. Бирок анын башка сайттардан/домендерден берилмелерди алуу жөндөмдүүлүгү чектелген. Негизи бул мүмкүн болсо да, ал алыскы тарап менен ачык макулдукту (HTTP баштарында көрсөтүлгөн) талап кылат. Дагы деле, бул коопсуздук чектөөсү.
 
 ![](limitations.svg)
 
-Such limitations do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugins/extensions which may ask for extended permissions.
+Эгер JavaScript браузерден тышкары, мисалы серверде колдонулса, мындай чектөөлөр таасир тийгизбейт. Заманбап браузерлер кошумча уруксаттарды талап кылуу үчүн плагиндер/кеңейтмелер менен камсыз кылат.
 
 ## JavaScript'ти өзгөчө кылган эмне?
 
