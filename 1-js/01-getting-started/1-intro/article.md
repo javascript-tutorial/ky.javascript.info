@@ -65,8 +65,9 @@ JavaScript'тин браузердеги мүмкүнчүлүктөрү колд
 
 - Веб-баракчадагы JavaScript катуу дисктеги каалаган файлдарды окуй/жаза албайт, аларды көчүрө албайт же программаларды аткара албайт. Анын OS функцияларына түз кирүү мүмкүнчүлүгү жок.
 
-    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
-
+    Заманбап браузерлер ага файлдар менен иштөөгө мүмкүндүк берет, бирок кирүү чектелген жана колдонуучу файлды браузердин терезесине "таштоо" же `<input>` теги аркылуу тандоо сыяктуу аракеттерди жасаганда гана берилет.
+    
+    Камера/микрофон жана башка түзмөктөр менен иштешүүнүн жолдору бар, бирок алар колдонуучунун ачык уруксатын талап кылат. Ошентип, JavaScript иштетилген баракча веб-камераны тымызын иштетип, айлананы байкап, маалыматты [УКМК](https://en.wikipedia.org/wiki/State_Committee_for_National_Security_(Kyrgyzstan))га жөнөтө албайт.
     There are ways to interact with the camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
 - Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other page if they come from different sites (from a different domain, protocol or port).
 
@@ -119,5 +120,4 @@ JavaScript'тин синтаксиси бардык муктаждыктарга
 
 - JavaScript башында браузер үчүн гана түзүлгөн, бирок азыр ал көптөгөн башка чөйрөлөрдө колдонулат.
 - Бүгүн JavaScript HTML/CSS менен толук интеграцияланган эң кеңири таралган браузер тили катары өзгөчө орунга ээ.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
 - JavaScript'ке "которулган" жана кошумча функцияларды камсыз кылган көптөгөн тилдер бар. JavaScript'ти өздөштүргөндөн кийин, жок дегенде кыскача аларды карап чыгуу сунушталат.
