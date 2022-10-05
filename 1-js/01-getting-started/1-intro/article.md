@@ -68,10 +68,10 @@ JavaScript'тин браузердеги мүмкүнчүлүктөрү колд
     Заманбап браузерлер ага файлдар менен иштөөгө мүмкүндүк берет, бирок кирүү чектелген жана колдонуучу файлды браузердин терезесине "таштоо" же `<input>` теги аркылуу тандоо сыяктуу аракеттерди жасаганда гана берилет.
     
     Камера/микрофон жана башка түзмөктөр менен иштешүүнүн жолдору бар, бирок алар колдонуучунун ачык уруксатын талап кылат. Ошентип, JavaScript иштетилген баракча веб-камераны тымызын иштетип, айлананы байкап, маалыматты [УКМК](https://en.wikipedia.org/wiki/State_Committee_for_National_Security_(Kyrgyzstan))га жөнөтө албайт.
-    There are ways to interact with the camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
-- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other page if they come from different sites (from a different domain, protocol or port).
+    
+- Ар түрдүү терезелер/салмалар бири-бири жөнүндө билишпейт. Кээде, мисалы, бир терезе экинчисин ачуу үчүн JavaScript колдонулат. Бирок бул учурда да, бир баракчадан JavaScript башка сайттардан (башка доменден, протоколдон же порттон) келсе, башкасына кол жеткизе албайт.
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must agree for data exchange and must contain special JavaScript code that handles it. We'll cover that in the tutorial.
+    Бул "Бирдей булак саясаты" (Same Origin Policy) деп аталат. Бул чектөөдөн өтүү үчүн, эки баракча тең буга макул болушу керек жана берилмелерди атайын жол менен алмашкан JavaScript кодун камтышы керек.
 
     This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com`, for example, and steal information from there.
 - JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
