@@ -1,6 +1,5 @@
-# The JavaScript language
+# JavaScript тили
 
-Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
+Бул жерде биз JavaScript'ти нөлдөн баштап үйрөнөбүз жана OOP сыяктуу алдыңкы концепцияларга өтөбүз.
 
-We concentrate on the language itself here, with the minimum of environment-specific notes.
-
+Биз тилдин өзүнө көңүл бурабыз, анда-санда анын аткарылуучу чөйрөлөрү боюнча эсбелгилерди кошуп турабыз.
