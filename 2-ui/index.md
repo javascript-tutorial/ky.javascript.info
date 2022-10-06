@@ -1,3 +1,3 @@
-# Browser: Document, Events, Interfaces 
+# Браузер: документ, окуялар, интерфейстер
 
-Learning how to manage the browser page: add elements, manipulate their size and position, dynamically create interfaces and interact with the visitor.
+Баракча менен иштөөнү үйрөнөбүз - элементтерди кантип алуу, алардын өлчөмдөрүн башкаруу, динамикалык түрдө интерфейстерди түзүү жана келүүчү менен иштешүү.
