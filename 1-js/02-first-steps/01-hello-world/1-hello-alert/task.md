@@ -2,11 +2,11 @@ importance: 5
 
 ---
 
-# Show an alert
+# Alert чакыруу
 
-Create a page that shows a message "I'm JavaScript!".
+"Мен JavaScript!" билдирүүсүн көрсөткөн баракты түзүңүз.
 
-Do it in a sandbox, or on your hard drive, doesn't matter, just ensure that it works.
+Бул тапшырманы кумкоргондо же катуу дискиңизде аткарыңыз, кайда - маанилүү эмес, эң башкысы анын иштеп жатканын текшериңиз.
 
 [demo src="solution"]
 
