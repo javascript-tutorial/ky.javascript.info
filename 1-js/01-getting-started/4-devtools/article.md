@@ -1,26 +1,26 @@
-# Developer console
+# Иштеп чыгуучунун консолу
 
-Code is prone to errors. You will quite likely make errors... Oh, what am I talking about? You are *absolutely* going to make errors, at least if you're a human, not a [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+Код каталарга шыктуу. Балким сиз коддо ката кетиресиз... Апей, мен эмнени айтып жатам? Сиз *шексиз* ката кетиресиз, акыры эгер [робот](https://en.wikipedia.org/wiki/Bender_(Futurama)) эмес, адам болсоңуз.
 
-But in the browser, users don't see errors by default. So, if something goes wrong in the script, we won't see what's broken and can't fix it.
+Бирок браузерде колдонуучулар демейки боюнча каталарды көрүшпөйт. Демек, скриптте бир нерсе туура эмес болуп кетсе, эмне бузулганын көрбөйбүз жана аны оңдой албайбыз.
 
-To see errors and get a lot of other useful information about scripts, "developer tools" have been embedded in browsers.
+Каталарды көрүү жана скрипттер жөнүндө башка көптөгөн пайдалуу маалыматтарды алуу үчүн браузерлерде "Иштеп чыгуучунун куралдары" (Developer tools же кыскача - devtools) камтылган.
 
-Most developers lean towards Chrome or Firefox for development because those browsers have the best developer tools. Other browsers also provide developer tools, sometimes with special features, but are usually playing "catch-up" to Chrome or Firefox. So most developers have a "favorite" browser and switch to others if a problem is browser-specific.
+Көпчүлүк программисттер иштеп чыгуу үчүн Chrome же Firefox'ту көздөшөт, анткени ошол браузерлерде эң мыкты иштеп чыгуучунун куралдары бар. Башка браузерлер да иштеп чыгуучунун куралдарын камсыздайт, кээде өзгөчө мүмкүнчүлүктөрү менен, бирок, адатта, Chrome же Firefox үчүн "кууп" ойношот. Ошентип, дээрлик бардык программисттердин "сүйүктүү" браузери бар жана көйгөй браузерге тиешелүү болсо, башкаларга которулушат.
 
-Developer tools are potent; they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+Иштеп чыгуучунун куралдары күчтүү; алар көп мүмкүнчүлүктөргө ээ. Баштоо үчүн, биз аларды кантип ачууну, каталарды карап, JavaScript буйруктарын иштетүүнү үйрөнөбүз.
 
 ## Google Chrome
 
-Open the page [bug.html](bug.html).
+[bug.html](bug.html) баракчасын ачыңыз.
 
-There's an error in the JavaScript code on it. It's hidden from a regular visitor's eyes, so let's open developer tools to see it.
+Андагы JavaScript кодунда ката бар. Ал кадимки келүүчүлөрдүн көзүнөн жашырылган, андыктан аны көрүү үчүн иштеп чыгуучунун куралдарын ачалы.
 
-Press `key:F12` or, if you're on Mac, then `key:Cmd+Opt+J`.
+`key:F12` басыңыз же, Mac'ты колдонсоңуз, `key:Cmd+Opt+J` басыңыз.
 
-The developer tools will open on the Console tab by default.
+Иштеп чыгуучунун куралдары демейки боюнча Console салмасында ачылат.
 
-It looks somewhat like this:
+Бул мындай көрүнөт:
 
 ![chrome](chrome.png)
 
@@ -39,7 +39,7 @@ Usually, when we put a line of code into the console, and then press `key:Enter`
 To insert multiple lines, press `key:Shift+Enter`. This way one can enter long fragments of JavaScript code.
 ```
 
-## Firefox, Edge, and others
+## Firefox, Edge жана башкалар
 
 Most other browsers use `key:F12` to open developer tools.
 
@@ -55,7 +55,7 @@ Open Preferences and go to the "Advanced" pane. There's a checkbox at the bottom
 
 Now `key:Cmd+Opt+C` can toggle the console. Also, note that the new top menu item named "Develop" has appeared. It has many commands and options.
 
-## Summary
+## Корутунду
 
 - Developer tools allow us to see errors, run commands, examine variables, and much more.
 - They can be opened with `key:F12` for most browsers on Windows. Chrome for Mac needs `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (need to enable first).
