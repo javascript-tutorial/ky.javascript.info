@@ -1,3 +1,3 @@
-# JavaScript Fundamentals
+# JavaScript'тин негиздери
 
-Let's learn the fundamentals of script building.
+Келгиле, скрипт жазуунун негиздерин үйрөнөлү.
