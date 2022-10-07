@@ -24,40 +24,41 @@
 
 ![chrome](chrome.png)
 
-The exact look of developer tools depends on your version of Chrome. It changes from time to time but should be similar.
+Иштеп чыгуучу куралдардын так көрүнүшү Chrome версияңыздан көз каранды. Анда-санда өзгөрүп турат, бирок, жалпысынан, көрүнүшү мурунку версияларга окшош бойдон калууда.
 
-- Here we can see the red-colored error message. In this case, the script contains an unknown "lalala" command.
-- On the right, there is a clickable link to the source `bug.html:12` with the line number where the error has occurred.
+- Консолдо биз кызыл түстөгү ката билдирүүсүн көрө алабыз. Бул учурда скрипт белгисиз "lalala" буйругун камтыйт.
+- Оң жакта булак кодуна `bug.html:12` шилтемеси бар, анда бул ката пайда болгон код сызыгынын номуру көрсөтүлгөн.
 
-Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them.
+Ката билдирүүсүнүн астында көк `>` белгиси бар. Ал JavaScript буйруктары териле турган "буйрук сабын" белгилейт. Аларды жүргүзүү үчүн `key:Enter` басыңыз.
 
-Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter <info:debugging-chrome>.
+Эми биз каталарды көрө алабыз, башталышы үчүн бул жетиштүү. Иштеп чыгуучунун куралдарына кийинчерээк кайтабыз жана дебаггингти (англис тилинен "debugging" - коддогу каталарды түзөтүү) <info:debugging-chrome> бөлүмүндө кененирээк карайбыз.
 
 ```smart header="Multi-line input"
-Usually, when we put a line of code into the console, and then press `key:Enter`, it executes.
+Адатта, `key:Enter` басылганда, киргизилген код сабы дароо аткарылат.
 
-To insert multiple lines, press `key:Shift+Enter`. This way one can enter long fragments of JavaScript code.
+Сапты которуу үчүн `key:Shift+Enter` басыңыз. Бул жол менен узунураак JavaScript кодун киргизүүгө болот.
 ```
 
 ## Firefox, Edge жана башкалар
 
-Most other browsers use `key:F12` to open developer tools.
+Көпчүлүк браузерлерде иштеп чыгуучу куралдар `key:F12` басылганда ачылат.
 
-The look & feel of them is quite similar. Once you know how to use one of these tools (you can start with Chrome), you can easily switch to another.
+Алардын көрүнүшү жана иштөө принциптери анча деле айырмаланбайт. Бул куралдардын бирин кантип колдонууну билгенден кийин (сиз Chrome менен баштасаңыз болот), башкасында оңой эле иштей аласыз.
 
 ## Safari
 
-Safari (Mac browser, not supported by Windows/Linux) is a little bit special here. We need to enable the "Develop menu" first.
 
-Open Preferences and go to the "Advanced" pane. There's a checkbox at the bottom:
+Safari (Mac браузери, Windows/Linux тарабынан колдоого алынбайт) бул жерде бир аз өзгөчө. Адегенде "Иштеп чыгуу менюсун" ("Developer menu") күйгүзүшүбүз керек.
+
+Орнотууларды (Preferences) ачып, "Өркүндөтүлгөндөр" (Advanced) панелине өтүңүз. Төмөндө чекбокс бар:
 
 ![safari](safari.png)
 
-Now `key:Cmd+Opt+C` can toggle the console. Also, note that the new top menu item named "Develop" has appeared. It has many commands and options.
+Эми `key:Cmd+Opt+C` баскычтарын басуу менен консолду активдештирүүгө болот. Менюнун жаңы "Иштеп чыгуу" ("Develop") элементине да көңүл буруңуз. Анын көптөгөн буйруктары жана орнотуулары бар.
 
 ## Корутунду
 
-- Developer tools allow us to see errors, run commands, examine variables, and much more.
-- They can be opened with `key:F12` for most browsers on Windows. Chrome for Mac needs `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (need to enable first).
+- Иштеп чыгуучунун куралдары каталарды көрүүгө, буйруктарды аткарууга, өзгөрмөлөрдүн касиеттерин текшерүүгө ж.б. көп нерселерге мүмкүндүк берет.
+- Аларды Windows'тун көпчүлүк браузерлеринде `key:F12` менен ачууга болот. Mac үчүн Chrome'до `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (алгач күйгүзүү керек).
 
-Now we have the environment ready. In the next section, we'll get down to JavaScript.
+Эми биздин чөйрөбүз толук орнотулду. Кийинки бөлүмдө JavaScript'ке өтөбүз.
