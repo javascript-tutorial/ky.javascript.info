@@ -2,14 +2,13 @@
 
 Колдонмонун бул бөлүгүндө биз JavaScript'тин, тилдин өзүн үйрөнөбүз.
 
-But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We'll keep the amount of browser-specific commands (like `alert`) to a minimum so that you don't spend time on them if you plan to concentrate on another environment (like Node.js). We'll focus on JavaScript in the browser in the [next part](/ui) of the tutorial.
+Бирок скрипттерди жүргүзүү үчүн бизге иштөө чөйрөсү керек жана бул китеп онлайн болгондуктан, браузер жакшы тандоо болмок. Эгер сиз башка чөйрөгө (мисалы, Node.js) көңүл топтоону пландап жатсаңыз, браузерге тиешелүү буйруктарга убакыт коротпооңуз үчүн, биз алардын көлөмүн (мисалы, `alert`) минималдаштырып коёбуз. Колдонмонун [кийинки бөлүгүндө](/ui) браузердеги JavaScript'ке көңүл бурабыз.
 
-So first, let's see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like `"node my.js"`.
-
+Ошентип, адегенде баракта скриптти кантип аткарууну карап көрөлү. Сервер чөйрөлөрү үчүн (мисалы, Node.js) `"node my.js"` сыяктуу буйрук менен скриптти аткарсаңыз болот. Браузер үчүн бир аз башкача.
 
 ## "script" теги
 
-JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+JavaScript программаларын HTML документинин каалаган жерине `<script>` теги менен киргизүүгө болот.
 
 Мисалы үчүн:
 
@@ -35,15 +34,14 @@ JavaScript programs can be inserted almost anywhere into an HTML document using 
 ```
 
 ```online
-You can run the example by clicking the "Play" button in the right-top corner of the box above.
+Жогорудагы кутучанын жогорку оң бурчундагы "Play" баскычын басуу менен мисалды жүргүзө аласыз.
 ```
 
-The `<script>` tag contains JavaScript code which is automatically executed when the browser processes the tag.
-
+`<script>` теги JavaScript кодун камтыйт, браузер аны иштеп чыгарганда ал автоматтык түрдө аткарылат.
 
 ## Заманбап белгилөө
 
-The `<script>` tag has a few attributes that are rarely used nowadays but can still be found in old code:
+`<script>` теги азыркы учурда сейрек колдонулган, бирок эски коддон дагы эле табыла турган бир нече атрибуттарга ээ:
 
 `type` атрибуту: <code>&lt;script <u>type</u>=...&gt;</code>
 : The old HTML standard, HTML4, required a script to have a `type`. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules. But that's an advanced topic, we'll talk about modules in another part of the tutorial.
@@ -51,8 +49,8 @@ The `<script>` tag has a few attributes that are rarely used nowadays but can st
 `language` атрибуту: <code>&lt;script <u>language</u>=...&gt;</code>
 : This attribute was meant to show the language of the script. This attribute no longer makes sense because JavaScript is the default language. There is no need to use it.
 
-Comments before and after scripts.
-: In really ancient books and guides, you may find comments inside `<script>` tags, like this:
+Скрипттерге чейинки жана кийинки комментарийлер.
+: Абдан байыркы китептерде жана колдонмолордо сиз `<script>` тегинин ичинен комментарийлерди таба аласыз, мисалы:
 
     ```html no-beautify
     <script type="text/javascript"><!--
@@ -65,9 +63,9 @@ Comments before and after scripts.
 
 ## Тышкы скрипттер
 
-If we have a lot of JavaScript code, we can put it into a separate file.
+Эгерде бизде JavaScript коду көп болсо, биз аны бөлөк файлга сала алабыз.
 
-Script files are attached to HTML with the `src` attribute:
+Скрипт файлын HTML'ге `src` атрибуту аркылуу кошууга болот:
 
 ```html
 <script src="/path/to/script.js"></script>
@@ -75,13 +73,13 @@ Script files are attached to HTML with the `src` attribute:
 
 Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"`, just like `src="./script.js"`, would mean a file `"script.js"` in the current folder.
 
-We can give a full URL as well. For instance:
+Биз толук URL дарегин да бере алабыз. Мисалы үчүн:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 
-To attach several scripts, use multiple tags:
+Бир нече скрипттерди кошуу үчүн бир нече тегдерди колдонуңуз:
 
 ```html
 <script src="/js/script1.js"></script>
@@ -102,17 +100,17 @@ That reduces traffic and makes pages faster.
 ````warn header="If `src` is set, the script content is ignored."
 A single `<script>` tag can't have both the `src` attribute and code inside.
 
-This won't work:
+Төмөндөгү мисал иштебейт:
 
 ```html
 <script *!*src*/!*="file.js">
-  alert(1); // the content is ignored, because src is set
+  alert(1); // мазмунуна көңүл бурулбайт, анткени src атрибуту бар
 </script>
 ```
 
-We must choose either an external `<script src="…">` or a regular `<script>` with code.
+Биз же тышкы `<script src="...">` скриптти, же `<script>` тегинин ичиндеги кадимки кодду тандашыбыз керек.
 
-The example above can be split into two scripts to work:
+Жогорудагы мисалды эки скриптке бөлсө болот:
 
 ```html
 <script src="file.js"></script>
@@ -122,11 +120,10 @@ The example above can be split into two scripts to work:
 ```
 ````
 
-## Summary
+## Корутунду
 
-- We can use a `<script>` tag to add JavaScript code to a page.
-- The `type` and `language` attributes are not required.
-- A script in an external file can be inserted with `<script src="path/to/script.js"></script>`.
-
+- Биз баракчага JavaScript кодун кошуу үчүн `<script>` тегин колдоно алабыз.
+- `type` жана `language` атрибуттары талап кылынбайт.
+- Тышкы файлдагы скрипт `<script src="path/to/script.js"></script>` менен киргизилиши мүмкүн.
 
 There is much more to learn about browser scripts and their interaction with the webpage. But let's keep in mind that this part of the tutorial is devoted to the JavaScript language, so we shouldn't distract ourselves with browser-specific implementations of it. We'll be using the browser as a way to run JavaScript, which is very convenient for online reading, but only one of many.
