@@ -1,8 +1,8 @@
-# Code structure
+# Коддун түзүмү
 
 The first thing we'll study is the building blocks of code.
 
-## Statements
+## Нускамалар
 
 Statements are syntax constructs and commands that perform actions.
 
@@ -13,14 +13,14 @@ We can have as many statements in our code as we want. Statements can be separat
 For example, here we split "Hello World" into two alerts:
 
 ```js run no-beautify
-alert('Hello'); alert('World');
+alert('Салам'); alert('дүйнө');
 ```
 
 Usually, statements are written on separate lines to make the code more readable:
 
 ```js run no-beautify
-alert('Hello');
-alert('World');
+alert('Салам');
+alert('дүйнө');
 ```
 
 ## Semicolons [#semicolon]
@@ -30,8 +30,8 @@ A semicolon may be omitted in most cases when a line break exists.
 This would also work:
 
 ```js run no-beautify
-alert('Hello')
-alert('World')
+alert('Салам')
+alert('дүйнө')
 ```
 
 Here, JavaScript interprets the line break as an "implicit" semicolon. This is called an [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
