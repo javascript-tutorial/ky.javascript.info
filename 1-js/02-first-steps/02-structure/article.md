@@ -1,10 +1,10 @@
 # Коддун түзүмү
 
-The first thing we'll study is the building blocks of code.
+Тилди коддун негизги курулуш блоктору менен үйрөнүп баштайлы.
 
 ## Нускамалар
 
-Statements are syntax constructs and commands that perform actions.
+Нускамалар - бул синтаксистик түзүлүштөр жана аракеттерди аткаруучу буйруктар.
 
 We've already seen a statement, `alert('Hello, world!')`, which shows the message "Hello, world!".
 
