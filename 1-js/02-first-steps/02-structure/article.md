@@ -23,11 +23,11 @@ alert('Салам');
 alert('дүйнө');
 ```
 
-## Semicolons [#semicolon]
+## Үтүрдүү чекиттер [#semicolon]
 
 A semicolon may be omitted in most cases when a line break exists.
 
-This would also work:
+Мынтип да иштейт:
 
 ```js run no-beautify
 alert('Салам')
