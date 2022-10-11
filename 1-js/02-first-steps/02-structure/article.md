@@ -6,26 +6,26 @@
 
 Нускамалар - бул синтаксистик түзүлүштөр жана аракеттерди аткаруучу буйруктар.
 
-We've already seen a statement, `alert('Hello, world!')`, which shows the message "Hello, world!".
+Биз "Салам, дүйнө!" билдирүүсүн көрсөткөн `alert('Hello, world!')` нускамасын көргөнбүз.
 
-We can have as many statements in our code as we want. Statements can be separated with a semicolon.
+Биздин кодубузда биз каалагандай көп нускамалар болушу мүмкүн. Нускамаларды үтүрлүү чекит менен ажыратса болот.
 
-For example, here we split "Hello World" into two alerts:
+Мисалы үчүн, биз бул жерде "Салам Дүйнө" билдирүүсүн эки alert'ке бөлдүк:
 
 ```js run no-beautify
 alert('Салам'); alert('дүйнө');
 ```
 
-Usually, statements are written on separate lines to make the code more readable:
+Адатта, кодду окууну жеңилдетүү үчүн нускамалар жаңы сапта жазылат:
 
 ```js run no-beautify
 alert('Салам');
 alert('дүйнө');
 ```
 
-## Үтүрдүү чекиттер [#semicolon]
+## Үтүрлүү чекиттер [#semicolon]
 
-A semicolon may be omitted in most cases when a line break exists.
+Көпчүлүк учурларда саптын үзүлүшү бар болсо, үтүрлүү чекит коюлбашы мүмкүн.
 
 Мынтип да иштейт:
 
@@ -34,11 +34,11 @@ alert('Салам')
 alert('дүйнө')
 ```
 
-Here, JavaScript interprets the line break as an "implicit" semicolon. This is called an [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
+Бул учурда, JavaScript саптын үзүлүшүн "айкын эмес" үтүрлүү чекит катары чечмелейт. Бул [автоматтык үтүрлүү чекит коюу](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) деп аталат.
 
-**In most cases, a newline implies a semicolon. But "in most cases" does not mean "always"!**
+**Көпчүлүк учурларда, жаңы сап үтүрлүү чекитти билдирет. Бирок "көпчүлүк учурларда" "ар дайым" дегенди билдирбейт!**
 
-There are cases when a newline does not mean a semicolon. For example:
+Жаңы сап үтүрлүү чекитти билдирбеген учурлар да бар. Мисалы:
 
 ```js run no-beautify
 alert(3 +
@@ -46,14 +46,14 @@ alert(3 +
 + 2);
 ```
 
-The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so a semicolon there would be incorrect. And in this case, that works as intended.
+Код `6`'ны чыгарат, анткени JavaScript бул жерге үтүрлүү чекиттерди койбойт. Эгерде сап "+" белгиси менен аяктаса, анда ал "бүтүрүлбөгөн туюнтма" экени интуитивдик түрдө ачык көрүнүп турат, андыктан үтүрлүү чекит керек эмес.
 
-**But there are situations where JavaScript "fails" to assume a semicolon where it is really needed.**
+**Бирок JavaScript керек болгон жерге үтүрлүү чекит коюуну "унутуп алган" жагдайлар бар.**
 
-Errors which occur in such cases are quite hard to find and fix.
+Бул учурда пайда болгон каталарды аныктоо жана оңдоо абдан кыйын.
 
 ````smart header="An example of an error"
-If you're curious to see a concrete example of such an error, check this code out:
+Эгер сиз мындай катанын айкын мисалын көргүңүз келсе, бул кодго көңүл буруңуз:
 
 ```js run
 alert("Hello");
@@ -61,9 +61,9 @@ alert("Hello");
 [1, 2].forEach(alert);
 ```
 
-No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of running the code: it shows `Hello`, then `1`, then `2`.
+Азырынча `[]` кашааларынын жана `forEach`'тин мааниси жөнүндө ойлонуунун кажети жок. Аларды кийинчерээк изилдейбиз. Азырынча жөн гана бул коддун натыйжасын эстеп калыңыз: ал `Hello`, анан `1`, анан `2` көрсөтөт.
 
-Now let's remove the semicolon after the `alert`:
+Эми `alert`'тен кийинки үтүрлүү чекитти алып салалы:
 
 ```js run no-beautify
 alert("Hello")
@@ -71,26 +71,26 @@ alert("Hello")
 [1, 2].forEach(alert);
 ```
 
-The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.
+Бул код жогорудагы коддон бир гана жагынан айырмаланат: биринчи саптын аягындагы үтүрлүү чекит жоголуп кетти.
 
-If we run this code, only the first `Hello` shows (and there's an error, you may need to open the console to see it). There are no numbers any more.
+Бул кодду жүргүзсөк, биринчи гана "Hello" көрсөтүлөт, андан кийин бир ката пайда болот (аны көрүү үчүн консолду ачышыңыз керек болушу мүмкүн).
 
-That's because JavaScript does not assume a semicolon before square brackets `[...]`. So, the code in the last example is treated as a single statement.
+Мунун себеби JavaScript `[...]` чарчы кашаасынын алдына үтүрлүү чекит койбойт. Андыктан акыркы мисалдагы код бир нускама катары аткарылат.
 
-Here's how the engine sees it:
+Кыймылдаткыч аны мынтип көрөт:
 
 ```js run no-beautify
 alert("Hello")[1, 2].forEach(alert);
 ```
 
-Looks weird, right? Such merging in this case is just wrong. We need to put a semicolon after `alert` for the code to work correctly.
+Укмуштай көрүнөт, туурабы? Мындай биригүү бул учурда туура эмес. Код туура иштеши үчүн `alert`'тен кийин үтүрлүү чекит коюшубуз керек.
 
-This can happen in other situations also.
+Бул кээ бир башка жагдайларда да болушу мүмкүн.
 ````
 
 We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
 
-## Comments [#code-comments]
+## Комментарийлер [#code-comments]
 
 As time goes on, programs become more and more complex. It becomes necessary to add *comments* which describe what the code does and why.
 
@@ -100,35 +100,35 @@ Comments can be put into any place of a script. They don't affect its execution 
 
 The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
 
-Like here:
+Бул жердегидей:
 ```js run
-// This comment occupies a line of its own
-alert('Hello');
+// Бул комментарий бүт сапты ээлейт
+alert('Салам');
 
-alert('World'); // This comment follows the statement
+alert('Дүйнө'); // Бул комментарий нускамадан кийин келет
 ```
 
 **Multiline comments start with a forward slash and an asterisk <code>/&#42;</code> and end with an asterisk and a forward slash <code>&#42;/</code>.**
 
-Like this:
+Мына бул жердегидей:
 
 ```js run
-/* An example with two messages.
-This is a multiline comment.
+/* Эки билдирүү менен мисал.
+Бул - көп саптуу комментарий.
 */
-alert('Hello');
-alert('World');
+alert('Салам');
+alert('Дүйнө');
 ```
 
 The content of comments is ignored, so if we put code inside <code>/&#42; ... &#42;/</code>, it won't execute.
 
-Sometimes it can be handy to temporarily disable a part of code:
+Кээде коддун бир бөлүгүн убактылуу өчүрүү үчүн ыңгайлуу болушу мүмкүн:
 
 ```js run
-/* Commenting out the code
-alert('Hello');
+/* Кодду комментарийлөө
+alert('Салам');
 */
-alert('World');
+alert('Дүйнө');
 ```
 
 ```smart header="Use hotkeys!"
@@ -136,19 +136,19 @@ In most editors, a line of code can be commented out by pressing the `key:Ctrl+/
 ```
 
 ````warn header="Nested comments are not supported!"
-There may not be `/*...*/` inside another `/*...*/`.
+Башка бир `/*...*/` ичинде `/*...*/` болушу мүмкүн эмес.
 
-Such code will die with an error:
+Мындай код ката менен "өлөт":
 
 ```js run no-beautify
 /*
-  /* nested comment ?!? */
+  /* камтылган комментарий ?!? */
 */
-alert( 'World' );
+alert( 'Дүйнө' );
 ```
 ````
 
-Please, don't hesitate to comment your code.
+Кодуңуздагы комментарийлерди колдонуудан тартынбаңыз.
 
 Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don't appear in the working scripts. Therefore, comments do not have negative effects on production at all.
 
