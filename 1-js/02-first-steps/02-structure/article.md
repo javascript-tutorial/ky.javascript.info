@@ -6,7 +6,7 @@
 
 Нускамалар - бул синтаксистик түзүлүштөр жана аракеттерди аткаруучу буйруктар.
 
-Биз "Салам, дүйнө!" билдирүүсүн көрсөткөн `alert('Hello, world!')` нускамасын көргөнбүз.
+Биз "Салам, дүйнө!" билдирүүсүн көрсөткөн `alert('Салам, дүйнө!')` нускамасын көргөнбүз.
 
 Биздин кодубузда биз каалагандай көп нускамалар болушу мүмкүн. Нускамаларды үтүрлүү чекит менен ажыратса болот.
 
@@ -88,13 +88,13 @@ alert("Hello")[1, 2].forEach(alert);
 Бул кээ бир башка жагдайларда да болушу мүмкүн.
 ````
 
-We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
+Нускамалар жаңы саптар менен бөлүнгөн болсо да, алардын ортосуна үтүрлүү чекиттерди коюуну сунуштайбыз. Бул эреже программисттердин коомдоштугунда кеңири колдонулат. Дагы бир жолу белгилей кетели - көпчүлүк учурда үтүрлүү чекит койбоого *болот*. Бирок аны коюу, айрыкча үйрөнчүктөр үчүн коопсуз.
 
 ## Комментарийлер [#code-comments]
 
-As time goes on, programs become more and more complex. It becomes necessary to add *comments* which describe what the code does and why.
+Убакыттын өтүшү менен программалар барган сайын татаалдашат. Код эмне кыларын жана эмне үчүн экенин сыпаттаган *комментарийлерди* кошуу зарылчылыгы жаралат.
 
-Comments can be put into any place of a script. They don't affect its execution because the engine simply ignores them.
+Комментарийлерди скрипттин каалаган жерине жайгаштырса болот. Алар анын аткарылышына таасир этпейт, анткени кыймылдаткыч аларды жөн эле көңүлдөнбөйт.
 
 **One-line comments start with two forward slash characters `//`.**
 
