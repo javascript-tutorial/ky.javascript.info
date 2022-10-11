@@ -132,7 +132,6 @@ alert('Дүйнө');
 ```
 
 ```smart header="Ысык баскычтарды колдонуңуз!"
-In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
 Көпчүлүк редакторлордо коддун саптарын бир саптуу комментарий үчүн `key:Ctrl+/` жана көп саптуу комментарийлер үчүн `key:Ctrl+Shift+/` сыяктуу баскычтарды басуу аркылуу комментарийлөөгө болот (коддун бир бөлүгүн бөлүп, баскычтар айкалышын басыңыз). Mac үчүн `key:Ctrl` ордуна `key:Cmd` жана `key:Shift` ордуна `key:Option` сынап көрүңүз.
 ```
 
