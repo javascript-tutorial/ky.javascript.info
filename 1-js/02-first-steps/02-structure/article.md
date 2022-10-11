@@ -52,7 +52,7 @@ alert(3 +
 
 Бул учурда пайда болгон каталарды аныктоо жана оңдоо абдан кыйын.
 
-````smart header="An example of an error"
+````smart header="Катанын мисалы"
 Эгер сиз мындай катанын айкын мисалын көргүңүз келсе, бул кодго көңүл буруңуз:
 
 ```js run
@@ -96,9 +96,9 @@ alert("Hello")[1, 2].forEach(alert);
 
 Комментарийлерди скрипттин каалаган жерине жайгаштырса болот. Алар анын аткарылышына таасир этпейт, анткени кыймылдаткыч аларды жөн эле көңүлдөнбөйт.
 
-**One-line comments start with two forward slash characters `//`.**
+**Бир саптык комментарийлер кош сызык `//` менен башталат.**
 
-The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
+Калган саптар комментарий болуп саналат. Ал өзүнүн толук сабын ээлей алат же нускамадан кийин жайгашат.
 
 Бул жердегидей:
 ```js run
@@ -108,7 +108,7 @@ alert('Салам');
 alert('Дүйнө'); // Бул комментарий нускамадан кийин келет
 ```
 
-**Multiline comments start with a forward slash and an asterisk <code>/&#42;</code> and end with an asterisk and a forward slash <code>&#42;/</code>.**
+**Көп саптуу комментарийлер жантык сызык жана жылдызчадан <code>/&#42;</code> башталып, жылдызча жана жантык сызык <code>&#42;/</code> менен аяктайт.**
 
 Мына бул жердегидей:
 
@@ -120,7 +120,7 @@ alert('Салам');
 alert('Дүйнө');
 ```
 
-The content of comments is ignored, so if we put code inside <code>/&#42; ... &#42;/</code>, it won't execute.
+Комментарийдин мазмуну көңүлдөнбөйт, ошондуктан <code>/&#42; ... &#42;/</code> ичине код киргизсек, ал аткарылбайт.
 
 Кээде коддун бир бөлүгүн убактылуу өчүрүү үчүн ыңгайлуу болушу мүмкүн:
 
@@ -131,11 +131,12 @@ alert('Салам');
 alert('Дүйнө');
 ```
 
-```smart header="Use hotkeys!"
+```smart header="Ысык баскычтарды колдонуңуз!"
 In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
+Көпчүлүк редакторлордо коддун саптарын бир саптуу комментарий үчүн `key:Ctrl+/` жана көп саптуу комментарийлер үчүн `key:Ctrl+Shift+/` сыяктуу баскычтарды басуу аркылуу комментарийлөөгө болот (коддун бир бөлүгүн бөлүп, баскычтар айкалышын басыңыз). Mac үчүн `key:Ctrl` ордуна `key:Cmd` жана `key:Shift` ордуна `key:Option` сынап көрүңүз.
 ```
 
-````warn header="Nested comments are not supported!"
+````warn header="Камтылган комментарийлер колдоого алынбайт!"
 Башка бир `/*...*/` ичинде `/*...*/` болушу мүмкүн эмес.
 
 Мындай код ката менен "өлөт":
@@ -150,6 +151,6 @@ alert( 'Дүйнө' );
 
 Кодуңуздагы комментарийлерди колдонуудан тартынбаңыз.
 
-Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don't appear in the working scripts. Therefore, comments do not have negative effects on production at all.
+Комментарийлер коддун көлөмүн көбөйтөт, бирок бул көйгөй эмес. Кодду өндүрүш серверине жарыялоодон мурун кичирейтүүчү көптөгөн куралдар бар. Алар иштөөчү скрипттерде камтылбашы үчүн комментарийлерди алып салышат. Ошентип, комментарийлер эч кандай жол менен иштөөчү кодго зыян келтирбейт.
 
-Later in the tutorial there will be a chapter <info:code-quality> that also explains how to write better comments.
+Кийинчерээк колдонмодо жакшыраак комментарийлерди жазууну түшүрдүргөн <info:code-quality> бөлүмү болот.
