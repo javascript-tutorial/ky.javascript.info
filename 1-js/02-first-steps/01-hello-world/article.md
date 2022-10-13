@@ -58,7 +58,7 @@ JavaScript программаларын HTML документинин каала
     //--></script>
     ```
 
-    This trick isn't used in modern JavaScript. These comments hide JavaScript code from old browsers that didn't know how to process the `<script>` tag. Since browsers released in the last 15 years don't have this issue, this kind of comment can help you identify really old code.
+    Бул комментарий JavaScript кодун `<script>` теги менен иштөөнү билбеген эски браузерлерде жашырган. Акыркы 15 жылда чыгарылган бардык браузерлерде бул көйгөй жок болгондуктан, мындай комментарийлердин кереги жок. Эгер алар бар болсо, анда бул бизде абдан байыркы код бар экендигинин белгиси.
 
 
 ## Тышкы скрипттер
@@ -71,7 +71,7 @@ JavaScript программаларын HTML документинин каала
 <script src="/path/to/script.js"></script>
 ```
 
-Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"`, just like `src="./script.js"`, would mean a file `"script.js"` in the current folder.
+Бул жерде `/path/to/script.js` - бул сайттын тамырынан скриптке чейин абсолюттук жол. Ошондой эле учурдагы баракчадан салыштырмалуу жолду көрсөтсө болот. Мисалы, `src="script.js"`, `src="./script.js"` сыяктуу эле, учурдагы папкада жайгашкан `"script.js"` файлын билдирет.
 
 Биз толук URL дарегин да бере алабыз. Мисалы үчүн:
 
@@ -88,17 +88,17 @@ Here, `/path/to/script.js` is an absolute path to the script from the site root.
 ```
 
 ```smart
-As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
+Эреже катары, HTML'ге эң жөнөкөй скрипттер гана киргизилет. Татаалдары өзүнчө файлдарда жайгашкан.
 
-The benefit of a separate file is that the browser will download it and store it in its [cache](https://en.wikipedia.org/wiki/Web_cache).
+Өзүнчө файлдардын пайдасы - браузер скриптти өзүнчө жүктөп алып, аны [кэште](https://en.wikipedia.org/wiki/Web_cache) сактай алат.
 
-Other pages that reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once.
+Ошол эле скрипт камтылган башка баракчалар аны тармактан кайра жүктөөнүн ордуна кэштен ала алышат. Ошентип, файл серверден бир гана жолу жүктөлөт.
 
-That reduces traffic and makes pages faster.
+Бул трафиктин чыгашасын азайтат жана баракчаны жүктөөнү тездетет.
 ```
 
-````warn header="If `src` is set, the script content is ignored."
-A single `<script>` tag can't have both the `src` attribute and code inside.
+````warn header="Эгерде `src` атрибуту коюлса, `script` тегинин мазмуну көңүлдөнбөйт."
+Жалгыз `<script>` тегинде `src` атрибутун жана ичиндеги кодду бир убакта колдонууга болбойт.
 
 Төмөндөгү мисал иштебейт:
 
