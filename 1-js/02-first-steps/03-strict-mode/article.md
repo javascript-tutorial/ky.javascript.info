@@ -1,4 +1,4 @@
-# The modern mode, "use strict"
+# Катуу режими, "use strict"
 
 For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
 
@@ -10,12 +10,12 @@ This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new feat
 
 The directive looks like a string: `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the "modern" way.
 
-For example:
+Мисалы:
 
 ```js
 "use strict";
 
-// this code works the modern way
+// бул код заманбап режиминде иштейт  
 ...
 ```
 
