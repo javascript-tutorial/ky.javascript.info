@@ -1,10 +1,10 @@
-importance: 2
+маанилүүлүк: 2
 
 ---
 
-# Working with variables
+# Өзгөрмөлөр менен иштөө
 
-1. Declare two variables: `admin` and `name`.
-2. Assign the value `"John"` to `name`.
-3. Copy the value from `name` to `admin`.
-4. Show the value of `admin` using `alert` (must output "John").
+1. Эки өзгөрмөнү жарыялаңыз: `admin` жана `name`.
+2. `"John"` сабын `name` өзгөрмөсүнө киргизиңиз.
+3. `name` өзгөрмөсүндөгү маанини `admin`ге көчүрүңүз.
+4. `alert` функциясын колдонуп `admin`'дин маанисин чыгарыңыз ("Жон" көрсөтүлүшү керек).
