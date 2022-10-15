@@ -1,21 +1,21 @@
-## The variable for our planet
+## Биздин планетанын аталышы үчүн өзгөрмө
 
-That's simple:
-
-```js
-let ourPlanetName = "Earth";
-```
-
-Note, we could use a shorter name `planet`, but it might not be obvious what planet it refers to. It's nice to be more verbose. At least until the variable isNotTooLong.
-
-## The name of the current visitor
+Бул оңой:
 
 ```js
-let currentUserName = "John";
+let ourPlanetName = "Жер";
 ```
 
-Again, we could shorten that to `userName` if we know for sure that the user is current.
+Көңүл буруңуз, биз `planet` деген кыскараак аталышты колдонсок болот эле, бирок ал кайсы планетага тиешелүү экени түшүнүксүз болмок. Жок дегенде өзгөрмөнүн аты өтөУзунБолупКалмайынча, өзгөрмөнүн мазмунун кененирээк сыпаттап берген жакшы.
 
-Modern editors and autocomplete make long variable names easy to write. Don't save on them. A name with 3 words in it is fine.
+## Учурдагы келүүчүнүн аты
 
-And if your editor does not have proper autocompletion, get [a new one](/code-editors).
+```js
+let currentUserName = "Жон";
+```
+
+Кайра эле, эгерде бул учурдагы колдонуучу экенин так билсек, аталышын `userName` деп кыскартсак болмок.
+
+Заманбап редакторлор жана автокошумчалоолор узун өзгөрмө аттарын жазууну жеңилдетет. Тамгаларды үнөмдөбөңүз. Үч сөздөн турган аттар түзүк.
+
+Редакторуңузда автокошумчалоо жок болсо, [башкаларды](/code-editors) колдонуңуз.
