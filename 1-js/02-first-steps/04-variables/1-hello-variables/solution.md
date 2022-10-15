@@ -1,12 +1,12 @@
-In the code below, each line corresponds to the item in the task list.
+Төмөндөгү коддо ар бир чечим сызыгы тапшырмалар тизмесиндеги бир элементке туура келет.
 
 ```js run
-let admin, name; // can declare two variables at once
+let admin, name; // үтүр аркылуу эки өзгөрмө жарыяланышы мүмкүн
 
-name = "John";
+name = "Жон";
 
 admin = name;
 
-alert( admin ); // "John"
+alert( admin ); // "Жон"
 ```
 
