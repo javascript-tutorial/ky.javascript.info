@@ -126,4 +126,4 @@ JavaScript программаларын HTML документинин каала
 - `type` жана `language` атрибуттары талап кылынбайт.
 - Тышкы файлдагы скрипт `<script src="path/to/script.js"></script>` менен киргизилиши мүмкүн.
 
-There is much more to learn about browser scripts and their interaction with the webpage. But let's keep in mind that this part of the tutorial is devoted to the JavaScript language, so we shouldn't distract ourselves with browser-specific implementations of it. We'll be using the browser as a way to run JavaScript, which is very convenient for online reading, but only one of many.
+Браузердин скрипттери жана алардын веб-баракча менен өз ара аракеттенүүсү жөнүндө дагы көп нерсе бар. Бирок колдонмонун бул бөлүгү JavaScript тилине арналганын эстен чыгарбайлы, андыктан анын браузерге тиешелүү ишке ашыруулары менен алаксыбашыбыз керек. Биз браузерди JavaScript'ти иштетүү жолу катары колдонобуз, ал онлайн окуу үчүн абдан ыңгайлуу, бирок көптөрдүн бири гана.
