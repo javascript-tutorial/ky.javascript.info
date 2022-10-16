@@ -1,41 +1,41 @@
-# Variables
+# Өзгөрмөлөр
 
-Most of the time, a JavaScript application needs to work with information. Here are two examples:
-1. An online shop -- the information might include goods being sold and a shopping cart.
-2. A chat application -- the information might include users, messages, and much more.
+Көпчүлүк учурда, JavaScript тиркемеси маалымат менен иштеши керек. Бул жерде эки мисал келтирилген:
+1. Интернет-дүкөн -- маалымат сатылуучу буюмдарды жана соода себетин камтышы мүмкүн.
+2. Баарлашуу тиркемеси -- маалымат колдонуучуларды, билдирүүлөрдү ж.б. көптөгөн нерселерди камтышы мүмкүн.
 
-Variables are used to store this information.
+Өзгөрмөлөр бул маалыматтарды сактоо үчүн колдонулат.
 
-## A variable
+## Өзгөрмө
 
-A [variable](https://en.wikipedia.org/wiki/Variable_(computer_science)) is a "named storage" for data. We can use variables to store goodies, visitors, and other data.
+[Өзгөрмө](https://en.wikipedia.org/wiki/Variable_(computer_science)) -- бул берилмелер үчүн "аталган сактагыч". Биз товарларды, келүүчүлөрдү жана башка берилмелерди сактоо үчүн өзгөрмөлөрдү колдоно алабыз.
 
-To create a variable in JavaScript, use the `let` keyword.
+JavaScript'те өзгөрмө түзүү үчүн, `let` ачкыч сөзүн колдонуңуз.
 
-The statement below creates (in other words: *declares*) a variable with the name "message":
+Төмөнкү нускама "билдирүү" аталышы менен өзгөрмө түзөт (башкача айтканда: *жарыялайт*):
 
 ```js
 let message;
 ```
 
-Now, we can put some data into it by using the assignment operator `=`:
+Эми `=` өздөштүрүү оператору аркылуу ага берилмелерди киргизе алабыз:
 
 ```js
 let message;
 
 *!*
-message = 'Hello'; // store the string 'Hello' in the variable named message
+message = 'Hello'; // 'Hello' сабын message деп аталган өзгөрмөдө сактоо
 */!*
 ```
 
-The string is now saved into the memory area associated with the variable. We can access it using the variable name:
+Сап эми өзгөрмө менен байланышкан эстутум аймагына сакталат. Биз ага өзгөрмө аты менен кире алабыз:
 
 ```js run
 let message;
 message = 'Hello!';
 
 *!*
-alert(message); // shows the variable content
+alert(message); // өзгөрмөнүн мазмунун көрсөтөт
 */!*
 ```
 
