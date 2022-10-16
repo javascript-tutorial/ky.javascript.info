@@ -1,5 +1,5 @@
-We generally use upper case for constants that are "hard-coded". Or, in other words, when the value is known prior to execution and directly written into the code.
+Биз негизи "катуу коддолгон" константалар үчүн баш тамганы колдонобуз. Же, башкача айтканда, скрипт аткарылганга чейин мааниси белгилүү болгондо жана түздөн-түз кодго жазылганда.
 
-In this code, `birthday` is exactly like that. So we could use the upper case for it.
+Биздин мисалда `birthday` дал ушундай өзгөрмө. Андыктан биз баш тамгаларды колдоно алабыз.
 
-In contrast, `age` is evaluated in run-time. Today we have one age, a year after we'll have another one. It is constant in a sense that it does not change through the code execution. But it is a bit "less of a constant" than `birthday`: it is calculated, so we should keep the lower case for it.
+Мурункудан айырмаланып, `age` өзгөрмөсү скрипт аткарылып жатканда эсептелинет. Бүгүн бизде бир курак бар, а бир жылдан кийин такыр башкача болот. Бул кандайдыр бир мааниде константа болуп саналат, ал коддун аткарылганында өзгөрбөйт. Бирок бул `birthday`'ден караганда бир аз "константтуусузураак": ал эсептелинет, андыктан аны саптамга менен калтырышыбыз керек.
