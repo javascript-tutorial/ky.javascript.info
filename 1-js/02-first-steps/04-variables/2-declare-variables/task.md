@@ -1,8 +1,8 @@
-importance: 3
+маанилүүлүк: 3
 
 ---
 
-# Giving the right name
+# Туура атоо
 
-1. Create a variable with the name of our planet. How would you name such a variable?
-2. Create a variable to store the name of a current visitor to a website. How would you name that variable?
+1. Биздин планетанын аталышы үчүн өзгөрмө түзүңүз. Аны эмне деп атайт элеңиз?
+2. Учурдагы сайттын келүүчүнүн атын сактай турган өзгөрмө түзүңүз. Мындай өзгөрмөнү кантип атайт элеңиз?
