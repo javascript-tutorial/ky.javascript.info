@@ -1,10 +1,10 @@
-importance: 4
+маанилүүлүк: 4
 
 ---
 
-# Uppercase const?
+# Баш тамгадагы константа?
 
-Examine the following code:
+Кийинки кодду карап көрөлү:
 
 ```js
 const birthday = '18.04.1982';
@@ -12,14 +12,14 @@ const birthday = '18.04.1982';
 const age = someCode(birthday);
 ```
 
-Here we have a constant `birthday` for the date, and also the `age` constant.
+Бул жерде бизде `birthday` жана `age` константалары бар.
 
-The `age` is calculated from `birthday` using `someCode()`, which means a function call that we didn't explain yet (we will soon!), but the details don't matter here, the point is that `age` is calculated somehow based on the `birthday`.
+Бизде `birthday` константасы, ошондой эле `age` бар, ал `birthday`'дин маанисин колдонуу менен кандайдыр бир код менен эсептелинет (бул учурда тетиктер маанилүү эмес, андыктан код караштырылбайт).
 
-Would it be right to use upper case for `birthday`? For `age`? Or even for both?
+`birthday` үчүн баш тамганы колдонуу туура болобу? `age` үчүнчү? Же экөөсүнө теңби?
 
 ```js
-const BIRTHDAY = '18.04.1982'; // make birthday uppercase?
+const BIRTHDAY = '18.04.1982'; // баш тамганы колдонуу керекпи?
 
-const AGE = someCode(BIRTHDAY); // make age uppercase?
+const AGE = someCode(BIRTHDAY); // бул жердечи?
 ```
