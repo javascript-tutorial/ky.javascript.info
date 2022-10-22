@@ -1,14 +1,14 @@
 # Катуу режими, "use strict"
 
-For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
+Узак убакыт бою, JavaScript шайкештик көйгөйлөрү жок өнүккөн. Тилге жаңы функциялар кошулуп турган, ал эми эски функционалдуулук өзгөргөн эмес.
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript's creators got stuck in the language forever.
+Бул ыкманын артыкчылыгы - болгон код иштей берген. Ал эми терс жагы - JavaScript жаратуучуларынан кабыл алынган ар кандай ката же кемчиликтүү чечим тилде түбөлүккө тыгылып калган.
 
-This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: `"use strict"`.
+Бул ECMAScript 5 (ES5) пайда болгондо 2009-жылга чейин болгон. Ал тилге жаңы функцияларды кошуп, айрымдарын өзгөрттү. Эски коддун иштеши үчүн, мындай өзгөртүүлөрдүн көбү демейки боюнча өчүрүлгөн. Андыктан биз аларды атайын `"use strict"` нускоонун жардамы менен иштетишибиз керек.
 
 ## "use strict"
 
-The directive looks like a string: `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the "modern" way.
+Нускоо сапка окшойт: `"use strict"` же `'use strict'`. Ал скрипттин башында жайгашканда, бүтүн скрипт "заманбап" жол менен иштейт.
 
 Мисалы:
 
