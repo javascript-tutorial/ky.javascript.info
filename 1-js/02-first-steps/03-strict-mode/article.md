@@ -19,26 +19,26 @@
 ...
 ```
 
-Quite soon we're going to learn functions (a way to group commands), so let's note in advance that `"use strict"` can be put at the beginning of a function. Doing that enables strict mode in that function only. But usually people use it for the whole script.
+Жакында биз функцияларды (буйруктарды топтоонун жолун) үйрөнөбүз, андыктан алдын ала белгилеп кетели, `"use strict"` функциянын башына коюлушу мүмкүн. Муну кылуу ошол функцияда гана катуу режимди иштетет. Бирок, адатта, адамдар аны бүт скрипт үчүн колдонушат.
 
-````warn header="Ensure that \"use strict\" is at the top"
-Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
+````warn header="\"use strict\" жогоруда экенин текшериңиз"
+Сураныч, скрипттериңиздин жогору жагында `"use strict"` турганын текшериңиз, антпесе катуу режими иштетилбей калышы мүмкүн.
 
-Strict mode isn't enabled here:
+Бул жерде катуу режими иштетилген эмес:
 
 ```js no-strict
 alert("some code");
-// "use strict" below is ignored--it must be at the top
+// төмөндөгү "use strict" көңүлдөнбөйт - ал жогоруда болушу керек
 
 "use strict";
 
-// strict mode is not activated
+// катуу режими активдештирилген эмес
 ```
 
-Only comments may appear above `"use strict"`.
+`"use strict"`'тин жогору жагында комментарийлер гана жазылышы мүмкүн.
 ````
 
-```warn header="There's no way to cancel `use strict`"
+```warn header="`use strict`'ти жокко чыгарууга эч кандай жол жок"
 There is no directive like `"no use strict"` that reverts the engine to old behavior.
 
 Once we enter strict mode, there's no going back.
