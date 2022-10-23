@@ -4,7 +4,7 @@
 
 Бул ыкманын артыкчылыгы - болгон код иштей берген. Ал эми терс жагы - JavaScript жаратуучуларынан кабыл алынган ар кандай ката же кемчиликтүү чечим тилде түбөлүккө тыгылып калган.
 
-Бул ECMAScript 5 (ES5) пайда болгондо 2009-жылга чейин болгон. Ал тилге жаңы функцияларды кошуп, айрымдарын өзгөрттү. Эски коддун иштеши үчүн, мындай өзгөртүүлөрдүн көбү демейки боюнча өчүрүлгөн. Андыктан биз аларды атайын `"use strict"` нускоонун жардамы менен иштетишибиз керек.
+Бул ECMAScript 5 (ES5) пайда болгонго чейин 2009-жылга чейин болгон. Ал тилге жаңы функцияларды кошуп, айрымдарын өзгөрттү. Эски коддун иштеши үчүн, мындай өзгөртүүлөрдүн көбү демейки боюнча өчүрүлгөн. Андыктан биз аларды атайын `"use strict"` нускоонун жардамы менен иштетишибиз керек.
 
 ## "use strict"
 
@@ -19,7 +19,7 @@
 ...
 ```
 
-Жакында биз функцияларды (буйруктарды топтоонун жолун) үйрөнөбүз, андыктан алдын ала белгилеп кетели, `"use strict"` функциянын башына коюлушу мүмкүн. Муну кылуу ошол функцияда гана катуу режимди иштетет. Бирок, адатта, адамдар аны бүт скрипт үчүн колдонушат.
+Жакында биз функцияларды (буйруктарды топтоонун жолун) үйрөнөбүз, андыктан алдын ала `"use strict"` функциянын башына коюлушу мүмкүн экенин белгилеп кетели. Муну кылгандан кийин катуу режими ошол функцияда гана иштейт. Бирок, адатта, адамдар аны бүт скрипт үчүн колдонушат.
 
 ````warn header="\"use strict\" жогоруда экенин текшериңиз"
 Сураныч, скрипттериңиздин жогору жагында `"use strict"` турганын текшериңиз, антпесе катуу режими иштетилбей калышы мүмкүн.
@@ -39,51 +39,51 @@ alert("some code");
 ````
 
 ```warn header="`use strict`'ти жокко чыгарууга эч кандай жол жок"
-There is no directive like `"no use strict"` that reverts the engine to old behavior.
+Кыймылдаткычты эски абалына кайтарган `"no use strict"` сыяктуу нускоолор жок.
 
-Once we enter strict mode, there's no going back.
+Катуу режимге киргени менен аны жокко чыгарууга эч кандай жол жок.
 ```
 
-## Browser console
+## Браузер консолу
 
-When you use a [developer console](info:devtools) to run code, please note that it doesn't `use strict` by default.
+Кодду жүргүзүү үчүн [иштеп чыгуучунун консолун](info:devtools) колдонгонуңузда, анда `use strict` демейки боюнча өчүрүлгөнүн эске алыңыз.
 
-Sometimes, when `use strict` makes a difference, you'll get incorrect results.
+Кээде, `use strict` колдонулганда, сиз туура эмес жыйынтыктарды алышыңыз мүмкүн.
 
-So, how to actually `use strict` in the console?
+Ошондо, консолдо чындыгында кантип `use strict`'ти колдонсо болот?
 
-First, you can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+Сиз бир нече саптарды киргизүү үчүн `key:Shift+Enter` колдонуп, жогорку сапка `use strict` деп жазсаңыз болот:
 
 ```js
-'use strict'; <Shift+Enter for a newline>
-//  ...your code
-<Enter to run>
+'use strict'; <жаңы сапка өтүү үчүн Shift+Enter>
+//  ...сиздин кодуңуз
+<жүргүзүү үчүн Enter>
 ```
 
-It works in most browsers, namely Firefox and Chrome.
+Көпчүлүк браузерлерде, анын ичинде Chrome жана Firefox, бул иштейт.
 
-If it doesn't, e.g. in an old browser, there's an ugly, but reliable way to ensure `use strict`. Put it inside this kind of wrapper:
+Эгер андай болбосо, мис. эски браузерде, `use strict`ти камсыз кылуунун начар, бирок ишенимдүү жолу бар. Аны төмөнкү каптамага киргизиңиз:
 
 ```js
 (function() {
   'use strict';
 
-  // ...your code here...
+  // ...сиздин кодуңуз...
 })()
 ```
 
-## Should we "use strict"?
+## "use strict" колдонушубуз керекпи?
 
-The question may sound obvious, but it's not so.
+Суроо анык угулушу мүмкүн, бирок андай эмес.
 
-One could recommend to start scripts with `"use strict"`... But you know what's cool?
+Бирөөсү скрипттерди `"use strict"` менен баштоону сунуштайт... Бирок сонунураак аргасы бар.
 
-Modern JavaScript supports "classes" and "modules" - advanced language structures (we'll surely get to them), that enable `use strict` automatically. So we don't need to add the `"use strict"` directive, if we use them.
+Заманбап JavaScript катуу режимди автоматтык түрдө иштеткен "класстарды" жана "модулдарды" - өркүндөтүлгөн тил түзүмдөрүн колдойт (албетте, биз аларга жетебиз). Демек, аларга `use strict` нускоосун кошуунун кажети жок.
 
-**So, for now `"use strict";` is a welcome guest at the top of your scripts. Later, when your code is all in classes and modules, you may omit it.**
+**Жыйынтыктайлы: скрипттериңиздин башында `"use strict";` кошуулуусу сунушталат. Кийинчерээк, сиздин бардык кодуңуз класстардан жана модулдардан турганда, нускоону өткөрүүгө болот.**
 
-As of now, we've got to know about `use strict` in general.
+Азырынча биз `use strict` жөнүндө жалпысынан гана билип алдык.
 
-In the next chapters, as we learn language features, we'll see the differences between the strict and old modes. Luckily, there aren't many and they actually make our lives better.
+Кийинки бөлүмдөрдө, тилдин өзгөчөлүктөрүн үйрөнгөнүбүздө, биз катуу жана стандарттуу режимдердин ортосундагы айырмачылыктарды көрөбүз. Бактыга жараша, алар көп эмес жана алар биздин жашообузду жакшыртат.
 
-All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+Бул колдонмодогу бардык мисалдар, эгерде (өтө сейрек) башкача белгиленбесе, катуу режимин божомолдойт.
