@@ -1,15 +1,14 @@
-
-Backticks embed the expression inside `${...}` into the string.
+Тескери тырмакчалар `${...}` ичиндеги туюнтманы сапка киргизүүгө мүмкүндүк берет.
 
 ```js run
 let name = "Ilya";
 
-// the expression is a number 1
+// туюнтма - 1 саны
 alert( `hello ${1}` ); // hello 1
 
-// the expression is a string "name"
+// туюнтма - "name" сабы
 alert( `hello ${"name"}` ); // hello name
 
-// the expression is a variable, embed it
+// туюнтма - өзгөрмө, аны сапка киргизебиз
 alert( `hello ${name}` ); // hello Ilya
 ```
