@@ -1,17 +1,17 @@
-importance: 5
+маанилүүлүк: 5
 
 ---
 
-# String quotes
+# Саптардагы тырмакчалар
 
-What is the output of the script?
+Скриптти аткаруунун натыйжасы кандай болот?
 
 ```js
-let name = "Ilya";
+let name = "Ильяс";
 
-alert( `hello ${1}` ); // ?
+alert( `салам ${1}` ); // ?
 
-alert( `hello ${"name"}` ); // ?
+alert( `салам ${"name"}` ); // ?
 
-alert( `hello ${name}` ); // ?
+alert( `салам ${name}` ); // ?
 ```
