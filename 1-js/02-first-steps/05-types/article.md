@@ -1,4 +1,4 @@
-# Берилмелердин түрлөрү
+# Берилмелер түрлөрү
 
 A value in JavaScript is always of a certain type. For example, a string or a number.
 
@@ -14,7 +14,7 @@ message = 123456;
 
 Programming languages that allow such things, such as JavaScript, are called "dynamically typed", meaning that there exist data types, but variables are not bound to any of them.
 
-## Сан
+## Сан (number)
 
 ```js
 let n = 123;
@@ -101,21 +101,21 @@ Right now, `BigInt` is supported in Firefox/Chrome/Edge/Safari, but not in IE.
 
 You can check [*MDN* BigInt compatibility table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility) to know which versions of a browser are supported.
 
-## String
+## Сап (string)
 
-A string in JavaScript must be surrounded by quotes.
+JavaScript'те сап тырмакчага алынышы керек.
 
 ```js
 let str = "Салам";
-let str2 = 'Жалгыз тырмакчалар деле болот';
+let str2 = 'Жалгыз тырмакча деле болот';
 let phrase = `дагы башка ${str} киргизүүгө болот`;
 ```
 
-In JavaScript, there are 3 types of quotes.
+JavaScript'те тырмакчанын 3 түрү бар.
 
-1. Кош тырмакчалар: `"Салам"`.
-2. Жалгыз тырмакчалар: `'Салам'`.
-3. Тескери тырмакчалар: <code>&#96;Салам&#96;</code>.
+1. Кош тырмакча: `"Салам"`.
+2. Жалгыз тырмакча: `'Салам'`.
+3. Тескери тырмакча: <code>&#96;Салам&#96;</code>.
 
 Double and single quotes are "simple" quotes. There's practically no difference between them in JavaScript.
 
@@ -146,7 +146,7 @@ In some languages, there is a special "character" type for a single character. F
 In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
 ```
 
-## Boolean (logical type)
+## Логикалык түр (boolean)
 
 The boolean type has only two values: `true` and `false`.
 
@@ -169,7 +169,7 @@ alert( isGreater ); // true (the comparison result is "yes")
 
 We'll cover booleans more deeply in the chapter <info:logical-operators>.
 
-## The "null" value
+## "null" мааниси
 
 The special `null` value does not belong to any of the types described above.
 
@@ -185,7 +185,7 @@ It's just a special value which represents "nothing", "empty" or "value unknown"
 
 The code above states that `age` is unknown.
 
-## The "undefined" value
+## "undefined" мааниси
 
 The special value `undefined` also stands apart. It makes a type of its own, just like `null`.
 
