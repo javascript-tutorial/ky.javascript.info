@@ -1,4 +1,4 @@
-# Data types
+# Берилмелердин түрлөрү
 
 A value in JavaScript is always of a certain type. For example, a string or a number.
 
@@ -7,14 +7,14 @@ There are eight basic data types in JavaScript. Here, we'll cover them in genera
 We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
 
 ```js
-// no error
-let message = "hello";
+// ката болбойт
+let message = "салам";
 message = 123456;
 ```
 
 Programming languages that allow such things, such as JavaScript, are called "dynamically typed", meaning that there exist data types, but variables are not bound to any of them.
 
-## Number
+## Сан
 
 ```js
 let n = 123;
@@ -43,7 +43,7 @@ Besides regular numbers, there are so-called "special numeric values" which also
 - `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
 
     ```js run
-    alert( "not a number" / 2 ); // NaN, such division is erroneous
+    alert( "сан эмес" / 2 ); // NaN, such division is erroneous
     ```
 
     `NaN` is sticky. Any further mathematical operation on `NaN` returns `NaN`:
@@ -51,7 +51,7 @@ Besides regular numbers, there are so-called "special numeric values" which also
     ```js run
     alert( NaN + 1 ); // NaN
     alert( 3 * NaN ); // NaN
-    alert( "not a number" / 2 - 1 ); // NaN
+    alert( "сан эмес" / 2 - 1 ); // NaN
     ```
 
     So, if there's a `NaN` somewhere in a mathematical expression, it propagates to the whole result (there's only one exception to that: `NaN ** 0` is `1`).
@@ -106,29 +106,29 @@ You can check [*MDN* BigInt compatibility table](https://developer.mozilla.org/e
 A string in JavaScript must be surrounded by quotes.
 
 ```js
-let str = "Hello";
-let str2 = 'Single quotes are ok too';
-let phrase = `can embed another ${str}`;
+let str = "Салам";
+let str2 = 'Жалгыз тырмакчалар деле болот';
+let phrase = `дагы башка ${str} киргизүүгө болот`;
 ```
 
 In JavaScript, there are 3 types of quotes.
 
-1. Double quotes: `"Hello"`.
-2. Single quotes: `'Hello'`.
-3. Backticks: <code>&#96;Hello&#96;</code>.
+1. Кош тырмакчалар: `"Салам"`.
+2. Жалгыз тырмакчалар: `'Салам'`.
+3. Тескери тырмакчалар: <code>&#96;Салам&#96;</code>.
 
 Double and single quotes are "simple" quotes. There's practically no difference between them in JavaScript.
 
 Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
 
 ```js run
-let name = "John";
+let name = "Жакыя";
 
-// embed a variable
-alert( `Hello, *!*${name}*/!*!` ); // Hello, John!
+// өзгөрмөнү киргизебиз
+alert( `Салам, *!*${name}*/!*!` ); // Салам, Жакыя!
 
-// embed an expression
-alert( `the result is *!*${1 + 2}*/!*` ); // the result is 3
+// туюнтманы киргизебиз
+alert( `натыйжа: *!*${1 + 2}*/!*` ); // натыйжа: 3
 ```
 
 The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
