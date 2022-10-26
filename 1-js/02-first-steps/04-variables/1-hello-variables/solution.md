@@ -3,10 +3,9 @@
 ```js run
 let admin, name; // үтүр аркылуу эки өзгөрмө жарыяланышы мүмкүн
 
-name = "Жон";
+name = "Жакыя";
 
 admin = name;
 
-alert( admin ); // "Жон"
+alert( admin ); // "Жакыя"
 ```
-
