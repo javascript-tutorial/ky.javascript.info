@@ -1,10 +1,10 @@
-importance: 5
+маанилүүлүк: 5
 
 ---
 
-# The postfix and prefix forms
+# Постфикс жана префикс формалары
 
-What are the final values of all variables `a`, `b`, `c` and `d` after the code below?
+Төмөндөгү мисалда `a`, `b`, `c` жана `d` өзгөрмөлөрү эмнеге барабар болот?
 
 ```js
 let a = 1, b = 1;
