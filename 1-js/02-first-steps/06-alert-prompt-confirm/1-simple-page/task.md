@@ -1,9 +1,9 @@
-importance: 4
+маанилүүлүк: 4
 
 ---
 
-# A simple page
+# Жөнөкөй баракча
 
-Create a web-page that asks for a name and outputs it.
+Колдонуучунун атын сураган жана аны чыгарган веб-баракчаны түзүңүз.
 
 [demo]
