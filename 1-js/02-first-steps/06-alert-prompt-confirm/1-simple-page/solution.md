@@ -1,11 +1,11 @@
-JavaScript-code:
+JavaScript коду:
 
 ```js demo run
-let name = prompt("What is your name?", "");
+let name = prompt("Сиздин атыңыз ким?", "");
 alert(name);
 ```
 
-The full page:
+Толук баракчасы:
 
 ```html
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ The full page:
   <script>
     'use strict';
 
-    let name = prompt("What is your name?", "");
+    let name = prompt("Сиздин атыңыз ким?", "");
     alert(name);
   </script>
 
