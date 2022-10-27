@@ -68,38 +68,35 @@ JavaScript'те математикалык эсептөөлөр "коопсуз�
 
 ## BigInt [#bigint-type]
 
-JavaScript'те "number" түрү <code>(2<sup>53</sup>-1)</code>ден чоңураак (бул `9007199254740991`) же <code>-(2<sup>53</sup>-1)</code>ден кичине бүтүн сандык маанилерди билдире албайт. Бул алардын ички ишке ашыруусунан улам келип чыккан техникалык чектөөсү.
+JavaScript'те "number" түрү <code>(2<sup>53</sup>-1)</code>ден чоңураак (бул `9007199254740991`) же <code>-(2<sup>53</sup>-1)</code>ден кичине бүтүн сандык маанилерди билдире албайт.
 
-To be really precise, the "number" type can store larger integers (up to <code>1.7976931348623157 * 10<sup>308</sup></code>), but outside of the safe integer range <code>±(2<sup>53</sup>-1)</code> there'll be a precision error, because not all digits fit into the fixed 64-bit storage. So an "approximate" value may be stored.
-
-For example, these two numbers (right above the safe range) are the same:
+Тактап айтканда, "number" түрү чоңураак бүтүн сандарды (<code>1.7976931348623157 * 10<sup>308</sup></code>ге чейин) сактай алат, бирок коопсуз бүтүн сан <code>±(2<sup>53</sup>-1)</code> диапазонунан тышкары тактык катасы болот, анткени бардык сандар туруктуу 64-биттик сактагычка туура келбейт. Ошентип, "болжолдуу" маани сакталышы мүмкүн.
 
 ```js
 console.log(9007199254740991 + 1); // 9007199254740992
 console.log(9007199254740991 + 2); // 9007199254740992
 ```
 
-So to say, all odd integers greater than <code>(2<sup>53</sup>-1)</code> can't be stored at all in the "number" type.
+Мындайча айтканда, <code>(2<sup>53</sup>-1)</code>ден чоң так бүтүн сандарды "number" тибинде такыр сактоого болбойт.
 
-For most purposes <code>±(2<sup>53</sup>-1)</code> range is quite enough, but sometimes we need the entire range of really big integers, e.g. for cryptography or microsecond-precision timestamps.
+Көпчүлүк максаттар үчүн <code>±(2<sup>53</sup>-1)</code> диапазону жетиштүү, бирок кээде бизге чыныгы чоң бүтүн сандардын толук диапазону керек болот, мис. криптография же микросекунддук тактык убакыт белгилери ("timestamp") үчүн.
 
-`BigInt` type was recently added to the language to represent integers of arbitrary length.
+`BigInt` түрү ыктыярдуу узундуктагы бүтүн сандарды көрсөтүү үчүн тилге жакында эле кошулган.
 
-A `BigInt` value is created by appending `n` to the end of an integer:
+`BigInt` мааниси бүтүн сандын аягына `n` кошуу менен түзүлөт:
 
 ```js
-// the "n" at the end means it's a BigInt
+// аягында "n" белгиси бул BigInt экенин билдирет
 const bigInt = 1234567890123456789012345678901234567890n;
 ```
 
-As `BigInt` numbers are rarely needed, we don't cover them here, but devoted them a separate chapter <info:bigint>. Read it when you need such big numbers.
+`BigInt` сандары сейрек талап кылынгандыктан, биз аларды бөлөк <info:bigint> бөлүмүндө караштырабыз. Ушунчалык чоң сандар керек болгондо аны окуңуз.
 
-
-```smart header="Compatibility issues"
-Right now, `BigInt` is supported in Firefox/Chrome/Edge/Safari, but not in IE.
+```smart header="Шайкештик көйгөйлөрү"
+Азыркы учурда `BigInt` Firefox/Chrome/Edge/Safari браузерлеринде колдоого алынат, бирок IE'де - жок.
 ```
 
-You can check [*MDN* BigInt compatibility table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility) to know which versions of a browser are supported.
+я Браузердин кайсы версиялары колдоого алынарын билүү үчүн [*MDN* BigInt шайкештик жадыбалын](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility) карап көрсөңүз болот.
 
 ## Сап (string)
 
@@ -117,9 +114,9 @@ JavaScript'те тырмакчанын 3 түрү бар.
 2. Жалгыз тырмакча: `'Салам'`.
 3. Тескери тырмакча: <code>&#96;Салам&#96;</code>.
 
-Double and single quotes are "simple" quotes. There's practically no difference between them in JavaScript.
+Кош жана жалгыз тырмакчалар "жөнөкөй" болуп саналат. JavaScript'те алардын ортосунда эч кандай айырмасы жок.
 
-Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
+Тескери тырмакчалар кеңейтилген функцияга ээ. Алар бизге өзгөрмөлөрдү жана туюнтмаларды `${…}` ичине ороп, сапка киргизүүгө мүмкүндүк берет, мисалы:
 
 ```js run
 let name = "Жакыя";
@@ -131,90 +128,91 @@ alert( `Салам, *!*${name}*/!*!` ); // Салам, Жакыя!
 alert( `натыйжа: *!*${1 + 2}*/!*` ); // натыйжа: 3
 ```
 
-The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
+`${…}` ичиндеги туюнтма эсептелинет жана натыйжасы саптын бир бөлүгү болуп калат. Биз ал жерге каалаган нерсени киргизе алабыз: `name` сыяктуу өзгөрмөнү же `1 + 2` сыяктуу арифметикалык туюнтманы же татаалыраак нерсени.
 
-Please note that this can only be done in backticks. Other quotes don't have this embedding functionality!
+Көнүл буруңуз, муну тескери тырмакча менен гана кылууга болот. Башка тырмакчаларда ушундай камтылуу функционалдуулугу жок!
+
 ```js run
-alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
+alert( "натыйжа: ${1 + 2}" ); // натыйжа: ${1 + 2} (кош тырмакча эч нерсе кылбайт)
 ```
 
-We'll cover strings more thoroughly in the chapter <info:string>.
+Биз <info:string> бөлүмүндө саптарды кененирээк караштырабыз.
 
-```smart header="There is no *character* type."
-In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is called "char".
+```smart header="*Символ* (*character*) түрү жок."
+Кээ бир тилдерде бир белгини белгилөө үчүн атайын "character" түрү бар. Мисалы, C жана Java тилдеринде бул `char`.
 
-In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
+JavaScript'те мындай түр жок. Бир гана түр бар: `string`. Сап нөл белгилерден (бош болушу), бир белгиден же алардын көбүнөн турушу мүмкүн.
 ```
 
 ## Логикалык түр (boolean)
 
-The boolean type has only two values: `true` and `false`.
+Логикалык түр эки маанини гана кабыл алат: `true` (чындык) жана `false` (жалган).
 
-This type is commonly used to store yes/no values: `true` means "yes, correct", and `false` means "no, incorrect".
+Бул түр көбүнчө ооба/жок маанилерин сактоо үчүн колдонулат: `true` - "ооба, туура", ал эми `false` - "жок, туура эмес" дегенди билдирет.
 
-For instance:
+Мисалы үчүн:
 
 ```js
-let nameFieldChecked = true; // yes, name field is checked
-let ageFieldChecked = false; // no, age field is not checked
+let nameFieldChecked = true; // ооба, аты текшерилди
+let ageFieldChecked = false; // жок, курагы текшерилбеди
 ```
 
-Boolean values also come as a result of comparisons:
+Ошондой эле логикалык маанилерди салыштыруулардын натыйжасында алууга болот:
 
 ```js run
 let isGreater = 4 > 1;
 
-alert( isGreater ); // true (the comparison result is "yes")
+alert( isGreater ); // true (салыштыруунун натыйжасы - "ооба")
 ```
 
-We'll cover booleans more deeply in the chapter <info:logical-operators>.
+Биз логикалык маанилерди <info:logical-operators> бөлүмүндө тереңирээк караштырабыз.
 
 ## "null" мааниси
 
-The special `null` value does not belong to any of the types described above.
+Атайын `null` мааниси жогоруда сыпатталган түрлөрдүн бирине да таандык эмес.
 
-It forms a separate type of its own which contains only the `null` value:
+Ал `null` маанисин гана камтыган өзүнчө түрдү түзөт:
 
 ```js
 let age = null;
 ```
 
-In JavaScript, `null` is not a "reference to a non-existing object" or a "null pointer" like in some other languages.
+JavaScript'те `null` кээ бир башка тилдердегидей "болбогон маңызга шилтеме" же "нөлдүк көрсөткүч" болуп саналбайт.
 
-It's just a special value which represents "nothing", "empty" or "value unknown".
+Бул жөн гана "эч нерсе", "бош" же "белгисиз маанини" билдирген өзгөчө маани.
 
-The code above states that `age` is unknown.
+Жогорудагы коддо `age` белгисиз экени айтылат.
 
 ## "undefined" мааниси
 
-The special value `undefined` also stands apart. It makes a type of its own, just like `null`.
+Атайын `undefined` мааниси да өзүнчө турат. Ал `null` сыяктуу өзүнүн түрүн түзөт.
 
-The meaning of `undefined` is "value is not assigned".
+`undefined` "маани ыйгарылган эмес" дегенди билдирет.
 
-If a variable is declared, but not assigned, then its value is `undefined`:
+Эгерде өзгөрмө жарыяланып, бирок ага эч кандай маани ыйгарылбаса, анда анын мааниси `undefined` болот:
 
 ```js run
 let age;
 
-alert(age); // shows "undefined"
+alert(age); // "undefined" көрсөтөт
 ```
 
-Technically, it is possible to explicitly assign `undefined` to a variable:
+Техникалык жактан өзгөрмөгө `undefined` ыйгарылышы мүмкүн:
 
 ```js run
 let age = 100;
 
-// change the value to undefined
+// маанисин undefined'ге өзгөртөбүз
 age = undefined;
 
 alert(age); // "undefined"
 ```
 
-...But we don't recommend doing that. Normally, one uses `null` to assign an "empty" or "unknown" value to a variable, while `undefined` is reserved as a default initial value for unassigned things.
+...Бирок биз муну кылууга сунуштабайбыз. Адатта, өзгөрмөгө "бош" же "белгисиз" маани ыйгаруу үчүн `null` колдонулат, ал эми `undefined` ыйгарылбаган нерселер үчүн демейки баштапкы маани катары сакталат.
 
-## Objects and Symbols
+## Маңыздар (object) жана символдор (symbol)
 
-The `object` type is special.
+`object` -- өзгөчө түр.
 
 All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
 
