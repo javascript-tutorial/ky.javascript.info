@@ -1,5 +1,4 @@
-The answer is:
+Жооп:
 
-- `a = 4` (multiplied by 2)
-- `x = 5` (calculated as 1 + 4)
-
+- `a = 4` (2ге көбөйтүлдү)
+- `x = 5` (1 + 4 катары эсептелди)
