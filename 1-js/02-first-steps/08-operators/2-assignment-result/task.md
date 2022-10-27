@@ -1,10 +1,10 @@
-importance: 3
+маанилүүлүк: 3
 
 ---
 
-# Assignment result
+# Ыйгаруунун натыйжасы
 
-What are the values of `a` and `x` after the code below?
+Төмөндөгү мисалдагы кодду аткаргандан кийин `a` жана `x` өзгөрмөлөрү эмнеге барабар болот?
 
 ```js
 let a = 2;
