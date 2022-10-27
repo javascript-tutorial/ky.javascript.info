@@ -1,10 +1,10 @@
 # Берилмелер түрлөрү
 
-A value in JavaScript is always of a certain type. For example, a string or a number.
+JavaScript'теги маани ар дайым аныкталган түргө ээ болот. Мисалы, сап же сан.
 
-There are eight basic data types in JavaScript. Here, we'll cover them in general and in the next chapters we'll talk about each of them in detail.
+JavaScript'те сегиз негизги берилмелер түрлөрү бар. Бул бөлүмдө биз аларды жалпысынан карап чыгабыз, ал эми кийинки бөлүмдөрдө ар бири жөнүндө кененирээк сүйлөшөбүз.
 
-We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
+Биз өзгөрмөгө ар кандай берилмелер түрүн жарыялай алабыз. Ал жерде бир учурда сап, ал эми башка учурда - сан болушу мүмкүн:
 
 ```js
 // ката болбойт
@@ -12,7 +12,7 @@ let message = "салам";
 message = 123456;
 ```
 
-Programming languages that allow such things, such as JavaScript, are called "dynamically typed", meaning that there exist data types, but variables are not bound to any of them.
+Муну кылууга жол берген программалоо тилдери "динамикалык типтештирилген" деп аталат. Бул берилмелер түрлөрү бар экенин билдирет, бирок өзгөрмөлөр алардын эч бирине байланган эмес.
 
 ## Сан (number)
 
@@ -21,32 +21,32 @@ let n = 123;
 n = 12.345;
 ```
 
-The *number* type represents both integer and floating point numbers.
+*Number* түрү бүтүн жана жылышма чекиттүү сандарды билдирет.
 
-There are many operations for numbers, e.g. multiplication `*`, division `/`, addition `+`, subtraction `-`, and so on.
+Сандар үчүн көптөгөн операциялар бар, мис. көбөйтүү `*`, бөлүү `/`, кошуу `+`, кемитүү `-` ж.б.
 
-Besides regular numbers, there are so-called "special numeric values" which also belong to this data type: `Infinity`, `-Infinity` and `NaN`.
+Кадимки сандардан тышкары, "өзгөчө сандык маанилер" деп аталгандар бар, алар дагы бул берилмелер түрүнө таандык: `Infinity`, `-Infinity` жана `NaN`.
 
-- `Infinity` represents the mathematical [Infinity](https://en.wikipedia.org/wiki/Infinity) ∞. It is a special value that's greater than any number.
+- `Infinity` математикалык [чексиздикти](https://en.wikipedia.org/wiki/Infinity) ∞ билдирет. Бул кандайдыр бир сандан чоңураак өзгөчө маани.
 
-    We can get it as a result of division by zero:
+    Биз аны нөлгө бөлүүнүн натыйжасында ала алабыз:
 
     ```js run
     alert( 1 / 0 ); // Infinity
     ```
 
-    Or just reference it directly:
+    Же аны ачык белгилегенде:
 
     ```js run
     alert( Infinity ); // Infinity
     ```
-- `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+- `NaN` эсептөө катасын билдирет. Бул туура эмес же аныкталбаган математикалык операциянын натыйжасы, мисалы:
 
     ```js run
-    alert( "сан эмес" / 2 ); // NaN, such division is erroneous
+    alert( "сан эмес" / 2 ); // NaN, мындай бөлүү ката болуп эсептелет
     ```
 
-    `NaN` is sticky. Any further mathematical operation on `NaN` returns `NaN`:
+    `NaN` жабышкак болот. `NaN` менен ар кандай кийинки математикалык операция `NaN` кайтарат:
 
     ```js run
     alert( NaN + 1 ); // NaN
@@ -54,21 +54,21 @@ Besides regular numbers, there are so-called "special numeric values" which also
     alert( "сан эмес" / 2 - 1 ); // NaN
     ```
 
-    So, if there's a `NaN` somewhere in a mathematical expression, it propagates to the whole result (there's only one exception to that: `NaN ** 0` is `1`).
+    Демек, математикалык туюнтманын бир жеринде `NaN` бар болсо, ал бүт натыйжага таралат (бир гана бөтөнчө бар: `NaN ** 0` операциянын натыйжасы `1` болот).
 
-```smart header="Mathematical operations are safe"
-Doing maths is "safe" in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.
+```smart header="Математикалык операциялар коопсуздуу"
+JavaScript'те математикалык эсептөөлөр "коопсуздуу". Биз каалаган нерсени кыла алабыз: нөлгө бөлүү, сандык эмес саптарга сандар катары кайрылуу ж.б.
 
-The script will never stop with a fatal error ("die"). At worst, we'll get `NaN` as the result.
+Скрипт эч качан фаталдуу ката менен токтобойт ("өлбөйт"). Эң жаман учурда, биз аткаруунун натыйжасында `NaN` алабыз.
 ```
 
-Special numeric values formally belong to the "number" type. Of course they are not numbers in the common sense of this word.
+Атайын сандык маанилер "number" түрүнө таандык. Албетте, бул сөздүн адаттагы мааниде сандар эмес.
 
-We'll see more about working with numbers in the chapter <info:number>.
+Сандар менен иштөө тууралуу кененирээк <info:number> бөлүмүндө караштырабыз.
 
 ## BigInt [#bigint-type]
 
-In JavaScript, the "number" type cannot safely represent integer values larger than <code>(2<sup>53</sup>-1)</code> (that's `9007199254740991`), or less than <code>-(2<sup>53</sup>-1)</code> for negatives.
+JavaScript'те "number" түрү <code>(2<sup>53</sup>-1)</code>ден чоңураак (бул `9007199254740991`) же <code>-(2<sup>53</sup>-1)</code>ден кичине бүтүн сандык маанилерди билдире албайт. Бул алардын ички ишке ашыруусунан улам келип чыккан техникалык чектөөсү.
 
 To be really precise, the "number" type can store larger integers (up to <code>1.7976931348623157 * 10<sup>308</sup></code>), but outside of the safe integer range <code>±(2<sup>53</sup>-1)</code> there'll be a precision error, because not all digits fit into the fixed 64-bit storage. So an "approximate" value may be stored.
 
