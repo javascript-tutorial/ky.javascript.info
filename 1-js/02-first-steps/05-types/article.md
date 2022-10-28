@@ -214,17 +214,17 @@ alert(age); // "undefined"
 
 `object` -- өзгөчө түр.
 
-All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+Бардык башка түрлөр "примитивдүү" деп аталат, анткени алардын маанилери бир гана нерсени камтышы мүмкүн (сап, же сан, же башка нерсе болсун). Ал эми маңыздарда берилмелер жыйындысы же татаалыраак түзүмдөр сакталат. 
 
-Being that important, objects deserve a special treatment. We'll deal with them later in the chapter <info:object>, after we learn more about primitives.
+Маңыздар тилде маанилүү орунду ээлеп, өзгөчө көңүл бурууну талап кылат. Примитивдер жөнүндө көбүрөөк билип алгандан кийин биз алар жөнүндө <info:object> бөлүмүндө сүйлөшөбүз.
 
-The `symbol` type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.
+`symbol` түрү маңыздар үчүн уникалдуу идентификаторлорду түзүү үчүн колдонулат. Биз аны бул жерде толук болушу үчүн айтып өтүшүбүз керек, бул түрдү маңыздардан кийин изилдейбиз.
 
-## The typeof operator [#type-typeof]
+## typeof оператору [#type-typeof]
 
-The `typeof` operator returns the type of the argument. It's useful when we want to process values of different types differently or just want to do a quick check.
+`typeof` оператору аргументинин түрүн кайтарат. Бул ар кандай түрдөгү маанилерди башкача иштеткибиз келгенде же жөн гана тез текшерүүнү каалаганыбызда пайдалуу.
 
-A call to `typeof x` returns a string with the type name:
+`typeof x` чалуусу түрү аталышы менен сапты кайтарат:
 
 ```js
 typeof undefined // "undefined"
@@ -252,41 +252,42 @@ typeof alert // "function"  (3)
 */!*
 ```
 
-The last three lines may need additional explanation:
+Акыркы үч сап кошумча түшүндүрмөлөрдү талап кылышы мүмкүн:
 
-1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
-2. The result of `typeof null` is `"object"`. That's an officially recognized error in `typeof`, coming from very early days of JavaScript and kept for compatibility. Definitely, `null` is not an object. It is a special value with a separate type of its own. The behavior of `typeof` is wrong here.
-3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That also comes from the early days of JavaScript. Technically, such behavior isn't correct, but can be convenient in practice.
+1. `Math` — бул математикалык операцияларды камсыз кылуучу камтылган маңыз. Биз аны <info:number> бөлүмүндө үйрөнөбүз. Бул жерде ал бир маңыздын мисалы катары колдонулат.
+2. `typeof null` чалуусунун натыйжасы `"object"` болуп саналат. Бул JavaScript'тин эң алгачкы күндөрүнөн келип чыккан жана шайкештик үчүн сакталган "typeof" катасы расмий түрдө таанылган. Албетте, `null` маңыз болуп саналбайт. Бул өзүнчө түрү бар өзгөчө маани. Бул жерде `typeof` кылык-жоругу туура эмес.
+3. `typeof alert` чалуусу `"function"` кайтарат, анткени `alert` функция болуп саналат. 
+4. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That also comes from the early days of JavaScript. Technically, such behavior isn't correct, but can be convenient in practice.
 
-```smart header="The `typeof(x)` syntax"
-You may also come across another syntax: `typeof(x)`. It's the same as `typeof x`.
+```smart header="`typeof(x)` синтаксиси"
+Сиз башка синтаксиске туш болушуңуз мүмкүн: `typeof(x)`. Ал `typeof x` менен бирдей.
 
-To put it clear: `typeof` is an operator, not a function. The parentheses here aren't a part of `typeof`. It's the kind of parentheses used for mathematical grouping.
+Түшүнүктүү болуу үчүн: `typeof` функция эмес, бул оператор. Бул жердеги кашаалар `typeof` бөлүгү эмес. Бул математикалык топтоо үчүн колдонулган кашаалардын түрү.
 
-Usually, such parentheses contain a mathematical expression, such as `(2 + 2)`, but here they contain only one argument `(x)`. Syntactically, they allow to avoid a space between the `typeof` operator and its argument, and some people like it.
+Адатта, мындай кашаалар `(2 + 2)` сыяктуу математикалык туюнтмаларды камтыйт, бирок бул жерде алар бир гана `(x)` аргументин камтыйт. Бул кашаалар `typeof` оператору менен анын аргументинин ортосундагы аралыкты калтырып кетүүгө мүмкүндүк берет, жана бул кээ бир адамдарга жагат.
 
-Some people prefer `typeof(x)`, although the `typeof x` syntax is much more common.
+Кээ бир адамдар `typeof(x)` артык көрүшөт, бирок `typeof x` синтаксиси кыйла кеңири таралган.
 ```
 
-## Summary
+## Корутунду
 
-There are 8 basic data types in JavaScript.
+JavaScript'те 8 негизги берилмелер түрлөрү бар.
 
-- Seven primitive data types:
-    - `number` for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.
-    - `bigint` for integer numbers of arbitrary length.
-    - `string` for strings. A string may have zero or more characters, there's no separate single-character type.
-    - `boolean` for `true`/`false`.
-    - `null` for unknown values -- a standalone type that has a single value `null`.
-    - `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
-    - `symbol` for unique identifiers.
-- And one non-primitive data type:
-    - `object` for more complex data structures.
+- Жети примитивдүү берилмелер түрлөрү:
+    - `number` ар кандай сандар үчүн: бүтүн же жылышма чекиттүү сандар; бүтүн сандар <code>±(2<sup>53</sup>-1)</code> менен чектелген.
+    - `bigint` ыктыярдуу узундуктагы бүтүн сандар үчүн.
+    - `string` саптар үчүн. Сапта нөл же андан көп белги болушу мүмкүн, өзүнчө бир белгиден турган түр жок.
+    - `boolean` `true`/`false` үчүн.
+    - `null` белгисиз маанилер үчүн -- бир `null` мааниси бар бөлөк түрү.
+    - `undefined` ыйгарылбаган маанилер үчүн -- бир `undefined` мааниси бар бөлөк түрү.
+    - `symbol` уникалдуу идентификаторлор үчүн.
+- Жана бир примитивдүү эмес берилмелер түрү:
+    - `object` татаалыраак берилмелер түзүмдөрү үчүн.
 
-The `typeof` operator allows us to see which type is stored in a variable.
+`typeof` оператору өзгөрмөдө кайсы берилмелер түрү сакталганын көрүүгө мүмкүндүк берет.
 
-- Usually used as `typeof x`, but `typeof(x)` is also possible.
-- Returns a string with the name of the type, like `"string"`.
-- For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
+- Адатта `typeof x` катары колдонулат, бирок `typeof(x)` да ыктымал.
+- Түрдүн аталышы менен сапты кайтарат. Мисалы, `"string"`.
+- `null` үчүн `"object"` кайтарылат -- бул тилдеги ката, чынында бул маңыз эмес.
 
-In the next chapters, we'll concentrate on primitive values and once we're familiar with them, we'll move on to objects.
+Кийинки бөлүмдөрдө примитивдүү маанилерге көңүл салабыз, алар менен таанышкандан кийин маңыздарга өтөбүз.
