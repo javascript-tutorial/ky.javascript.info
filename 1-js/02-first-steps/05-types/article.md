@@ -256,8 +256,7 @@ typeof alert // "function"  (3)
 
 1. `Math` — бул математикалык операцияларды камсыз кылуучу камтылган маңыз. Биз аны <info:number> бөлүмүндө үйрөнөбүз. Бул жерде ал бир маңыздын мисалы катары колдонулат.
 2. `typeof null` чалуусунун натыйжасы `"object"` болуп саналат. Бул JavaScript'тин эң алгачкы күндөрүнөн келип чыккан жана шайкештик үчүн сакталган "typeof" катасы расмий түрдө таанылган. Албетте, `null` маңыз болуп саналбайт. Бул өзүнчө түрү бар өзгөчө маани. Бул жерде `typeof` кылык-жоругу туура эмес.
-3. `typeof alert` чалуусу `"function"` кайтарат, анткени `alert` функция болуп саналат. 
-4. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That also comes from the early days of JavaScript. Technically, such behavior isn't correct, but can be convenient in practice.
+3. `typeof alert` чалуусу `"function"` кайтарат, анткени `alert` функция болуп саналат. Биз кийинки бөлүмдөрдө функцияларды изилдейбиз, ошондо JavaScript'те атайын "function" түрү жок экенин көрөбүз. Функциялар маңыз түрүнө таандык. Бирок `typeof` аларды өзгөчө жол менен иштетип, `"function"` кайтарып берет. Бул деле JavaScript'тин алгачкы күндөрүнөн келип чыккан. Техникалык жактан мындай кылык-жорук туура эмес, бирок тажрыйбада ыңгайлуу болушу мүмкүн.
 
 ```smart header="`typeof(x)` синтаксиси"
 Сиз башка синтаксиске туш болушуңуз мүмкүн: `typeof(x)`. Ал `typeof x` менен бирдей.
