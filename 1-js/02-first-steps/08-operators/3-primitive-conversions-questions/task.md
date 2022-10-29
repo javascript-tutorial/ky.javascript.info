@@ -2,9 +2,9 @@ importance: 5
 
 ---
 
-# Type conversions
+# Түрлөрдү айландыруу
 
-What are results of these expressions?
+Бул туюнтмалардын натыйжасы кандай?
 
 ```js no-beautify
 "" + 1 + 0
@@ -23,4 +23,4 @@ undefined + 1
 " \t \n" - 2
 ```
 
-Think well, write down and then compare with the answer.
+Жакшылап ойлонуп, жоопторду жазып алып, жоопту салыштырыңыз.
