@@ -1,32 +1,32 @@
-The reason is that prompt returns user input as a string.
+Себеби, сурам терезеси колдонуучунун киргизүүсүн сап катары кайтарат.
 
-So variables have values `"1"` and `"2"` respectively.
+Демек, өзгөрмөлөр тиешелүүлүгүнө жараша `"1"` жана `"2"` маанилерин алышат.
 
 ```js run
-let a = "1"; // prompt("First number?", 1);
-let b = "2"; // prompt("Second number?", 2);
+let a = "1"; // prompt("Биринчи сан?", 1);
+let b = "2"; // prompt("Экинчи сан?", 2);
 
 alert(a + b); // 12
 ```
 
-What we should do is to convert strings to numbers before `+`. For example, using `Number()` or prepending them with `+`.
+Биз `+` операторун колдонуудан мурун саптарды сандарга айландырышыбыз керек. Мисалы, `Number()` же алардын алдына `+` коюу менен.
 
-For example, right before `prompt`:
+Плюсту `+` түздөн-түз `prompt`'тун алдына коюуга болот:
 
 ```js run
-let a = +prompt("First number?", 1);
-let b = +prompt("Second number?", 2);
+let a = +prompt("Биринчи сан?", 1);
+let b = +prompt("Экинчи сан?", 2);
 
 alert(a + b); // 3
 ```
 
-Or in the `alert`:
+Же `alert`'тин ичине:
 
 ```js run
-let a = prompt("First number?", 1);
-let b = prompt("Second number?", 2);
+let a = prompt("Биринчи сан?", 1);
+let b = prompt("Экинчи сан?", 2);
 
 alert(+a + +b); // 3
 ```
 
-Using both unary and binary `+` in the latest code. Looks funny, doesn't it?
+Акыркы вариантта унардык жана бинардык `+` чогуу колдонулат. Укмуштай көрүнөт, туурабы?
