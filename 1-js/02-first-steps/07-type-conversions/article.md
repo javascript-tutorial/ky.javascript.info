@@ -1,4 +1,4 @@
-# Type Conversions
+# Түрлөрдү айландыруу
 
 Most of the time, operators and functions automatically convert the values given to them to the right type.
 
@@ -12,7 +12,7 @@ In this chapter, we won't cover objects. For now, we'll just be talking about pr
 Later, after we learn about objects, in the chapter <info:object-toprimitive> we'll see how objects fit in.
 ```
 
-## String Conversion
+## Сапка айландыруу
 
 String conversion happens when we need the string form of a value.
 
@@ -25,21 +25,21 @@ let value = true;
 alert(typeof value); // boolean
 
 *!*
-value = String(value); // now value is a string "true"
+value = String(value); // эми value - бул "true" сабы
 alert(typeof value); // string
 */!*
 ```
 
 String conversion is mostly obvious. A `false` becomes `"false"`, `null` becomes `"null"`, etc.
 
-## Numeric Conversion
+## Санга айландыруу
 
 Numeric conversion happens in mathematical functions and expressions automatically.
 
 For example, when division `/` is applied to non-numbers:
 
 ```js run
-alert( "6" / "2" ); // 3, strings are converted to numbers
+alert( "6" / "2" ); // 3, саптар сандарга айланды
 ```
 
 We can use the `Number(value)` function to explicitly convert a `value` to a number:
@@ -48,7 +48,7 @@ We can use the `Number(value)` function to explicitly convert a `value` to a num
 let str = "123";
 alert(typeof str); // string
 
-let num = Number(str); // becomes a number 123
+let num = Number(str); // 123 санына айланат
 
 alert(typeof num); // number
 ```
@@ -65,18 +65,18 @@ alert(age); // NaN, conversion failed
 
 Numeric conversion rules:
 
-| Value |  Becomes... |
+| Маани |  Натыйжа |
 |-------|-------------|
 |`undefined`|`NaN`|
 |`null`|`0`|
 |<code>true&nbsp;and&nbsp;false</code> | `1` and `0` |
 | `string` | Whitespaces (includes spaces, tabs `\t`, newlines `\n` etc.) from the start and end are removed. If the remaining string is empty, the result is `0`. Otherwise, the number is "read" from the string. An error gives `NaN`. |
 
-Examples:
+Мисалдар:
 
 ```js run
 alert( Number("   123   ") ); // 123
-alert( Number("123z") );      // NaN (error reading a number at "z")
+alert( Number("123z") );      // NaN ("z" белгинин ордунда санды окуу катасы)
 alert( Number(true) );        // 1
 alert( Number(false) );       // 0
 ```
@@ -85,24 +85,24 @@ Please note that `null` and `undefined` behave differently here: `null` becomes 
 
 Most mathematical operators also perform such conversion, we'll see that in the next chapter.
 
-## Boolean Conversion
+## Логикалык түргө айландыруу
 
-Boolean conversion is the simplest one.
+Логикалык айландыруу эң жөнөкөй.
 
 It happens in logical operations (later we'll meet condition tests and other similar things) but can also be performed explicitly with a call to `Boolean(value)`.
 
-The conversion rule:
+Айландырууну эрежелери:
 
 - Values that are intuitively "empty", like `0`, an empty string, `null`, `undefined`, and `NaN`, become `false`.
-- Other values become `true`.
+- Башка маанилер `true` болуп калат.
 
-For instance:
+Мисалы үчүн:
 
 ```js run
 alert( Boolean(1) ); // true
 alert( Boolean(0) ); // false
 
-alert( Boolean("hello") ); // true
+alert( Boolean("салам") ); // true
 alert( Boolean("") ); // false
 ```
 
@@ -115,7 +115,7 @@ alert( Boolean(" ") ); // spaces, also true (any non-empty string is true)
 ```
 ````
 
-## Summary
+## Корутунду
 
 The three most widely used type conversions are to string, to number, and to boolean.
 
@@ -125,7 +125,7 @@ The three most widely used type conversions are to string, to number, and to boo
 
 The conversion follows the rules:
 
-| Value |  Becomes... |
+| Маани |  Натыйжа |
 |-------|-------------|
 |`undefined`|`NaN`|
 |`null`|`0`|
@@ -136,7 +136,7 @@ The conversion follows the rules:
 
 Follows the rules:
 
-| Value |  Becomes... |
+| Маани |  Натыйжа |
 |-------|-------------|
 |`0`, `null`, `undefined`, `NaN`, `""` |`false`|
 |any other value| `true` |
