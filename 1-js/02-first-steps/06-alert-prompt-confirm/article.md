@@ -1,105 +1,105 @@
-# Interaction: alert, prompt, confirm
+# Өз ара аракет: alert, prompt, confirm
 
-As we'll be using the browser as our demo environment, let's see a couple of functions to interact with the user: `alert`, `prompt` and `confirm`.
+Биз браузерди демо-чөйрө катары колдонгондуктан, келгиле, колдонуучу менен өз ара аракеттенүү үчүн бир нече функцияларды карап көрөлү: `alert`, `prompt` жана `confirm`.
 
 ## alert
 
-This one we've seen already. It shows a message and waits for the user to press "OK".
+Биз бул функцияны көргөнбүз. Ал билдирүүнү көрсөтөт жана колдонуучунун "OK" баскычын басышын күтөт.
 
-For example:
+Мисалы:
 
 ```js run
-alert("Hello");
+alert("Салам");
 ```
 
-The mini-window with the message is called a *modal window*. The word "modal" means that the visitor can't interact with the rest of the page, press other buttons, etc, until they have dealt with the window. In this case -- until they press "OK".
+Билдирүүсү бар кичи терезе *модалдык терезе* деп аталат. "Модалдык" сөзү колдонуучу терезе менен иштешмейинче баракчанын калган бөлүгү менен иштеше албастыгын, башка баскычтарды баса албастыгын ж.б.у.с. билдирет.
 
 ## prompt
 
-The function `prompt` accepts two arguments:
+`prompt` функциясы эки аргументти кабыл алат:
 
 ```js no-beautify
 result = prompt(title, [default]);
 ```
 
-It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel.
+Ал текст билдирүүсү бар модалдык терезени, келүүчү текст киргизе ала турган талаасын жана OK/Жокко чыгаруу баскычтарын көрсөтөт.
 
 `title`
-: The text to show the visitor.
+: Келүүчүгө көрсөтүү үчүн текст.
 
 `default`
-: An optional second parameter, the initial value for the input field.
+: Кошумча экинчи параметр, текст киргизүү талаасы үчүн баштапкы маани.
 
-```smart header="The square brackets in syntax `[...]`"
-The square brackets around `default` in the syntax above denote that the parameter is optional, not required.
+```smart header="`[...]` синтаксисиндеги чарчы кашаалар"
+Жогорудагы синтаксистеги `default` тегерегиндеги чарчы кашаалар параметр милдеттүү эмес, талап кылынбаган экенин билдирет.
 ```
 
-The visitor can type something in the prompt input field and press OK. Then we get that text in the `result`. Or they can cancel the input by pressing Cancel or hitting the `key:Esc` key, then we get `null` as the `result`.
+Келүүчү киргизүү талаасына бир нерсени терип, OK баскычын баса алат. Киргизилген текст `result` өзгөрмөсүнө ыйгарылат. Колдонуучу ошондой эле "Жокко чыгаруу" баскычын басуу же `key:Esc` баскычын басуу менен киргизүүнү жокко чыгара алат. Бул учурда `result` өзгөрмөсү `null` маанисине ээ болот.
 
-The call to `prompt` returns the text from the input field or `null` if the input was canceled.
+`prompt` чакыруусу киргизүү талаасынан текстти же киргизүү жокко чыгарылган болсо `null` кайтарат.
 
-For instance:
+Мисалы үчүн:
 
 ```js run
-let age = prompt('How old are you?', 100);
+let age = prompt('Сиз канча жаштасыз?', 100);
 
-alert(`You are ${age} years old!`); // You are 100 years old!
+alert(`Сиз ${age} жаштасыз!`); // Сиз 100 жаштасыз!
 ```
 
-````warn header="In IE: always supply a `default`"
-The second parameter is optional, but if we don't supply it, Internet Explorer will insert the text `"undefined"` into the prompt.
+````warn header="IE'де: ар дайым баштыпкы `default` маанисин белгилеңиз"
+Экинчи параметр кошумча болуп саналат, бирок биз аны белгилебесек, Internet Explorer текст киргизүү талаасына `"undefined"` сабын киргизет.
 
-Run this code in Internet Explorer to see:
+Көрүү үчүн бул кодду Internet Explorer'де жүргүзүңүз:
 
 ```js run
 let test = prompt("Test");
 ```
 
-So, for prompts to look good in IE, we recommend always providing the second argument:
+Ошентип, IE'де модалдык терезе жакшы көрүнүшү үчүн, биз ар дайым экинчи аргументти белгилөөнү сунуштайбыз:
 
 ```js run
-let test = prompt("Test", ''); // <-- for IE
+let test = prompt("Test", ''); // <-- IE үчүн
 ```
 ````
 
 ## confirm
 
-The syntax:
+Синтаксиси:
 
 ```js
 result = confirm(question);
 ```
 
-The function `confirm` shows a modal window with a `question` and two buttons: OK and Cancel.
+`confirm` функциясы `question` суроо тексти жана эки баскычы бар модалдык терезени көрсөтөт: OK жана Жокко чыгаруу.
 
-The result is `true` if OK is pressed and `false` otherwise.
+Натыйжасы OK басылса `true`, башка учурларда `false` болот.
 
-For example:
+Мисалы:
 
 ```js run
-let isBoss = confirm("Are you the boss?");
+let isBoss = confirm("Сиз башчысызбы?");
 
-alert( isBoss ); // true if OK is pressed
+alert( isBoss ); // true, эгерде OK басылса
 ```
 
-## Summary
+## Корутунду
 
-We covered 3 browser-specific functions to interact with visitors:
+Биз келүүчүлөр менен өз ара аракеттенүүү үчүн 3 браузердин функцияларын үйрөндүк:
 
 `alert`
-: shows a message.
+: билдирүү көрсөтөт.
 
 `prompt`
-: shows a message asking the user to input text. It returns the text or, if Cancel button or `key:Esc` is clicked, `null`.
+: билдирүү көрсөтөт жана колдонуучудан текст киргизүүнү сурайт. Терилген текстти кайтарат, же "Жокко чыгаруу" менен `key:Esc` баскычтары басылса `null` кайтарат.
 
 `confirm`
-: shows a message and waits for the user to press "OK" or "Cancel". It returns `true` for OK and `false` for Cancel/`key:Esc`.
+: билдирүү көрсөтөт жана колдонуучунун "OK" же "Жокко чыгаруу" баскычын басышын күтөт. Ал OK үчүн `true` жана "Жокко чыгаруу"/`key:Esc` үчүн `false` кайтарат.
 
-All these methods are modal: they pause script execution and don't allow the visitor to interact with the rest of the page until the window has been dismissed.
+Бул ыкмалардын баары модалдуу: алар скрипттин аткарылышын токтотуп, терезе жабылмайынча колдонуучуга баракчанын калган бөлүгү менен иштешүүгө жол бербейт.
 
-There are two limitations shared by all the methods above:
+Жогорудагы бардык ыкмалар менен байланышкан эки чектөө бар:
 
-1. The exact location of the modal window is determined by the browser. Usually, it's in the center.
-2. The exact look of the window also depends on the browser. We can't modify it.
+1. Модалдык терезенин так жайгашкан жерин браузер аныктайт. Адатта, ал борбордо жайгашкан.
+2. Терезенин так көрүнүшү браузерден да көз каранды. Биз аны өзгөртө албайбыз.
 
-That is the price for simplicity. There are other ways to show nicer windows and richer interaction with the visitor, but if "bells and whistles" do not matter much, these methods work just fine.
+Жөнөкөйлүктүн баасы ушундай. Келүүчү менен өз ара аракеттенүү үчүн бай функционалдуураак жагымдуураак терезелерди көрсөтүүнүн башка жолдору бар, бирок "коңгуроолор жана ышкырыктар" маанилүү болбосо, бул ыкмалар жакшы иштейт.
