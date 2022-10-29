@@ -1,18 +1,18 @@
-importance: 5
+маанилүүлүк: 5
 
 ---
 
-# Fix the addition
+# Кошууну оңдоңуз
 
-Here's a code that asks the user for two numbers and shows their sum.
+Төмөндө колдонуучудан эки санды сураган жана алардын суммасын көрсөткөн код келтирилген.
 
-It works incorrectly. The output in the example below is `12` (for default prompt values).
+Ал туура эмес иштейт. Мисалдагы код `12` чыгарат (талаалардын демейки мааниси үчүн).
 
-Why? Fix it. The result should be `3`.
+Ката эмнеде? Аны оңдоңуз. Натыйжасы `3` болушу керек.
 
 ```js run
-let a = prompt("First number?", 1);
-let b = prompt("Second number?", 2);
+let a = prompt("Биринчи сан?", 1);
+let b = prompt("Экинчи сан?", 2);
 
 alert(a + b); // 12
 ```
