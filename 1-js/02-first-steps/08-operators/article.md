@@ -1,6 +1,6 @@
-# Basic operators, maths
+# Базалык операторлор, математика
 
-We know many operators from school. They are things like addition `+`, multiplication `*`, subtraction `-`, and so on.
+Көптөгөн операторлор бизге мектептен таанымал, булар кошуу `+`, көбөйтүү `*`, кемитүү `-` ж.б.
 
 In this chapter, we’ll start with simple operators, then concentrate on JavaScript-specific aspects, not covered by school arithmetic.
 
