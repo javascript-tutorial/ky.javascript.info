@@ -2,11 +2,11 @@
 
 Көптөгөн операторлор бизге мектептен таанымал, булар кошуу `+`, көбөйтүү `*`, кемитүү `-` ж.б.
 
-In this chapter, we’ll start with simple operators, then concentrate on JavaScript-specific aspects, not covered by school arithmetic.
+Бул бөлүмдө биз жөнөкөй операторлордон баштайбыз, андан кийин мектептеги арифметикада окутулбаган JavaScript спецификалык аспектилерине топтолобуз.
 
-## Terms: "unary", "binary", "operand"
+## Терминдер: "унардык", "бинардык", "операнд"
 
-Before we move on, let's grasp some common terminology.
+Улантуудан мурун, кээ бир жалпы терминологияны түшүнүп алалы.
 
 - *An operand* -- is what operators are applied to. For instance, in the multiplication of `5 * 2` there are two operands: the left operand is `5` and the right operand is `2`. Sometimes, people call these "arguments" instead of "operands".
 - An operator is *unary* if it has a single operand. For example, the unary negation `-` reverses the sign of a number:
@@ -17,50 +17,50 @@ Before we move on, let's grasp some common terminology.
     *!*
     x = -x;
     */!*
-    alert( x ); // -1, unary negation was applied
+    alert( x ); // -1, унардык минус колдонулду
     ```
 - An operator is *binary* if it has two operands. The same minus exists in binary form as well:
 
     ```js run no-beautify
     let x = 1, y = 3;
-    alert( y - x ); // 2, binary minus subtracts values
+    alert( y - x ); // 2, бинардык минус маанилерди кемитет
     ```
 
     Formally, in the examples above we have two different operators that share the same symbol: the negation operator, a unary operator that reverses the sign, and the subtraction operator, a binary operator that subtracts one number from another.
 
-## Maths
+## Математика
 
-The following math operations are supported:
+Төмөнкү математикалык операциялар колдоого алынат:
 
-- Addition `+`,
-- Subtraction `-`,
-- Multiplication `*`,
-- Division `/`,
-- Remainder `%`,
-- Exponentiation `**`.
+- Кошуу `+`,
+- Кемитүү `-`,
+- Көбөйтүү `*`,
+- Бөлүү `/`,
+- Бөлүүнүн калдыгын алуу `%`,
+- Даражага көтөрүү `**`.
 
-The first four are straightforward, while `%` and `**` need a few words about them.
+Алгачкы төрт оператор түшүнүктүү, бирок `%` жана `**` жөнүндө бир нече сөз айтуу керек.
 
-### Remainder %
+### Бөлүүнүн калдыгы %
 
-The remainder operator `%`, despite its appearance, is not related to percents.
+Бөлүүнүн калдыгын алуунун оператору `%`, көрүнүшүнө карабастан, пайыздар менен байланышпайт.
 
-The result of `a % b` is the [remainder](https://en.wikipedia.org/wiki/Remainder) of the integer division of `a` by `b`.
+`a % b` натыйжасы - бул `a` менен `b`'нын бүтүн сандык бөлүүнүн [калдыгы](https://en.wikipedia.org/wiki/Remainder).
 
-For instance:
+Мисалы үчүн:
 
 ```js run
-alert( 5 % 2 ); // 1, a remainder of 5 divided by 2
-alert( 8 % 3 ); // 2, a remainder of 8 divided by 3
+alert( 5 % 2 ); // 1, 5ти 2ге бөлүүнүн калдыгы
+alert( 8 % 3 ); // 2, 8ди 3кө бөлүүнүн калдыгы
 ```
 
-### Exponentiation **
+### Даражага көтөрүү **
 
-The exponentiation operator `a ** b` raises `a` to the power of `b`.
+`a ** b` туюнтмасында даражага көтөрүү оператору `a`'ны өзүнө `b` эсеге көбөйтөт.
 
-In school maths, we write that as a<sup>b</sup>.
+Мектепте биз муну a<sup>b</sup> деп жазабыз.
 
-For instance:
+Мисалы үчүн:
 
 ```js run
 alert( 2 ** 2 ); // 2² = 4
@@ -68,72 +68,72 @@ alert( 2 ** 3 ); // 2³ = 8
 alert( 2 ** 4 ); // 2⁴ = 16
 ```
 
-Just like in maths, the exponentiation operator is defined for non-integer numbers as well. 
+Математикадагыдай эле, даражага көтөрүү операторун бөлчөктүк сандар үчүн да колдонууга болот.
 
-For example, a square root is an exponentiation by ½:
+Мисалы, чарчы тамыр бул ½ даражага көтөрүүсү:
 
 ```js run
-alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root)
-alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
+alert( 4 ** (1/2) ); // 2 (1/2 даражасы чарчы тамыр менен бирдей)
+alert( 8 ** (1/3) ); // 2 (1/3 даражасы кубдук тамыр менен бирдей)
 ```
 
 
-## String concatenation with binary +
+## Бинардык + менен саптарды кошуу
 
-Let's meet features of JavaScript operators that are beyond school arithmetics.
+Келгиле, мектеп арифметикасынын алкагына кирбеген JavaScript операторлорунун өзгөчөлүктөрү менен таанышалы.
 
-Usually, the plus operator `+` sums numbers.
+Адатта, плюс оператору `+` сандарды кошот.
 
-But, if the binary `+` is applied to strings, it merges (concatenates) them:
+Бирок, бинардык `+` саптарга колдонулса, ал аларды бириктирет:
 
 ```js
-let s = "my" + "string";
-alert(s); // mystring
+let s = "менин" + "сабым";
+alert(s); // менинсабым
 ```
 
-Note that if any of the operands is a string, then the other one is converted to a string too.
+Көңүл буруңуз, эгерде операнддардын бири сап болсо, башкасы ошондой эле сапка айландырылат.
 
-For example:
+Мисалы:
 
 ```js run
 alert( '1' + 2 ); // "12"
 alert( 2 + '1' ); // "21"
 ```
 
-See, it doesn't matter whether the first operand is a string or the second one.
+Караңыз, биринчи операнд саппы же экинчисиби, айырмасы жок.
 
-Here's a more complex example:
+Мына татаалыраак мисал:
 
 ```js run
-alert(2 + 2 + '1' ); // "41" and not "221"
+alert(2 + 2 + '1' ); // "41", "221" эмес
 ```
 
 Here, operators work one after another. The first `+` sums two numbers, so it returns `4`, then the next `+` adds the string `1` to it, so it's like `4 + '1' = '41'`.
 
 ```js run
-alert('1' + 2 + 2); // "122" and not "14"
+alert('1' + 2 + 2); // "122", "14" эмес
 ```
 Here, the first operand is a string, the compiler treats the other two operands as strings too. The `2` gets concatenated to `'1'`, so it's like `'1' + 2 = "12"` and `"12" + 2 = "122"`.
 
 The binary `+` is the only operator that supports strings in such a way. Other arithmetic operators work only with numbers and always convert their operands to numbers.
 
-Here's the demo for subtraction and division:
+Мисалы, кемитүү жана бөлүү:
 
 ```js run
-alert( 6 - '2' ); // 4, converts '2' to a number
-alert( '6' / '2' ); // 3, converts both operands to numbers
+alert( 6 - '2' ); // 4, '2' санга айландырылат
+alert( '6' / '2' ); // 3, эки операнд тең сапка айландырылат
 ```
 
-## Numeric conversion, unary +
+## Санга келтирүү, унардык +
 
-The plus `+` exists in two forms: the binary form that we used above and the unary form.
+Плюс `+` эки формада бар: биз жогоруда колдонгон бинардык форма жана унардык форма.
 
 The unary plus or, in other words, the plus operator `+` applied to a single value, doesn't do anything to numbers. But if the operand is not a number, the unary plus converts it into a number.
 
-For example:
+Мисалы:
 
 ```js run
-// No effect on numbers
+// Сандарга таасир этпейт
 let x = 1;
 alert( +x ); // 1
 
@@ -141,26 +141,26 @@ let y = -2;
 alert( +y ); // -2
 
 *!*
-// Converts non-numbers
+// Сандык эмес маанилерди айландырат
 alert( +true ); // 1
 alert( +"" );   // 0
 */!*
 ```
 
-It actually does the same thing as `Number(...)`, but is shorter.
+Бул чындыгында `Number(...)` менен бирдей, бирок көрүнүшү кыскараак.
 
 The need to convert strings to numbers arises very often. For example, if we are getting values from HTML form fields, they are usually strings. What if we want to sum them?
 
-The binary plus would add them as strings:
+Бинардык плюс аларды сап катары кошот:
 
 ```js run
 let apples = "2";
 let oranges = "3";
 
-alert( apples + oranges ); // "23", the binary plus concatenates strings
+alert( apples + oranges ); // "23", бинардык плюс саптарды бириктирет
 ```
 
-If we want to treat them as numbers, we need to convert and then sum them:
+Эгерде биз аларды сандар катары колдонууну кааласак, анда биз аларды айландырып, андан кийин суммалашыбыз керек:
 
 ```js run
 let apples = "2";
@@ -171,7 +171,7 @@ let oranges = "3";
 alert( +apples + +oranges ); // 5
 */!*
 
-// the longer variant
+// узунураак вариант
 // alert( Number(apples) + Number(oranges) ); // 5
 ```
 
@@ -179,7 +179,7 @@ From a mathematician's standpoint, the abundance of pluses may seem strange. But
 
 Why are unary pluses applied to values before the binary ones? As we're going to see, that's because of their *higher precedence*.
 
-## Operator precedence
+## Операторлордун приоритети
 
 If an expression has more than one operator, the execution order is defined by their *precedence*, or, in other words, the default priority order of operators.
 
@@ -191,23 +191,23 @@ There are many operators in JavaScript. Every operator has a corresponding prece
 
 Here's an extract from the [precedence table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (you don't need to remember this, but note that unary operators are higher than corresponding binary ones):
 
-| Precedence | Name | Sign |
+| Приоритет | Аталыш | Белги |
 |------------|------|------|
 | ... | ... | ... |
-| 14 | unary plus | `+` |
-| 14 | unary negation | `-` |
-| 13 | exponentiation | `**` |
-| 12 | multiplication | `*` |
-| 12 | division | `/` |
-| 11 | addition | `+` |
-| 11 | subtraction | `-` |
+| 14 | унардык плюс | `+` |
+| 14 | унардык минус | `-` |
+| 13 | даражага көтөрүү | `**` |
+| 12 | көбөйтүү | `*` |
+| 12 | бөлүү | `/` |
+| 11 | кошуу | `+` |
+| 11 | кемитүү | `-` |
 | ... | ... | ... |
-| 2 | assignment | `=` |
+| 2 | ыйрагуу | `=` |
 | ... | ... | ... |
 
 As we can see, the "unary plus" has a priority of `14` which is higher than the `11` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
 
-## Assignment
+## Ыйгаруу
 
 Let's note that an assignment `=` is also an operator. It is listed in the precedence table with the very low priority of `2`.
 
@@ -219,7 +219,7 @@ let x = 2 * 2 + 1;
 alert( x ); // 5
 ```
 
-### Assignment = returns a value
+### Ыйгаруу = маанини кайтарат
 
 The fact of `=` being an operator, not a "magical" language construct has an interesting implication.
 
@@ -247,7 +247,7 @@ Funny code, isn't it? We should understand how it works, because sometimes we se
 
 Although, please don't write the code like that. Such tricks definitely don't make code clearer or readable.
 
-### Chaining assignments
+### Чынжырча ыйгаруу
 
 Another interesting feature is the ability to chain assignments:
 
@@ -278,7 +278,7 @@ That's easier to read, especially when eye-scanning the code fast.
 
 We often need to apply an operator to a variable and store the new result in that same variable.
 
-For example:
+Мисалы:
 
 ```js
 let n = 2;
@@ -308,26 +308,26 @@ n *= 3 + 5; // right part evaluated first, same as n *= 8
 alert( n ); // 16  
 ```
 
-## Increment/decrement
+## Инкремент/декремент
 
 <!-- Can't use -- in title, because the built-in parser turns it into a 'long dash' – -->
 
 Increasing or decreasing a number by one is among the most common numerical operations.
 
-So, there are special operators for it:
+Ал үчүн атайын операторлор бар:
 
-- **Increment** `++` increases a variable by 1:
+- **Инкремент** `++` өзгөрмөнү 1ге көбөйтөт:
 
     ```js run no-beautify
     let counter = 2;
-    counter++;        // works the same as counter = counter + 1, but is shorter
+    counter++;        // counter = counter + 1 сыяктуу иштейт, бирок жазуусу кыскараак
     alert( counter ); // 3
     ```
-- **Decrement** `--` decreases a variable by 1:
+- **Декремент** `--` өзгөрмөнү 1ге азайтат:
 
     ```js run no-beautify
     let counter = 2;
-    counter--;        // works the same as counter = counter - 1, but is shorter
+    counter--;        // counter = counter - 1 сыяктуу иштейт, бирок жазуусу кыскараак
     alert( counter ); // 1
     ```
 
@@ -346,7 +346,7 @@ Is there any difference? Yes, but we can only see it if we use the returned valu
 
 Let's clarify. As we know, all operators return a value. Increment/decrement is no exception. The prefix form returns the new value while the postfix form returns the old value (prior to increment/decrement).
 
-To see the difference, here's an example:
+Айырмачылыгын көрүү үчүн, мына мисал:
 
 ```js run
 let counter = 1;
@@ -357,18 +357,18 @@ alert(a); // *!*2*/!*
 
 In the line `(*)`, the *prefix* form `++counter` increments `counter` and returns the new value, `2`. So, the `alert` shows `2`.
 
-Now, let's use the postfix form:
+Эми постфикс формасын колдонолу:
 
 ```js run
 let counter = 1;
-let a = counter++; // (*) changed ++counter to counter++
+let a = counter++; // (*) ++counter counter++'ка алмашты
 
 alert(a); // *!*1*/!*
 ```
 
 In the line `(*)`, the *postfix* form `counter++` also increments `counter` but returns the *old* value (prior to increment). So, the `alert` shows `1`.
 
-To summarize:
+Жыйынтыктайлы:
 
 - If the result of increment/decrement is not used, there is no difference in which form to use:
 
