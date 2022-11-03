@@ -1,24 +1,24 @@
 # Түрлөрдү айландыруу
 
-Most of the time, operators and functions automatically convert the values given to them to the right type.
+Көпчүлүк учурда операторлор жана функциялар аларга берилген маанилерди автоматтык түрдө керектүү түргө айландырышат.
 
-For example, `alert` automatically converts any value to a string to show it. Mathematical operations convert values to numbers.
+Мисалы, `alert` каалаган маанини автоматтык түрдө сапка айландырат. Математикалык операторлор маанилерди сандарга айландырат.
 
-There are also cases when we need to explicitly convert a value to the expected type.
+Ошондой эле биз маанини күтүлгөн түргө айкын айландырышыбыз керек болгон учурлар бар.
 
 ```smart header="Not talking about objects yet"
-In this chapter, we won't cover objects. For now, we'll just be talking about primitives.
+Бул бөлүмдө биз маңыздарга тийишпейбиз. Азырынча жөн гана примитивдер жөнүндө сүйлөшөбүз.
 
-Later, after we learn about objects, in the chapter <info:object-toprimitive> we'll see how objects fit in.
+Кийинчерээк, маңыздар менен таанышкандан кийин, алардын айландыруусун <info:object-toprimitive> бөлүмүндө карайбыз.
 ```
 
 ## Сапка айландыруу
 
-String conversion happens when we need the string form of a value.
+Сапка айландыруу бизге маанинин сап формасы керек болгондо болот.
 
-For example, `alert(value)` does it to show the value.
+Мисалы, `alert(value)` муну маанисин көрсөтүү үчүн кылат.
 
-We can also call the `String(value)` function to convert a value to a string:
+Ошондой эле биз маанини сапка айландыруу үчүн `String(value)` функциясын чакыра алабыз:
 
 ```js run
 let value = true;
@@ -30,7 +30,7 @@ alert(typeof value); // string
 */!*
 ```
 
-String conversion is mostly obvious. A `false` becomes `"false"`, `null` becomes `"null"`, etc.
+Саптарды айландыруу анык түрдө болот. `false` - `"false"` болуп калат, `null` - `"null"` болуп калат ж.б.у.с.
 
 ## Санга айландыруу
 
