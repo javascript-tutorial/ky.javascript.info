@@ -8,8 +8,8 @@
 
 Улантуудан мурун, кээ бир жалпы терминологияны түшүнүп алалы.
 
-- *An operand* -- is what operators are applied to. For instance, in the multiplication of `5 * 2` there are two operands: the left operand is `5` and the right operand is `2`. Sometimes, people call these "arguments" instead of "operands".
-- An operator is *unary* if it has a single operand. For example, the unary negation `-` reverses the sign of a number:
+- *Операнд* -- операторлор колдонулган нерсе. Мисалы үчүн, `5 * 2` көбөйтүүсүндө эки оператор бар: сол операнд `5` жана оң операнд `2`. Кээде буларды "операнддардын" ордуна "аргументтер" деп аташат.
+- Оператор бир операндга ээ болсо, ал *унардык* болот. Мисалы, унардык минус `-` сандын белгисин өзгөртөт:
 
     ```js run
     let x = 1;
@@ -19,14 +19,14 @@
     */!*
     alert( x ); // -1, унардык минус колдонулду
     ```
-- An operator is *binary* if it has two operands. The same minus exists in binary form as well:
+- Оператор эки операндга ээ болсо, ал *бинардык* болот. Ошол эле минус бинардык формада да бар:
 
     ```js run no-beautify
     let x = 1, y = 3;
     alert( y - x ); // 2, бинардык минус маанилерди кемитет
     ```
 
-    Formally, in the examples above we have two different operators that share the same symbol: the negation operator, a unary operator that reverses the sign, and the subtraction operator, a binary operator that subtracts one number from another.
+    Формалдуу түрдө жогорудагы мисалдарда бир эле белги менен белгиленген эки ар кандай оператор бар: тануу оператору -- сандын белгисин өзгөртүүчү унардык оператор жана кемитүү оператору -- бир санды экинчисинен кемите турган бинардык оператор.
 
 ## Математика
 
@@ -108,14 +108,15 @@ alert( 2 + '1' ); // "21"
 alert(2 + 2 + '1' ); // "41", "221" эмес
 ```
 
-Here, operators work one after another. The first `+` sums two numbers, so it returns `4`, then the next `+` adds the string `1` to it, so it's like `4 + '1' = '41'`.
+Бул жерде операторлор биринин артынан бири иштешет. Биринчи `+` эки санды кошот, андыктан ал `4`'тү кайтарат, андан кийин кийинки `+` ага `1` сабын кошот, демек, натыйжада `4 + '1' = '41'` болот.
 
 ```js run
 alert('1' + 2 + 2); // "122", "14" эмес
 ```
-Here, the first operand is a string, the compiler treats the other two operands as strings too. The `2` gets concatenated to `'1'`, so it's like `'1' + 2 = "12"` and `"12" + 2 = "122"`.
 
-The binary `+` is the only operator that supports strings in such a way. Other arithmetic operators work only with numbers and always convert their operands to numbers.
+Бул жерде биринчи операнд -- бул сап, компилятор башка эки операндды да сап катары карайт. `2` операнды `'1'` менен бириктирилет, ошондуктан натыйжада `'1' + 2 = "12"`, андан кийин `"12" + 2 = "122"` болот.
+
+Бинардык `+` гана саптар менен ушундай иштейт. Башка арифметикалык операторлор сандар менен гана иштешет жана операнддарын ар дайым сандарга айландырышат.
 
 Мисалы, кемитүү жана бөлүү:
 
@@ -421,38 +422,38 @@ counter++;
 ```
 ````
 
-## Bitwise operators
+## Биттик операторлор
 
-Bitwise operators treat arguments as 32-bit integer numbers and work on the level of their binary representation.
+Биттик операторлор аргументтерди 32-биттик бүтүн сандар катары карашат жана алардын экилик көрсөтүм деңгээлинде иштешет.
 
-These operators are not JavaScript-specific. They are supported in most programming languages.
+Бул операторлор JavaScript үчүн спецификалуу эмес. Алар көпчүлүк программалоо тилдеринде колдоого алынат.
 
-The list of operators:
+Операторлордун тизмеси:
 
-- AND ( `&` )
-- OR ( `|` )
-- XOR ( `^` )
-- NOT ( `~` )
-- LEFT SHIFT ( `<<` )
-- RIGHT SHIFT ( `>>` )
-- ZERO-FILL RIGHT SHIFT ( `>>>` )
+- AND(жана) ( `&` )
+- OR(же) ( `|` )
+- XOR(биттик бөтөнчөлүү же) ( `^` )
+- NOT(эмес) ( `~` )
+- LEFT SHIFT(солго жылдыруу) ( `<<` )
+- RIGHT SHIFT(оңго жылдыруу) ( `>>` )
+- ZERO-FILL RIGHT SHIFT(нөлдөр менен толтуруу менен оңго жылдыруу) ( `>>>` )
 
 These operators are used very rarely, when we need to fiddle with numbers on the very lowest (bitwise) level. We won't need these operators any time soon, as web development has little use of them, but in some special areas, such as cryptography, they are useful. You can read the [Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) chapter on MDN when a need arises.
 
-## Comma
+## Үтүр
 
 The comma operator `,` is one of the rarest and most unusual operators. Sometimes, it's used to write shorter code, so we need to know it in order to understand what's going on.
 
 The comma operator allows us to evaluate several expressions, dividing them with a comma `,`. Each of them is evaluated but only the result of the last one is returned.
 
-For example:
+Мисалы:
 
 ```js run
 *!*
 let a = (1 + 2, 3 + 4);
 */!*
 
-alert( a ); // 7 (the result of 3 + 4)
+alert( a ); // 7 (3 + 4 эсептөөсүнүн жыйынтыгы)
 ```
 
 Here, the first expression `1 + 2` is evaluated and its result is thrown away. Then, `3 + 4` is evaluated and returned as the result.
@@ -467,7 +468,7 @@ Why do we need an operator that throws away everything except the last expressio
 
 Sometimes, people use it in more complex constructs to put several actions in one line.
 
-For example:
+Мисалы:
 
 ```js
 // three operations in one line
