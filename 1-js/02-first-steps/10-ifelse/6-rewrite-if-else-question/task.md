@@ -1,22 +1,22 @@
-importance: 5
+маанилүүлүк: 5
 
 ---
 
-# Rewrite 'if..else' into '?'
+# 'if..else' дегенди '?' дегенге кайрадан жазыңыз
 
-Rewrite `if..else` using multiple ternary operators `'?'`.
+Бир нече тернарлык операторлорун `'?'` колдонуп, `if..else` түзүлүшүн кайра жазыңыз.
 
-For readability, it's recommended to split the code into multiple lines.
+Окууга ыңгайлуу болуу үчүн кодду бир нече сапка бөлүүгө сунушталат.
 
 ```js
 let message;
 
-if (login == 'Employee') {
-  message = 'Hello';
-} else if (login == 'Director') {
-  message = 'Greetings';
+if (login == 'Кызматчы') {
+  message = 'Салам';
+} else if (login == 'Мүдүр') {
+  message = 'Саламатсызбы';
 } else if (login == '') {
-  message = 'No login';
+  message = 'Логин жок';
 } else {
   message = '';
 }
