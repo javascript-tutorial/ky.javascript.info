@@ -1,17 +1,17 @@
-importance: 5
+маанилүүлүк: 5
 
 ---
 
-# Rewrite 'if' into '?'
+# 'if' дегенди '?' дегенге кайрадан жазыңыз
 
-Rewrite this `if` using the conditional operator `'?'`:
+`'?'` шарттуу операторун колдонуп `if` түзүлүшүн кайрадан жазыңыз:
 
 ```js
 let result;
 
 if (a + b < 4) {
-  result = 'Below';
+  result = 'Аз';
 } else {
-  result = 'Over';
+  result = 'Көп';
 }
 ```
