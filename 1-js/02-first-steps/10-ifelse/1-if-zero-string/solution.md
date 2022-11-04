@@ -1,12 +1,12 @@
-**Yes, it will.**
+**Ооба, болот.**
 
-Any string except an empty one (and `"0"` is not empty) becomes `true` in the logical context.
+Бош саптан башка ар кандай сап (`"0"` -- бош сап эмес) логикалык контекстте `true` болуп калат.
 
-We can run and check:
+Биз жүргүзүп, текшере алабыз:
 
 ```js run
 if ("0") {
-  alert( 'Hello' );
+  alert( 'Салам' );
 }
 ```
 
