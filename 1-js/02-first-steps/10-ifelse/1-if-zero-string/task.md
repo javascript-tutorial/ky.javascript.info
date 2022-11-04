@@ -2,13 +2,13 @@ importance: 5
 
 ---
 
-# if (a string with zero)
+# if (нөлү бар сап)
 
-Will `alert` be shown?
+`alert` көрсөтүлөбү?
 
 ```js
 if ("0") {
-  alert( 'Hello' );
+  alert( 'Салам' );
 }
 ```
 
