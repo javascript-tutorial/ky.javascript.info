@@ -1,15 +1,15 @@
-importance: 2
+маанилүүлүк: 2
 
 ---
 
-# Show the sign
+# Белгини көрсөтүңүз
 
-Using `if..else`, write the code which gets a number via `prompt` and then shows in `alert`:
+`if..else` түзүлүшүн колдонуп, `prompt` аркылуу санды алып, `alert` менен көрсөткөн кодду жазыңыз:
 
-- `1`, if the value is greater than zero,
-- `-1`, if less than zero,
-- `0`, if equals zero.
+- `1`, мааниси нөлдөн жогору болсо,
+- `-1`, нөлдөн төмөн болсо,
+- `0`, нөлгө барабар болсо.
 
-In this task we assume that the input is always a number.
+Бул тапшырмада биз киргизилген маанини ар дайым сан экенин болжойбуз.
 
 [demo src="if_sign"]
