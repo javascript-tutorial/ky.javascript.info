@@ -1,20 +1,20 @@
-# Conditional branching: if, '?'
+# Шарттуу бутактануу: if, '?'
 
 Sometimes, we need to perform different actions based on different conditions.
 
 To do that, we can use the `if` statement and the conditional operator `?`, that's also called a "question mark" operator.
 
-## The "if" statement
+## "if" нускамасы
 
 The `if(...)` statement evaluates a condition in parentheses and, if the result is `true`, executes a block of code.
 
-For example:
+Мисалы:
 
 ```js run
 let year = prompt('In which year was ECMAScript-2015 specification published?', '');
 
 *!*
-if (year == 2015) alert( 'You are right!' );
+if (year == 2015) alert( 'Туура айтасыз!' );
 */!*
 ```
 
@@ -24,14 +24,14 @@ If we want to execute more than one statement, we have to wrap our code block in
 
 ```js
 if (year == 2015) {
-  alert( "That's correct!" );
-  alert( "You're so smart!" );
+  alert( "Бул туура!" );
+  alert( "Сиз абдан акылдуусуз!" );
 }
 ```
 
 We recommend wrapping your code block with curly braces `{}` every time you use an `if` statement, even if there is only one statement to execute. Doing so improves readability.
 
-## Boolean conversion
+## Логикалык айландыруу
 
 The `if (…)` statement evaluates the expression in its parentheses and converts the result to a boolean.
 
@@ -43,7 +43,7 @@ Let's recall the conversion rules from the chapter <info:type-conversions>:
 So, the code under this condition would never execute:
 
 ```js
-if (0) { // 0 is falsy
+if (0) { // 0 бул жалган
   ...
 }
 ```
@@ -51,7 +51,7 @@ if (0) { // 0 is falsy
 ...and inside this condition -- it always will:
 
 ```js
-if (1) { // 1 is truthy
+if (1) { // 1 бул чындык
   ...
 }
 ```
