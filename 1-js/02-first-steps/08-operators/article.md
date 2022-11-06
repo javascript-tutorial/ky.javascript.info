@@ -129,7 +129,7 @@ alert( '6' / '2' ); // 3, эки операнд тең сапка айланды
 
 Плюс `+` эки формада бар: биз жогоруда колдонгон бинардык форма жана унардык форма.
 
-The unary plus or, in other words, the plus operator `+` applied to a single value, doesn't do anything to numbers. But if the operand is not a number, the unary plus converts it into a number.
+Унардык плюс же, башкача айтканда, плюс оператору `+` бир мааниге колдонулат, сандарга эч нерсе кылбайт. Бирок эгерде операнд сан болбосо, унардык плюс аны санга айландырат.
 
 Мисалы:
 
