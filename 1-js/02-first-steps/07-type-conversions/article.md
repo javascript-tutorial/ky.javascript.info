@@ -6,7 +6,7 @@
 
 Ошондой эле биз маанини күтүлгөн түргө айкын айландырышыбыз керек болгон учурлар бар.
 
-```smart header="Not talking about objects yet"
+```smart header="Азырынча маңыздар жөнүндө сүйлөшпөйбүз"
 Бул бөлүмдө биз маңыздарга тийишпейбиз. Азырынча жөн гана примитивдер жөнүндө сүйлөшөбүз.
 
 Кийинчерээк, маңыздар менен таанышкандан кийин, алардын айландыруусун <info:object-toprimitive> бөлүмүндө карайбыз.
@@ -34,15 +34,15 @@ alert(typeof value); // string
 
 ## Санга айландыруу
 
-Numeric conversion happens in mathematical functions and expressions automatically.
+Сандарга айландыруу математикалык функцияларда жана туюнтмаларда автоматтык түрдө ишке ашат.
 
-For example, when division `/` is applied to non-numbers:
+Мисалы, бөлүү `/` сандар эместерге колдонулганда:
 
 ```js run
 alert( "6" / "2" ); // 3, саптар сандарга айланды
 ```
 
-We can use the `Number(value)` function to explicitly convert a `value` to a number:
+Биз `Number(value)` функциясын `value`'ну санга айкын түрдө айландыруу үчүн колдоно алабыз:
 
 ```js run
 let str = "123";
@@ -53,24 +53,24 @@ let num = Number(str); // 123 санына айланат
 alert(typeof num); // number
 ```
 
-Explicit conversion is usually required when we read a value from a string-based source like a text form but expect a number to be entered.
+Айкын айландыруу адатта текст формасы сыяктуу сапка негизделген булактан маанини окуганда талап кылынат, бирок сан киргизилгенин күтөбүз.
 
-If the string is not a valid number, the result of such a conversion is `NaN`. For instance:
+Эгерде сап жарактуу сан болбосо, мындай айландыруунун натыйжасы `NaN` болот. Мисалы үчүн:
 
 ```js run
-let age = Number("an arbitrary string instead of a number");
+let age = Number("сандын ордуна ыктыярдуу сап");
 
-alert(age); // NaN, conversion failed
+alert(age); // NaN, айландыруу ишке ашкан жок
 ```
 
-Numeric conversion rules:
+Санга айландыруунун эрежелери:
 
 | Маани |  Натыйжа |
 |-------|-------------|
 |`undefined`|`NaN`|
 |`null`|`0`|
-|<code>true&nbsp;and&nbsp;false</code> | `1` and `0` |
-| `string` | Whitespaces (includes spaces, tabs `\t`, newlines `\n` etc.) from the start and end are removed. If the remaining string is empty, the result is `0`. Otherwise, the number is "read" from the string. An error gives `NaN`. |
+|<code>true&nbsp;жана&nbsp;false</code> | `1` жана `0` |
+| `string` | Башындагы жана аягындагы аралык белгилери (анын ичинде аралыктар, табуляция `\t`, жаңы саптар `\n` ж.б.у.с.) жок кылынат. Эгерде калган сап бош болсо, натыйжа `0` болот. Болбосо, сан саптан "окулат". Ката `NaN` берет. |
 
 Мисалдар:
 
@@ -81,9 +81,9 @@ alert( Number(true) );        // 1
 alert( Number(false) );       // 0
 ```
 
-Please note that `null` and `undefined` behave differently here: `null` becomes zero while `undefined` becomes `NaN`.
+Бул жерде `null` жана `undefined` башкача иштээрин эске алыңыз: `null` нөлгө айланат, ал эми `undefined` - `NaN` болуп калат.
 
-Most mathematical operators also perform such conversion, we'll see that in the next chapter.
+Көпчүлүк математикалык операторлор да ушундай айландырууну аткарышат, муну кийинки бөлүмдө көрөбүз.
 
 ## Логикалык түргө айландыруу
 
@@ -91,9 +91,9 @@ Most mathematical operators also perform such conversion, we'll see that in the 
 
 It happens in logical operations (later we'll meet condition tests and other similar things) but can also be performed explicitly with a call to `Boolean(value)`.
 
-Айландырууну эрежелери:
+Айландыруунун эрежелери:
 
-- Values that are intuitively "empty", like `0`, an empty string, `null`, `undefined`, and `NaN`, become `false`.
+- `0`, бош сап, `null`, `undefined` жана `NaN` сыяктуу интуитивдик "бош" маанилер `false` болуп калат.
 - Башка маанилер `true` болуп калат.
 
 Мисалы үчүн:
@@ -106,45 +106,45 @@ alert( Boolean("салам") ); // true
 alert( Boolean("") ); // false
 ```
 
-````warn header="Please note: the string with zero `\"0\"` is `true`"
-Some languages (namely PHP) treat `"0"` as `false`. But in JavaScript, a non-empty string is always `true`.
+````warn header="`\"0\"` нөлү бар сап `true` экенин эске алабыз"
+Кээ бир тилдер (мисалы, PHP) `"0"` сабын `false` катары карашат. Бирок JavaScript'те бош эмес сап ар дайым `true` болот.
 
 ```js run
 alert( Boolean("0") ); // true
-alert( Boolean(" ") ); // spaces, also true (any non-empty string is true)
+alert( Boolean(" ") ); // аралык деле true (ар кандай бош эмес сап бул true)
 ```
 ````
 
 ## Корутунду
 
-The three most widely used type conversions are to string, to number, and to boolean.
+Эң көп колдонулган үч түр айландыруулары: булар - сапка, санга жана логикалык түргө айландыруу.
 
-**`String Conversion`** -- Occurs when we output something. Can be performed with `String(value)`. The conversion to string is usually obvious for primitive values.
+**`Сапка айландыруу`** -- Биз бир нерсени чыгарганда пайда болот. `String(value)` менен аткарылышы мүмкүн. Примитивдүү маанилер үчүн, адатта, айкын жол менен иштейт.
 
-**`Numeric Conversion`** -- Occurs in math operations. Can be performed with `Number(value)`.
+**`Санга айландыруу`** -- Математикалык операцияларда пайда болот. `Number(value)` менен аткарылышы мүмкүн.
 
-The conversion follows the rules:
+Айландыруу эрежелерди ээрчийт:
 
 | Маани |  Натыйжа |
 |-------|-------------|
 |`undefined`|`NaN`|
 |`null`|`0`|
 |<code>true&nbsp;/&nbsp;false</code> | `1 / 0` |
-| `string` | The string is read "as is", whitespaces (includes spaces, tabs `\t`, newlines `\n` etc.) from both sides are ignored. An empty string becomes `0`. An error gives `NaN`. |
+| `string` | Сап "кандай болсо, ошондой" окулат, эки жактан тең аралыктар көңүлдөнбөйт. Бош сап `0` болуп калат. Ката `NaN` берет. |
 
-**`Boolean Conversion`** -- Occurs in logical operations. Can be performed with `Boolean(value)`.
+**`Логикалык айландыруу`** -- Логикалык операцияларда пайда болот. `Boolean(value)` менен аткарылышы мүмкүн.
 
-Follows the rules:
+Эрежелерди ээрчийт:
 
 | Маани |  Натыйжа |
 |-------|-------------|
 |`0`, `null`, `undefined`, `NaN`, `""` |`false`|
-|any other value| `true` |
+|ар кандай башка маани| `true` |
 
 
-Most of these rules are easy to understand and memorize. The notable exceptions where people usually make mistakes are:
+Бул эрежелердин көбүн түшүнүүгө жана эсте тутууга оңой. Адамдар адатта ката кетирген көрүнүктүү учурлар:
 
-- `undefined` is `NaN` as a number, not `0`.
-- `"0"` and space-only strings like `"   "` are true as a boolean.
+- `undefined` сан катары бул `NaN`, `0` эмес.
+- `"0"` жана `"   "` сыяктуу аралыкка гана ээ болгон саптар логикалык маани катары бул `true`.
 
-Objects aren't covered here. We'll return to them later in the chapter <info:object-toprimitive> that is devoted exclusively to objects after we learn more basic things about JavaScript.
+Бул жерде маңыздар камтылган эмес. Биз JavaScript жөнүндө көбүрөөк негизги нерселерди үйрөнгөндөн кийин гана маңыздарга арналган <info:object-toprimitive> бөлүмүндө аларга кийинчерээк кайтабыз.
