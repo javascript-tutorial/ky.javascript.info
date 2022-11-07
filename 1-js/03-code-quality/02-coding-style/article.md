@@ -1,12 +1,12 @@
-# Coding Style
+# Код стили боюнча кеңештер
 
-Our code must be as clean and easy to read as possible.
+Биздин код мүмкүн болушунча түшүнүктүү жана окууга оңой болушу керек.
 
-That is actually the art of programming -- to take a complex task and code it in a way that is both correct and human-readable. A good code style greatly assists in that.  
+Чындыгында программалоо чеберчилиги -- бул татаал тапшырманы аткаруу жана аны туура жана адамга түшүнүктүү кылып коддоо. Жакшы код стили буга чоң жардам берет.
 
-## Syntax
+## Синтаксис
 
-Here is a cheat sheet with some suggested rules (see below for more details):
+Кээ бир сунушталган эрежелер бул сүрөттө келтирилген (кененирээк маалымат үчүн төмөндө караңыз):
 
 ![](code-style.svg)
 <!--
@@ -34,21 +34,21 @@ if (n < 0) {
 
 -->
 
-Now let's discuss the rules and reasons for them in detail.
+Эми алардын эрежелерин жана себептерин кененирээк караштыралы.
 
-```warn header="There are no \"you must\" rules"
-Nothing is set in stone here. These are style preferences, not religious dogmas.
+```warn header="Милдеттүү эрежелер жок"
+Бул жерде эч кандай темирдей эрежелер жок. Булар стилдик артыкчылыктар, диний догмалар эмес.
 ```
 
-### Curly Braces
+### Фигуралык кашаалар
 
 In most JavaScript projects curly braces are written in "Egyptian" style with the opening brace on the same line as the corresponding keyword -- not on a new line. There should also be a space before the opening bracket, like this:
 
 ```js
 if (condition) {
-  // do this
-  // ...and that
-  // ...and that
+  // муну кыл
+  // ...муну дагы
+  // ...муну дагы
 }
 ```
 
@@ -56,49 +56,49 @@ A single-line construct, such as `if (condition) doSomething()`, is an important
 
 Here are the annotated variants so you can judge their readability for yourself:
 
-1. 😠 Beginners sometimes do that. Bad! Curly braces are not needed:
+1. 😠 Кээде үйрөнчүктөр ушундай кылышат. Бул жаман мисал, фигуралык кашаалардын кереги жок: 
     ```js
-    if (n < 0) *!*{*/!*alert(`Power ${n} is not supported`);*!*}*/!*
+    if (n < 0) *!*{*/!*alert(`${n} даражасы колдоого алынбайт`);*!*}*/!*
     ```
-2. 😠 Split to a separate line without braces. Never do that, easy to make an error when adding new lines:
+2. 😠 Фигуралык кашаасыз саптарды эч качан бөлбөңүз - жаңы саптарды кошуп жатканда кокустан ката кетиши мүмкүн:
     ```js
     if (n < 0)
-      alert(`Power ${n} is not supported`);
+      alert(`${n} даражасы колдоого алынбайт`);
     ```
-3. 😏 One line without braces - acceptable, if it's short:
+3. 😏 Кашаасыз бир сапка жазуу - алгылыктуу вариант, эгерде сап кыска болсо:
     ```js
-    if (n < 0) alert(`Power ${n} is not supported`);
+    if (n < 0) alert(`${n} даражасы колдоого алынбайт`);
     ```
-4. 😃 The best variant:
+4. 😃 Мыкты вариант:
     ```js
     if (n < 0) {
-      alert(`Power ${n} is not supported`);
+      alert(`${n} даражасы колдоого алынбайт`);
     }
     ```
 
 For a very brief code, one line is allowed, e.g. `if (cond) return null`. But a code block (the last variant) is usually more readable.
 
-### Line Length
+### Саптын узундугу
 
 No one likes to read a long horizontal line of code. It's best practice to split them.
 
-For example:
+Мисалы:
 ```js
-// backtick quotes ` allow to split the string into multiple lines
+// тескери тырмакча ` сапты бир нече бөлүктөргө бөлүүгө мүмкүндүк берет
 let str = `
-  ECMA International's TC39 is a group of JavaScript developers,
-  implementers, academics, and more, collaborating with the community
-  to maintain and evolve the definition of JavaScript.
+  ECMA International уюмунун TC39 жумушчу тобу - бул JavaScript тилин
+  колдоо жана өнүктүрүү үчүн коомдоштук менен биргелешип иштешкен JavaScript
+  иштеп чыгуучулардын, интеграция боюнча адистердин, илимпоздордун ж.б. тобу.
 `;
 ```
 
-And, for `if` statements:
+Же `if` үчүн:
 
 ```js
 if (
   id === 123 &&
-  moonPhase === 'Waning Gibbous' &&
-  zodiacSign === 'Libra'
+  moonPhase === 'Өсүп жаткан ай' &&
+  zodiacSign === 'Тараза'
 ) {
   letTheSorceryBegin();
 }
@@ -106,7 +106,7 @@ if (
 
 The maximum line length should be agreed upon at the team-level. It's usually 80 or 120 characters.
 
-### Indents
+### Чегинүүлөр
 
 There are two types of indents:
 
