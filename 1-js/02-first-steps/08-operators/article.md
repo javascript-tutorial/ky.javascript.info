@@ -150,7 +150,7 @@ alert( +"" );   // 0
 
 Бул чындыгында `Number(...)` менен бирдей, бирок көрүнүшү кыскараак.
 
-The need to convert strings to numbers arises very often. For example, if we are getting values from HTML form fields, they are usually strings. What if we want to sum them?
+Саптарды сандарга айландыруу зарылдыгы абдан көп пайда болот. Мисалы, адатта HTML форманын талааларынын маанилери сап түрүндө болот. Аларды суммалайлы десек эмне кылыш керек?
 
 Бинардык плюс аларды сап катары кошот:
 
@@ -168,7 +168,7 @@ let apples = "2";
 let oranges = "3";
 
 *!*
-// both values converted to numbers before the binary plus
+// эки маани бинардык плюсту колдонуудан мурун сандарга айландырылат
 alert( +apples + +oranges ); // 5
 */!*
 
@@ -176,23 +176,24 @@ alert( +apples + +oranges ); // 5
 // alert( Number(apples) + Number(oranges) ); // 5
 ```
 
-From a mathematician's standpoint, the abundance of pluses may seem strange. But from a programmer's standpoint, there's nothing special: unary pluses are applied first, they convert strings to numbers, and then the binary plus sums them up.
+Математиктин көз карашы боюнча, плюстардын көптүгү кызыктай көрүнүшү мүмкүн. Бирок программисттин көз карашы боюнча, бул жерде өзгөчө эч нерсе жок: адегенде унардык плюстар колдонулат, алар саптарды сандарга айландырат, андан кийин бинардык плюс аларды жыйынтыктайт.
 
-Why are unary pluses applied to values before the binary ones? As we're going to see, that's because of their *higher precedence*.
+Эмнеге маанилерге унардык плюстар бинардык плюстардан мурун колдонулат? Төмөндө көрө турганыбыздай, бул алардын алгачкылыгына байланыштуу.
 
-## Операторлордун приоритети
+## Операторлордун алгачкылыгы
 
-If an expression has more than one operator, the execution order is defined by their *precedence*, or, in other words, the default priority order of operators.
+Эгерде туюнтма бирден ашык операторго ээ болсо, аткаруу тартиби алардын *алгачкылыгы* же башкача айтканда, оператордук биринчиликтин демейки тартиби менен аныкталат.
 
-From school, we all know that the multiplication in the expression `1 + 2 * 2` should be calculated before the addition. That's exactly the precedence thing. The multiplication is said to have *a higher precedence* than the addition.
+`1 + 2 * 2` туюнтмасындагы көбөйтүүнү кошууга чейин эсептөө керек экенин мектептен биз баарыбыз билебиз. Алгачкылык дал ушул нерсе. 
+Көбөйтүү кошууга караганда *жогору алгачкылыкка* ээ болот деп айтылат.
 
-Parentheses override any precedence, so if we're not satisfied with the default order, we can use them to change it. For example, write `(1 + 2) * 2`.
+Кашаалар кандайдыр бир алгачкылыктан бийик турат, андыктан демейки тартип бизди канааттандырбаса, аларды өзгөртүү үчүн кашааларды колдоно алабыз. Мисалы, `(1 + 2) * 2`.
 
-There are many operators in JavaScript. Every operator has a corresponding precedence number. The one with the larger number executes first. If the precedence is the same, the execution order is from left to right.
+JavaScript'те көптөгөн операторлор бар. Ар бир оператордун ылайыктуу алгачкылык номуру бар. Саны көбүрөөк болгон оператор биринчи аткарылат. Эгерде алгачкылык бирдей болсо, анда солдон оңго карай аткарылат.
 
-Here's an extract from the [precedence table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) (you don't need to remember this, but note that unary operators are higher than corresponding binary ones):
+Мына [алгачкылык жадыбалынан](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) үзүндү (баарын жаттап алуунун кереги жок, бирок унардык операторлордун алгачкылыгы ылайыктуу бинардык операторлорго караганда жогору экенин эске алыңыз):
 
-| Приоритет | Аталыш | Белги |
+| Алгачкылык | Аталыш | Белги |
 |------------|------|------|
 | ... | ... | ... |
 | 14 | унардык плюс | `+` |
@@ -206,7 +207,7 @@ Here's an extract from the [precedence table](https://developer.mozilla.org/en-U
 | 2 | ыйрагуу | `=` |
 | ... | ... | ... |
 
-As we can see, the "unary plus" has a priority of `14` which is higher than the `11` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
+Көрүнүп тургандай, "унардык плюс" `14` алгачкылыгына ээ, ал "кошуунун" (бинардык плюстун) алгачкылыгынан -- `11`ден жогору. Мына ошондуктан `"+apples + +oranges"` туюнтмасында унардык плюс кошуудан мурун аткарылат.
 
 ## Ыйгаруу
 
