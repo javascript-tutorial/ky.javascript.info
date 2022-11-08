@@ -84,7 +84,7 @@ alert( '01' == 1 ); // true, string '01' becomes a number 1
 
 For boolean values, `true` becomes `1` and `false` becomes `0`.
 
-For example:
+Мисалы:
 
 ```js run
 alert( true == 1 ); // true
@@ -97,7 +97,7 @@ It is possible that at the same time:
 - Two values are equal.
 - One of them is `true` as a boolean and the other one is `false` as a boolean.
 
-For example:
+Мисалы:
 
 ```js run
 let a = 0;
