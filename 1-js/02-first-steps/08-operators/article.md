@@ -211,9 +211,9 @@ JavaScript'те көптөгөн операторлор бар. Ар бир оп
 
 ## Ыйгаруу
 
-Let's note that an assignment `=` is also an operator. It is listed in the precedence table with the very low priority of `2`.
+Ыйгаруу `=` да оператор экенин белгилей кетели. Ал алгачкылык жадыбалында өтө төмөн `2` алгачкылыгы менен келтирилген.
 
-That's why, when we assign a variable, like `x = 2 * 2 + 1`, the calculations are done first and then the `=` is evaluated, storing the result in `x`.
+Ошондуктан, биз өзгөрмөгө маани ыйгарганыбызда, мис. `x = 2 * 2 + 1`, адегенде эсептөөлөр аткарылып, андан кийин ыйгаруу `=` аткарылып, натыйжа `x` өзгөрмөсүндө сакталат.
 
 ```js
 let x = 2 * 2 + 1;
@@ -223,13 +223,13 @@ alert( x ); // 5
 
 ### Ыйгаруу = маанини кайтарат
 
-The fact of `=` being an operator, not a "magical" language construct has an interesting implication.
+`=` "сыйкырдуу" тил түзүлүшү эмес, оператор экенинин фактысы кызыктуу мааниге ээ.
 
-All operators in JavaScript return a value. That's obvious for `+` and `-`, but also true for `=`.
+JavaScript'теги бардык операторлор маанини кайтарышат. Бул `+` жана `-` үчүн айкын, бирок `=` үчүн да дурус.
 
-The call `x = value` writes the `value` into `x` *and then returns it*.
+`x = value` чакыруусу `value`'ну `x` ичине жазат *жана аны кайтарат*.
 
-Here's a demo that uses an assignment as part of a more complex expression:
+Бул жерде ыйгарууну татаалыраак туюнтманын бир бөлүгү катары колдонгон демонстрация келтирилген:
 
 ```js run
 let a = 1;
@@ -243,15 +243,15 @@ alert( a ); // 3
 alert( c ); // 0
 ```
 
-In the example above, the result of expression `(a = b + 1)` is the value which was assigned to `a` (that is `3`). It is then used for further evaluations.
+Жогорудагы мисалда `(a = b + 1)` туюнтмасынын натыйжасы `a` өзгөрмөсүнө ыйгарылган маани (б.а. `3`) болот. Андан кийин ал кийинки эсептөөлөр үчүн колдонулат.
 
-Funny code, isn't it? We should understand how it works, because sometimes we see it in JavaScript libraries.
+Укмуштай код, туурабы? Биз анын кантип иштээрин түшүнүшүбүз керек, анткени кээде биз аны JavaScript китепканаларынан көрө алабыз.
 
-Although, please don't write the code like that. Such tricks definitely don't make code clearer or readable.
+Бирок, сураныч, мындай код жазбаңыз. Бул трюктар, албетте, кодуңузду түшүнүктүү же окула тургандай кылбайт.
 
-### Чынжырча ыйгаруу
+### Чынжырча ыйгаруусу
 
-Another interesting feature is the ability to chain assignments:
+Дагы бир кызыктуу өзгөчөлүк - чынжырча ыйгаруу мүмкүнчүлүгү:
 
 ```js run
 let a, b, c;
@@ -265,16 +265,17 @@ alert( b ); // 4
 alert( c ); // 4
 ```
 
-Chained assignments evaluate from right to left. First, the rightmost expression `2 + 2` is evaluated and then assigned to the variables on the left: `c`, `b` and `a`. At the end, all the variables share a single value.
+Чынжырча ыйгаруулар оңдон солго карай аткарылат. Биринчиден, эң оң жактагы `2 + 2` туюнтмасы аткарылып, андан кийин сол жактагы өзгөрмөлөргө ыйгарылат: `c`, `b` жана `a`. Аягында, бардык өзгөрмөлөр бир жалпы мааниге ээ болот.
 
-Once again, for the purposes of readability it's better to split such code into few lines:
+Дагы бир жолу, окууга ыңгайлуу болуу үчүн мындай кодду бир нече сапка бөлүү жакшыраак:
 
 ```js
 c = 2 + 2;
 b = c;
 a = c;
 ```
-That's easier to read, especially when eye-scanning the code fast.
+
+Айрыкча кодду тез карап жатканда, муну окууга оңоюраак.
 
 ## Modify-in-place
 
