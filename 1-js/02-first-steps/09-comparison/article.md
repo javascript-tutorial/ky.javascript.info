@@ -1,55 +1,55 @@
-# Comparisons
+# Салыштыруу операторлору
 
-We know many comparison operators from maths.
+Көптөгөн салыштыруу операторлору бизге математикадан белгилүү.
 
-In JavaScript they are written like this:
+JavaScript'те алар мындай жазылат:
 
-- Greater/less than: <code>a &gt; b</code>, <code>a &lt; b</code>.
-- Greater/less than or equals: <code>a &gt;= b</code>, <code>a &lt;= b</code>.
-- Equals: `a == b`, please note the double equality sign `==` means the equality test, while a single one `a = b` means an assignment.
-- Not equals: In maths the notation is <code>&ne;</code>, but in JavaScript it's written as <code>a != b</code>.
+- Чоң/кичине: <code>a &gt; b</code>, <code>a &lt; b</code>.
+- Чоң/кичине же барабар: <code>a &gt;= b</code>, <code>a &lt;= b</code>.
+- Барабар: `a == b`, көңүл буруңуз, кош барабардык белгиси `==` салыштыруу үчүн колдонулат, ал эми жалгыз барабардык белгиси `a = b` ыйгарууну билдирчү.
+- Барабар эмес: Математикада <code>&ne;</code> белгиси менен белгиленет, бирок JavaScript'те <code>a != b</code> деп жазылат.
 
 In this article we'll learn more about different types of comparisons, how JavaScript makes them, including important peculiarities.
 
 At the end you'll find a good recipe to avoid "JavaScript quirks"-related issues.
 
-## Boolean is the result
+## Салыштыруунун натыйжасы логикалык түргө ээ
 
-All comparison operators return a boolean value:
+Бардык салыштыруу операторлору логикалык түрдөгү маанини кайтарат:
 
-- `true` -- means "yes", "correct" or "the truth".
-- `false` -- means "no", "wrong" or "not the truth".
+- `true` -- "ооба", "туура" же "чындыкты" билдирет.
+- `false` -- "жок", "туура эмес" же "жалганды" билдирет.
 
-For example:
+Мисалы:
 
 ```js run
-alert( 2 > 1 );  // true (correct)
-alert( 2 == 1 ); // false (wrong)
-alert( 2 != 1 ); // true (correct)
+alert( 2 > 1 );  // true (туура)
+alert( 2 == 1 ); // false (туура эмес)
+alert( 2 != 1 ); // true (туура)
 ```
 
 A comparison result can be assigned to a variable, just like any value:
 
 ```js run
-let result = 5 > 4; // assign the result of the comparison
+let result = 5 > 4; // салыштыруунун натыйжасы result өзгөрмөсүнө ыйгарылат
 alert( result ); // true
 ```
 
-## String comparison
+## Саптарды салыштыруу
 
 To see whether a string is greater than another, JavaScript uses the so-called "dictionary" or "lexicographical" order.
 
 In other words, strings are compared letter-by-letter.
 
-For example:
+Мисалы:
 
 ```js run
-alert( 'Z' > 'A' ); // true
-alert( 'Glow' > 'Glee' ); // true
-alert( 'Bee' > 'Be' ); // true
+alert( 'Я' > 'А' ); // туура (true)
+alert( 'Кант' > 'Калп' ); // туура (true)
+alert( 'Бала' > 'Бал' ); // туура (true)
 ```
 
-The algorithm to compare two strings is simple:
+Эки сапты салыштыруу алгоритми абдан жөнөкөй:
 
 1. Compare the first character of both strings.
 2. If the first character from the first string is greater (or less) than the other string's, then the first string is greater (or less) than the second. We're done.
@@ -59,11 +59,11 @@ The algorithm to compare two strings is simple:
 
 In the first example above, the comparison `'Z' > 'A'` gets to a result at the first step.
 
-The second comparison `'Glow'` and `'Glee'` needs more steps as strings are compared character-by-character:
+Экинчи `'Кант'` жана `'Калп'` сөздөрүнүн салыштыруусу белгиден белгиге салыштырылат:
 
-1. `G` is the same as `G`.
-2. `l` is the same as `l`.
-3. `o` is greater than `e`. Stop here. The first string is greater.
+1. `К` менен `К` барабар.
+2. `а` менен `а` барабар.
+3. `н` `л`ден чоңураак. Бул жерде салыштыруу бүтөт. Биринчи сап чоңураак.
 
 ```smart header="Not a real dictionary, but Unicode order"
 The comparison algorithm given above is roughly equivalent to the one used in dictionaries or phone books, but it's not exactly the same.
@@ -207,7 +207,7 @@ Why did we go over these examples? Should we remember these peculiarities all th
 - Treat any comparison with `undefined/null` except the strict equality `===` with exceptional care.
 - Don't use comparisons `>= > < <=` with a variable which may be `null/undefined`, unless you're really sure of what you're doing. If a variable can have these values, check for them separately.
 
-## Summary
+## Корутунду
 
 - Comparison operators return a boolean value.
 - Strings are compared letter-by-letter in the "dictionary" order.
