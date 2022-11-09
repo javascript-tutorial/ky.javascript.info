@@ -1,4 +1,4 @@
-# Functions
+# Функциялар
 
 Quite often we need to perform a similar action in many places of the script.
 
@@ -8,7 +8,7 @@ Functions are the main "building blocks" of the program. They allow the code to 
 
 We've already seen examples of built-in functions, like `alert(message)`, `prompt(message, default)` and `confirm(question)`. But we can create functions of our own as well.
 
-## Function Declaration
+## Функцияны жарыялоо
 
 To create a function we can use a *function declaration*.
 
@@ -16,7 +16,7 @@ It looks like this:
 
 ```js
 function showMessage() {
-  alert( 'Hello everyone!' );
+  alert( 'Баарына салам!' );
 }
 ```
 
@@ -30,11 +30,11 @@ function name(parameter1, parameter2, ... parameterN) {
 
 Our new function can be called by its name: `showMessage()`.
 
-For instance:
+Мисалы үчүн:
 
 ```js run
 function showMessage() {
-  alert( 'Hello everyone!' );
+  alert( 'Баарына салам!' );
 }
 
 *!*
