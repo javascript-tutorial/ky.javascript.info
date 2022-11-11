@@ -277,9 +277,9 @@ a = c;
 
 Айрыкча кодду тез карап жатканда, муну окууга оңоюраак.
 
-## Modify-in-place
+## "Өзгөртүү жана ыйгаруу" оператору
 
-We often need to apply an operator to a variable and store the new result in that same variable.
+Биз көп учурда өзгөрмөгө операторду колдонушубуз керек жана жаңы натыйжаны ошол эле өзгөрмөдө сакташыбыз керек.
 
 Мисалы:
 
@@ -289,24 +289,24 @@ n = n + 5;
 n = n * 2;
 ```
 
-This notation can be shortened using the operators `+=` and `*=`:
+Бул жазууну `+=` жана `*=` операторлорунун жардамы менен кыскартууга болот:
 
 ```js run
 let n = 2;
-n += 5; // now n = 7 (same as n = n + 5)
-n *= 2; // now n = 14 (same as n = n * 2)
+n += 5; // эми n = 7 (n = n + 5 менен бирдей)
+n *= 2; // эми n = 14 (n = n * 2 менен бирдей)
 
 alert( n ); // 14
 ```
 
-Short "modify-and-assign" operators exist for all arithmetical and bitwise operators: `/=`, `-=`, etc.
+Кыска "өзгөртүү жана ыйгаруу" операторлору бардык арифметикалык жана биттик операторлор үчүн бар: `/=`, `-=` ж.б.
 
-Such operators have the same precedence as a normal assignment, so they run after most other calculations:
+Мындай операторлор кадимки ыйгаруу сыяктуу эле алгачкылыкка ээ, андыктан алар башка көптөгөн эсептөөлөрдөн кийин аткарылат:
 
 ```js run
 let n = 2;
 
-n *= 3 + 5; // right part evaluated first, same as n *= 8
+n *= 3 + 5; // алгач оң бөлүгү эсептелинет, n *= 8 менен бирдей
 
 alert( n ); // 16  
 ```
@@ -315,7 +315,7 @@ alert( n ); // 16
 
 <!-- Can't use -- in title, because the built-in parser turns it into a 'long dash' – -->
 
-Increasing or decreasing a number by one is among the most common numerical operations.
+Санды бирге көбөйтүү же азайтуу эң кеңири таралган сандык операциялардын бири болуп саналат.
 
 Ал үчүн атайын операторлор бар:
 
@@ -335,21 +335,21 @@ Increasing or decreasing a number by one is among the most common numerical oper
     ```
 
 ```warn
-Increment/decrement can only be applied to variables. Trying to use it on a value like `5++` will give an error.
+Инкремент/декремент өзгөрмөлөргө гана колдонулушу мүмкүн. Аны `5++` сыяктуу мааниде колдонууга аракет кылуу катага алып келет.
 ```
 
-The operators `++` and `--` can be placed either before or after a variable.
+`++` жана `--` операторлору өзгөрмөнүн алдында же өзгөрмөдөн кийин жайгаштырылышы мүмкүн.
 
-- When the operator goes after the variable, it is in "postfix form": `counter++`.
-- The "prefix form" is when the operator goes before the variable: `++counter`.
+- Оператор өзгөрмөдөн кийин келгенде, ал "постфикс формасында" болот: `counter++`.
+- "Префикс формасы" оператор өзгөрмөнүн алдына келгенде болот: `++counter`.
 
-Both of these statements do the same thing: increase `counter` by `1`.
+Бул эки нускама тең бирдей нерсени аткарат: `counter` өзгөрмөсүн `1`ге көбөйтөт.
 
-Is there any difference? Yes, but we can only see it if we use the returned value of `++/--`.
+Айырмасы барбы? Ооба, бирок биз аны `++/--` кайтарган маанисин колдонсок гана көрө алабыз.
 
-Let's clarify. As we know, all operators return a value. Increment/decrement is no exception. The prefix form returns the new value while the postfix form returns the old value (prior to increment/decrement).
+Келгиле, тактап алалы. Белгилүү болгондой, бардык операторлор маанини кайтарышат. Инкремент/декремент да бөтөнчө эмес. Префикс формасы жаңы маанини кайтарат, ал эми постфикс формасы эски маанини кайтарат (санды көбөйтүүгө/азайтууга чейин).
 
-Айырмачылыгын көрүү үчүн, мына мисал:
+Айырмасын көрүү үчүн, мисал келтирели:
 
 ```js run
 let counter = 1;
@@ -358,7 +358,7 @@ let a = ++counter; // (*)
 alert(a); // *!*2*/!*
 ```
 
-In the line `(*)`, the *prefix* form `++counter` increments `counter` and returns the new value, `2`. So, the `alert` shows `2`.
+`(*)` сабында *префикс* формасы `++counter` `counter`'ди көбөйтөт жана жаңы `2` маанисин кайтарат. Ошентип, `alert` `2`ни көрсөтөт.
 
 Эми постфикс формасын колдонолу:
 
@@ -369,53 +369,53 @@ let a = counter++; // (*) ++counter counter++'ка алмашты
 alert(a); // *!*1*/!*
 ```
 
-In the line `(*)`, the *postfix* form `counter++` also increments `counter` but returns the *old* value (prior to increment). So, the `alert` shows `1`.
+`(*)` сабында *постфикс* формасы `counter++` да `counter`'ди көбөйтөт, бирок *эски* (көбөйтүүгө чейинки) маанисин кайтарат. Ошентип, `alert` `1`ди көрсөтөт.
 
 Жыйынтыктайлы:
 
-- If the result of increment/decrement is not used, there is no difference in which form to use:
+- Эгерде көбөйтүүнүн/азайтуунун натыйжасы колдонулбаса, анда кайсы форманы колдонуунун айырмасы жок:
 
     ```js run
     let counter = 0;
     counter++;
     ++counter;
-    alert( counter ); // 2, the lines above did the same
+    alert( counter ); // 2, жогорудагы саптар бирдей нерсени кылышты
     ```
-- If we'd like to increase a value *and* immediately use the result of the operator, we need the prefix form:
+- Эгерде биз маанини көбөйтүүнү *жана* оператордун натыйжасын колдонууну кааласак, бизге префикс формасы керек:
 
     ```js run
     let counter = 0;
     alert( ++counter ); // 1
     ```
-- If we'd like to increment a value but use its previous value, we need the postfix form:
+- Эгерде биз маанини көбөйтүүнү, бирок анын мурунку маанисин колдонууну кааласак, бизге постфикс формасы керек:
 
     ```js run
     let counter = 0;
     alert( counter++ ); // 0
     ```
 
-````smart header="Increment/decrement among other operators"
-The operators `++/--` can be used inside expressions as well. Their precedence is higher than most other arithmetical operations.
+````smart header="Башка операторлордун арасындагы инкремент/декремент"
+`++/--` операторлору туюнтмалардын ичинде да колдонулушу мүмкүн. Алардын алгачкылыгы башка арифметикалык операциялардын көбүнө караганда жогору.
 
-For instance:
+Мисалы үчүн:
 
 ```js run
 let counter = 1;
 alert( 2 * ++counter ); // 4
 ```
 
-Compare with:
+Төмөндөгү менен салыштырыңыз:
 
 ```js run
 let counter = 1;
-alert( 2 * counter++ ); // 2, because counter++ returns the "old" value
+alert( 2 * counter++ ); // 2, себеби counter++ "эски" маанисин кайтарат
 ```
 
-Though technically okay, such notation usually makes code less readable. One line does multiple things -- not good.
+Техникалык жактан түзүк болгону менен, мындай жазуу адатта коддун окулушун начарлатат. Бир сап көп нерсени аткарса -- бул жакшы эмес.
 
-While reading code, a fast "vertical" eye-scan can easily miss something like `counter++` and it won't be obvious that the variable increased.
+Кодду окуп жатканда, тез "вертикалдуу" сканерлөө `counter++` сыяктуу нерселерди оңой эле өткөрүп жибериши мүмкүн жана өзгөрмө жогорулатылганы анык болбойт.
 
-We advise a style of "one line -- one action":
+Биз "бир сап -- бир аракет" стилин сунуштайбыз:
 
 ```js run
 let counter = 1;
@@ -434,19 +434,19 @@ counter++;
 
 - AND(жана) ( `&` )
 - OR(же) ( `|` )
-- XOR(биттик бөтөнчөлүү же) ( `^` )
+- XOR(биттик бөтөнчөлөгөн же) ( `^` )
 - NOT(эмес) ( `~` )
 - LEFT SHIFT(солго жылдыруу) ( `<<` )
 - RIGHT SHIFT(оңго жылдыруу) ( `>>` )
 - ZERO-FILL RIGHT SHIFT(нөлдөр менен толтуруу менен оңго жылдыруу) ( `>>>` )
 
-These operators are used very rarely, when we need to fiddle with numbers on the very lowest (bitwise) level. We won't need these operators any time soon, as web development has little use of them, but in some special areas, such as cryptography, they are useful. You can read the [Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) chapter on MDN when a need arises.
+Биз сандар менен эң төмөнкү (биттик) деңгээлде иштеш керек болгондо бул операторлор өтө сейрек колдонулат. Жакын арада бизге бул операторлордун кереги жок, анткени веб иштеп чыгуучулар аларды аз колдонушат, бирок криптография сыяктуу кээ бир өзгөчө тармактарда алар пайдалуу болот. Зарылчылык жаралганда MDN'деги [Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) бөлүмүн окуй аласыз.
 
 ## Үтүр
 
-The comma operator `,` is one of the rarest and most unusual operators. Sometimes, it's used to write shorter code, so we need to know it in order to understand what's going on.
+Үтүр оператору `,` эң сейрек кездешүүчү жана адаттан тыш операторлордун бири. Кээде ал кыскараак код жазуу үчүн колдонулат, андыктан эмне болуп жатканын түшүнүү үчүн аны билишибиз керек.
 
-The comma operator allows us to evaluate several expressions, dividing them with a comma `,`. Each of them is evaluated but only the result of the last one is returned.
+Үтүр оператору бизге бир нече туюнтмаларды үтүр `,` менен бөлүп аткарууга мүмкүндүк берет. Алардын ар бири аткарылат, бирок акыркысынын натыйжасы гана кайтарылат.
 
 Мисалы:
 
@@ -460,7 +460,7 @@ alert( a ); // 7 (3 + 4 эсептөөсүнүн жыйынтыгы)
 
 Here, the first expression `1 + 2` is evaluated and its result is thrown away. Then, `3 + 4` is evaluated and returned as the result.
 
-```smart header="Comma has a very low precedence"
+```smart header="Үтүр өтө төмөн алгачкылыкка ээ"
 Please note that the comma operator has very low precedence, lower than `=`, so parentheses are important in the example above.
 
 Without them: `a = 1 + 2, 3 + 4` evaluates `+` first, summing the numbers into `a = 3, 7`, then the assignment operator `=` assigns `a = 3`, and the rest is ignored. It's like `(a = 1 + 2), 3 + 4`.
@@ -473,10 +473,10 @@ Sometimes, people use it in more complex constructs to put several actions in on
 Мисалы:
 
 ```js
-// three operations in one line
+// бир сапта үч операция
 for (*!*a = 1, b = 3, c = a * b*/!*; a < 10; a++) {
  ...
 }
 ```
 
-Such tricks are used in many JavaScript frameworks. That's why we're mentioning them. But usually they don't improve code readability so we should think well before using them.
+Мындай трюктар көптөгөн JavaScript фреймворкторунда колдонулат. Ошондуктан биз аларды белгилеп жатабыз. Бирок, адатта, алар коддун окулушун жакшыртпайт, андыктан аларды колдонуудан мурун жакшылап ойлонушубуз керек.
