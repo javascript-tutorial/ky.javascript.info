@@ -415,7 +415,7 @@ alert( 2 * counter++ ); // 2, себеби counter++ "эски" маанисин
 
 Кодду окуп жатканда, тез "вертикалдуу" сканерлөө `counter++` сыяктуу нерселерди оңой эле өткөрүп жибериши мүмкүн жана өзгөрмө жогорулатылганы анык болбойт.
 
-Биз "бир сап -- бир аракет" стилин сунуштайбыз:
+Биз "бир сап -- бир иш-аракет" стилин сунуштайбыз:
 
 ```js run
 let counter = 1;
@@ -458,17 +458,17 @@ let a = (1 + 2, 3 + 4);
 alert( a ); // 7 (3 + 4 эсептөөсүнүн жыйынтыгы)
 ```
 
-Here, the first expression `1 + 2` is evaluated and its result is thrown away. Then, `3 + 4` is evaluated and returned as the result.
+Бул жерде биринчи `1 + 2` туюнтмасы аткарылат жана анын натыйжасы ыргытылат. Андан кийин `3 + 4` аткарылат жана натыйжа катары кайтарылат.
 
 ```smart header="Үтүр өтө төмөн алгачкылыкка ээ"
-Please note that the comma operator has very low precedence, lower than `=`, so parentheses are important in the example above.
+Сураныч, үтүр операторунун алгачкылыгы `=` операторунан абдан төмөн экенин эске алыңыз, андыктан жогорудагы мисалда кашаалар маанилүү.
 
-Without them: `a = 1 + 2, 3 + 4` evaluates `+` first, summing the numbers into `a = 3, 7`, then the assignment operator `=` assigns `a = 3`, and the rest is ignored. It's like `(a = 1 + 2), 3 + 4`.
+Кашааларсыз `a = 1 + 2, 3 + 4` туюнтмасында адегенде `+` операторлору аткарылып, сандарды `a = 3, 7` менен бириктирет, андан кийин ыйгаруу оператору `=` `a = 3`'тү ыйгарат, ал эми калганы көңүлдөнбөйт. Бул `(a = 1 + 2), 3 + 4` менен бирдей.
 ```
 
-Why do we need an operator that throws away everything except the last expression?
+Эмне үчүн бизге акыркы туюнтмадан башкасынын баарын ыргыткан оператор керек?
 
-Sometimes, people use it in more complex constructs to put several actions in one line.
+Кээде адамдар бир сапка бир нече иш-аракеттерди киргизүү үчүн аны татаал түзүлүштөрдө колдонушат.
 
 Мисалы:
 
