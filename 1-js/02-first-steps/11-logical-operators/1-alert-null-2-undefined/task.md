@@ -1,12 +1,11 @@
-importance: 5
+маанилүүлүк: 5
 
 ---
 
-# What's the result of OR?
+# ЖЕ натыйжасы эмне?
 
-What is the code below going to output?
+Төмөнкү код эмнени чыгарат?
 
 ```js
 alert( null || 2 || undefined );
 ```
-
