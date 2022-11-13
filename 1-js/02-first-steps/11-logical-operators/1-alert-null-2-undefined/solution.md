@@ -1,4 +1,4 @@
-The answer is `2`, that's the first truthy value.
+Натыйжасы `2`, бул биринчи чындык маани.
 
 ```js run
 alert( null || 2 || undefined );
