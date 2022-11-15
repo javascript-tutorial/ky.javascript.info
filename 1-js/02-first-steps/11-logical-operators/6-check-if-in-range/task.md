@@ -1,9 +1,9 @@
-importance: 3
+маанилүүлүк: 3
 
 ---
 
-# Check the range between
+# Диапазонду текшериңиз
 
-Write an `if` condition to check that `age` is between `14` and `90` inclusively.
+`age` `14` жана `90`'ду камтыган арасында экенин текшерүү үчүн `if` шартын жазыңыз.
 
-"Inclusively" means that `age` can reach the edges `14` or `90`.
+"Камтыган" дегени `age` `14` же `90`'дун чектерине жете аларын билдирет.
