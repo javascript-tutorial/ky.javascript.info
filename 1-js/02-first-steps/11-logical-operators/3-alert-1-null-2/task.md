@@ -1,12 +1,11 @@
-importance: 5
+маанилүүлүк: 5
 
 ---
 
-# What is the result of AND?
+# ЖАНА натыйжасы эмне?
 
-What is this code going to show?
+Бул код эмнени көрсөтөт?
 
 ```js
 alert( 1 && null && 2 );
 ```
-
