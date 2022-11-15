@@ -1,16 +1,15 @@
-The answer: `3`.
+Жообу: `3`.
 
 ```js run
 alert( null || 2 && 3 || 4 );
 ```
 
-The precedence of AND `&&` is higher than `||`, so it executes first.
+ЖАНА'нын `&&` алгачкылыгы `||` операторунан жогору, андыктан ал биринчи аткарылат.
 
-The result of `2 && 3 = 3`, so the expression becomes:
+Натыйжасы `2 && 3 = 3`, андыктан туюнтма мындай болуп калат:
 
 ```
 null || 3 || 4
 ```
 
-Now the result is the first truthy value: `3`.
-
+Эми натыйжасы - бул биринчи чындык мааниси: `3`.
