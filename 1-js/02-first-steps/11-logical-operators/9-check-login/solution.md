@@ -18,7 +18,7 @@ if (userName === 'Админ') {
 } else if (userName === '' || userName === null) {
   alert( 'Жокко чыгарылды' );
 } else {
-  alert( "Мен сизди билбейм" );
+  alert( "Мен сизди тааныбайм" );
 }
 ```
 
