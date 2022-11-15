@@ -1,6 +1,5 @@
-The answer: `null`, because it's the first falsy value from the list.
+Жообу: `null`, анткени бул тизмедеги биринчи жалган маани.
 
 ```js run
 alert(1 && null && 2);
 ```
-
