@@ -1,9 +1,9 @@
-importance: 3
+маанилүүлүк: 3
 
 ---
 
-# Check the range outside
+# Тышкы диапазонду текшериңиз
 
-Write an `if` condition to check that `age` is NOT between `14` and `90` inclusively.
+`age` `14` жана `90`ду кошо алганда арасында ЭМЕС экенин текшерүү үчүн `if` шартын жазыңыз.
 
-Create two variants: the first one using NOT `!`, the second one -- without it.
+Эки вариант түзүңүз: биринчисин ЭМЕС `!` оператору менен, экинчисин -- ансыз.
