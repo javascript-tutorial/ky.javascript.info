@@ -1,25 +1,25 @@
-importance: 3
+маанилүүлүк: 3
 
 ---
 
-# Check the login
+# Логинди текшериңиз
 
-Write the code which asks for a login with `prompt`.
+Логинди `prompt` менен сураган кодду жазыңыз.
 
-If the visitor enters `"Admin"`, then `prompt` for a password, if the input is an empty line or `key:Esc` -- show "Canceled", if it's another string -- then show "I don't know you".
+Эгерде келүүчү `Админ` киргизсе, анда `prompt` менен сырсөздү киргизүүгө сунуш кылыңыз. Эгерде бош сап киргизилсе же `key:Esc` басылса -- "Жокко чыгарылды" көрсөтүңүз. Эгерде башка сап киргизилсе - анда "Мен сизди тааныбайм" көрсөтүңүз.
 
-The password is checked as follows:
+Сырсөз төмөнкүдөй текшерилет:
 
-- If it equals "TheMaster", then show "Welcome!",
-- Another string -- show "Wrong password",
-- For an empty string or cancelled input, show "Canceled"
+- Эгер ал "Башчымын" менен барабар болсо, анда "Кош келиңиз!" көрсөтүңүз,
+- Башка сап болсо -- "Туура эмес сырсөз" көрсөтүңүз,
+- Бош сап же жокко чыгарылган киргизүү үчүн "Жокко чыгарылды" көрсөтүңүз.
 
-The schema:
+Схемасы:
 
 ![](ifelse_task.svg)
 
-Please use nested `if` blocks. Mind the overall readability of the code.
+Сураныч, камтылган `if` блокторун колдонуңуз. Коддун жалпы окулушуна көңүл буруңуз.
 
-Hint:  passing an empty input to a prompt returns an empty string `''`. Pressing `key:ESC` during a prompt returns `null`.
+Кеңешме: сурамга бош киргизүүнү өткөрүү бош сапты `''` кайтарат. Сурам учурунда `key:ESC` басылганда `null` кайтарылат.
 
 [demo]
