@@ -1,12 +1,11 @@
-importance: 5
+маанилүүлүк: 5
 
 ---
 
-# The result of OR AND OR
+# ЖЕ ЖАНА ЖЕ натыйжасы
 
-What will the result be?
+Натыйжасы кандай болот?
 
 ```js
 alert( null || 2 && 3 || 4 );
 ```
-
