@@ -1,12 +1,11 @@
-The first variant:
+Биринчи варианты:
 
 ```js
 if (!(age >= 14 && age <= 90))
 ```
 
-The second variant:
+Экинчи варианты:
 
 ```js
 if (age < 14 || age > 90)
 ```
-
