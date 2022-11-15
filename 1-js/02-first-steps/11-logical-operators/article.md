@@ -1,24 +1,24 @@
-# Logical operators
+# Логикалык операторлор
 
-There are four logical operators in JavaScript: `||` (OR), `&&` (AND), `!` (NOT), `??` (Nullish Coalescing). Here we cover the first three, the `??` operator is in the next article.
+JavaScript'те төрт логикалык оператор бар: `||` (ЖЕ), `&&` (ЖАНА), `!` (ЭМЕС), `??` (Нөлдүк биригүү оператору). Бул жерде биз биринчи үчөөнү караштырабыз, `??` оператору кийинки бөлүмдө болот.
 
-Although they are called "logical", they can be applied to values of any type, not only boolean. Their result can also be of any type.
+Алар "логикалык" деп аталганы менен, логикалык гана эмес, ар кандай түрдөгү маанилерге колдонулушу мүмкүн. Алардын натыйжасы да ар кандай түрдө болушу мүмкүн.
 
-Let's see the details.
+Кененирээк карап көрөлү.
 
-## || (OR)
+## || (ЖЕ)
 
-The "OR" operator is represented with two vertical line symbols:
+"ЖЕ" оператору эки вертикалдуу сызык белгиси менен көрсөтүлөт:
 
 ```js
 result = a || b;
 ```
 
-In classical programming, the logical OR is meant to manipulate boolean values only. If any of its arguments are `true`, it returns `true`, otherwise it returns `false`.
+Классикалык программалоодо логикалык ЖЕ логикалык маанилерди гана башкарууга үчүн арналган. Эгерде анын аргументтеринин бири `true` болсо, `true` кайтарылат, антпесе `false` кайтарылат.
 
-In JavaScript, the operator is a little bit trickier and more powerful. But first, let's see what happens with boolean values.
+JavaScript'те бул оператор бир аз татаалыраак жана күчтүүрөөк. Бирок адегенде логикалык маанилер менен эмне болорун карап көрөлү.
 
-There are four possible logical combinations:
+Төрт мүмкүн болгон логикалык комбинациясы бар:
 
 ```js run
 alert( true || true );   // true
@@ -27,21 +27,21 @@ alert( true || false );  // true
 alert( false || false ); // false
 ```
 
-As we can see, the result is always `true` except for the case when both operands are `false`.
+Көрүнүп тургандай, эки операнд тең `false` болгондон башкасы, натыйжасы ар дайым `true` болот.
 
-If an operand is not a boolean, it's converted to a boolean for the evaluation.
+Эгерде операнд логикалык эмес болсо, анда ал эсептөө үчүн логикалык түргө айландырылат.
 
-For instance, the number `1` is treated as `true`, the number `0` as `false`:
+Мисалы үчүн, `1` саны `true`, `0` саны `false` катары каралат:
 
 ```js run
-if (1 || 0) { // works just like if( true || false )
-  alert( 'truthy!' );
+if (1 || 0) { // if( true || false ) сыяктуу иштейт
+  alert( 'чындык!' );
 }
 ```
 
-Most of the time, OR `||` is used in an `if` statement to test if *any* of the given conditions is `true`.
+Көбүнчө ЖЕ `||` оператору `if` нускамасында берилген шарттардын *кайсынысы болбосун* `true` экенин текшерүү үчүн колдонулат.
 
-For example:
+Мисалы:
 
 ```js run
 let hour = 9;
@@ -49,28 +49,28 @@ let hour = 9;
 *!*
 if (hour < 10 || hour > 18) {
 */!*
-  alert( 'The office is closed.' );
+  alert( 'Кеңсе жабылды.' );
 }
 ```
 
-We can pass more conditions:
+Биз көбүрөөк шарттарды бере алабыз:
 
 ```js run
 let hour = 12;
 let isWeekend = true;
 
 if (hour < 10 || hour > 18 || isWeekend) {
-  alert( 'The office is closed.' ); // it is the weekend
+  alert( 'Кеңсе жабылды.' ); // бул дем алыш күндөрү
 }
 ```
 
-## OR "||" finds the first truthy value [#or-finds-the-first-truthy-value]
+## ЖЕ "||" биринчи чындык маанини табат [#or-finds-the-first-truthy-value]
 
 The logic described above is somewhat classical. Now, let's bring in the "extra" features of JavaScript.
 
-The extended algorithm works as follows.
+Кеңейтилген алгоритм төмөнкүдөй иштейт.
 
-Given multiple OR'ed values:
+ЖЕ оператору менен бөлүнгөн бир нече маани берилди:
 
 ```js
 result = value1 || value2 || value3;
