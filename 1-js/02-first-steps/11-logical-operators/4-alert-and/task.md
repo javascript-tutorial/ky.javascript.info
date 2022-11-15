@@ -1,12 +1,11 @@
-importance: 3
+маанилүүлүк: 3
 
 ---
 
-# What is the result of AND'ed alerts?
+# ЖАНА менен бириктирилген alert'тердин натыйжасы эмне?
 
-What will this code show?
+Бул код эмнени көрсөтөт?
 
 ```js
 alert( alert(1) && alert(2) );
 ```
-
