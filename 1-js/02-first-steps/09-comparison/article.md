@@ -9,9 +9,9 @@ JavaScript'те алар мындай жазылат:
 - Барабар: `a == b`, көңүл буруңуз, кош барабардык белгиси `==` салыштыруу үчүн колдонулат, ал эми жалгыз барабардык белгиси `a = b` ыйгарууну билдирчү.
 - Барабар эмес: Математикада <code>&ne;</code> белгиси менен белгиленет, бирок JavaScript'те <code>a != b</code> деп жазылат.
 
-In this article we'll learn more about different types of comparisons, how JavaScript makes them, including important peculiarities.
+Бул бөлүмдө биз салыштыруунун ар кандай түрлөрү, JavaScript аларды кантип аткарышы жана маанилүү өзгөчөлүктөрү жөнүндө көбүрөөк үйрөнөбүз.
 
-At the end you'll find a good recipe to avoid "JavaScript quirks"-related issues.
+Аягында, сиз JavaScript'теги салыштыруу "тентектиктеринен" сактануу үчүн жакшы кеңештерди таба аласыз.
 
 ## Салыштыруунун натыйжасы логикалык түргө ээ
 
@@ -28,7 +28,7 @@ alert( 2 == 1 ); // false (туура эмес)
 alert( 2 != 1 ); // true (туура)
 ```
 
-A comparison result can be assigned to a variable, just like any value:
+Салыштыруунун натыйжасы ар кандай маани сыяктуу эле өзгөрмөгө ыйгарылышы мүмкүн:
 
 ```js run
 let result = 5 > 4; // салыштыруунун натыйжасы result өзгөрмөсүнө ыйгарылат
@@ -37,27 +37,27 @@ alert( result ); // true
 
 ## Саптарды салыштыруу
 
-To see whether a string is greater than another, JavaScript uses the so-called "dictionary" or "lexicographical" order.
+Бир сап экинчисинен чоңураак экенин аныктоо үчүн JavaScript "алфавиттик" же "лексикографиялык" деп аталган тартипти колдонот.
 
-In other words, strings are compared letter-by-letter.
+Башкача айтканда, саптар белгиден белгиге салыштырылат.
 
 Мисалы:
 
 ```js run
 alert( 'Я' > 'А' ); // туура (true)
 alert( 'Кант' > 'Калп' ); // туура (true)
-alert( 'Бала' > 'Бал' ); // туура (true)
+alert( 'Балдар' > 'Бал' ); // туура (true)
 ```
 
 Эки сапты салыштыруу алгоритми абдан жөнөкөй:
 
-1. Compare the first character of both strings.
-2. If the first character from the first string is greater (or less) than the other string's, then the first string is greater (or less) than the second. We're done.
-3. Otherwise, if both strings' first characters are the same, compare the second characters the same way.
-4. Repeat until the end of either string.
-5. If both strings end at the same length, then they are equal. Otherwise, the longer string is greater.
+1. Эки саптын биринчи белгилери салыштырылат.
+2. Эгерде биринчи саптын биринчи белгиси башка саптардан чоң (же кичине) болсо, биринчи сап экинчисинен чоң (же кичине) болот. Салыштыруу аяктады.
+3. Болбосо, эки саптын тең биринчи белгилери бирдей болсо, экинчи белгилери ошондой жол менен эле салыштырылат.
+4. Салыштыруу саптардын бири бүтмөйүнчө уланат.
+5. Эгерде эки сап бирдей узундукта аяктаса, анда алар барабар болот. Болбосо, узун сап чоңураак болуп саналат.
 
-In the first example above, the comparison `'Z' > 'A'` gets to a result at the first step.
+Жогорудагы биринчи мисалда `'Я' > 'А'` салыштыруусу биринчи кадамда аяктайт.
 
 Экинчи `'Кант'` жана `'Калп'` сөздөрүнүн салыштыруусу белгиден белгиге салыштырылат:
 
@@ -71,18 +71,18 @@ The comparison algorithm given above is roughly equivalent to the one used in di
 For instance, case matters. A capital letter `"A"` is not equal to the lowercase `"a"`. Which one is greater? The lowercase `"a"`. Why? Because the lowercase character has a greater index in the internal encoding table JavaScript uses (Unicode). We'll get back to specific details and consequences of this in the chapter <info:string>.
 ```
 
-## Comparison of different types
+## Ар кандай түрлөрдү салыштыруу
 
-When comparing values of different types, JavaScript converts the values to numbers.
+Ар кандай түрдөгү маанилер салыштырылганда, JavaScript ошол маанилерди сандарга айландырат.
 
-For example:
+Мисалы:
 
 ```js run
-alert( '2' > 1 ); // true, string '2' becomes a number 2
-alert( '01' == 1 ); // true, string '01' becomes a number 1
+alert( '2' > 1 ); // true, '2' сабы 2 санына айланат
+alert( '01' == 1 ); // true, '01' сабы 1 санына айланат
 ```
 
-For boolean values, `true` becomes `1` and `false` becomes `0`.
+Логикалык `true` мааниси `1` болуп калат жана `false` мааниси `0` болуп калат.
 
 Мисалы:
 
@@ -92,10 +92,10 @@ alert( false == 0 ); // true
 ```
 
 ````smart header="A funny consequence"
-It is possible that at the same time:
+Төмөнкү кырдаал болушу мүмкүн:
 
-- Two values are equal.
-- One of them is `true` as a boolean and the other one is `false` as a boolean.
+- Эки маани барабар.
+- Алардын бири логикалык `true` мааниси, экинчиси - `false`.
 
 Мисалы:
 
@@ -112,15 +112,15 @@ alert(a == b); // true!
 From JavaScript's standpoint, this result is quite normal. An equality check converts values using the numeric conversion (hence `"0"` becomes `0`), while the explicit `Boolean` conversion uses another set of rules.
 ````
 
-## Strict equality
+## Катуу салыштыруу
 
-A regular equality check `==` has a problem. It cannot differentiate `0` from `false`:
+Кадимки салыштыруу операторунун `==` көйгөйү бар. Ал `0` менен `false` маанилерин айырмалай албайт:
 
 ```js run
 alert( 0 == false ); // true
 ```
 
-The same thing happens with an empty string:
+Ошол эле көйгөй бош сап менен келип чыгат:
 
 ```js run
 alert( '' == false ); // true
