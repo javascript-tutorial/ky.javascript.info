@@ -37,7 +37,7 @@ alert( result ); // true
 
 ## Саптарды салыштыруу
 
-Бир сап экинчисинен чоңураак экенин аныктоо үчүн JavaScript "алфавиттик" же "лексикографиялык" деп аталган тартипти колдонот.
+Бир сап экинчисинен чоңураак экенин аныктоо үчүн JavaScript "алиппелик" же "лексикографиялык" деп аталган тартипти колдонот.
 
 Башкача айтканда, саптар белгиден белгиге салыштырылат.
 
@@ -65,10 +65,10 @@ alert( 'Балдар' > 'Бал' ); // туура (true)
 2. `а` менен `а` барабар.
 3. `н` `л`ден чоңураак. Бул жерде салыштыруу бүтөт. Биринчи сап чоңураак.
 
-```smart header="Not a real dictionary, but Unicode order"
-The comparison algorithm given above is roughly equivalent to the one used in dictionaries or phone books, but it's not exactly the same.
+```smart header="Чыныгы алиппе эмес, Unicode коддоосу колдонулат"
+Жогоруда келтирилген салыштыруу алгоритми болжол менен сөздүктөрдө же телефон китептеринде колдонулган алгоритмге барабар, бирок так окшош эмес.
 
-For instance, case matters. A capital letter `"A"` is not equal to the lowercase `"a"`. Which one is greater? The lowercase `"a"`. Why? Because the lowercase character has a greater index in the internal encoding table JavaScript uses (Unicode). We'll get back to specific details and consequences of this in the chapter <info:string>.
+Мисалы, JavaScript'те белги регистри мааниге ээ. Баш `"A"` тамгасы кичине `"a"` тамгасына барабар эмес. Кайсынысы чоңураак? Бул кичине `"a"` тамгасы. Эмнеге? Анткени кичине тамгалар JavaScript (Unicode) колдонгон ички коддоо жадыбалында чоңураак кодго ээ. Бул коддоонун өзгөчөлүктөрүн жана натыйжаларын <info:string> бөлүмүндө карап чыгабыз.
 ```
 
 ## Ар кандай түрлөрдү салыштыруу
@@ -91,7 +91,7 @@ alert( true == 1 ); // true
 alert( false == 0 ); // true
 ```
 
-````smart header="A funny consequence"
+````smart header="Кызык натыйжа"
 Төмөнкү кырдаал болушу мүмкүн:
 
 - Эки маани барабар.
