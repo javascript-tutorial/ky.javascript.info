@@ -10,9 +10,9 @@ null == "\n0\n" → false
 null === +"\n0\n" → false
 ```
 
-Some of the reasons:
+Кээ бир себептери:
 
-1. Obviously, true.
+1. Албетте, туура.
 2. Dictionary comparison, hence false. `"a"` is smaller than `"p"`.
 3. Again, dictionary comparison, first char `"2"` is greater than the first char `"1"`.
 4. Values `null` and `undefined` equal each other only.
