@@ -114,7 +114,7 @@ From JavaScript's standpoint, this result is quite normal. An equality check con
 
 ## Катуу салыштыруу
 
-Кадимки салыштыруу операторунун `==` көйгөйү бар. Ал `0` менен `false` маанилерин айырмалай албайт:
+Кадимки салыштыруу `==` операторунун көйгөйү бар. Ал `0` менен `false` маанилерин айырмалай албайт:
 
 ```js run
 alert( 0 == false ); // true
@@ -209,7 +209,7 @@ Why did we go over these examples? Should we remember these peculiarities all th
 
 ## Корутунду
 
-- Comparison operators return a boolean value.
+- Салыштыруу операторлору логикалык маанини кайтарат.
 - Strings are compared letter-by-letter in the "dictionary" order.
 - When values of different types are compared, they get converted to numbers (with the exclusion of a strict equality check).
 - The values `null` and `undefined` equal `==` each other and do not equal any other value.
