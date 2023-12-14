@@ -1,56 +1,60 @@
-# Заманбап JavaScript колдонмосу Кыргыз тилинде
+# Заманбап JavaScript колдонмосу Кыргыз тилинде 🇰🇬
 
 Бул репозиторийде <https://javascript.info> колдонмосунун кыргыз тилиндеги котормосу сакталып жатат.
 
 
 **Сиз кантип салым кошо аласыз:**
 
-1. [Kyrgyz Translate Progress](https://github.com/javascript-tutorial/ky.javascript.info/issues/1) талкуулоосун караңыз.
+1. [Kyrgyz Translate Progress](https://github.com/javascript-tutorial/ky.javascript.info/issues/1) талкуулоосун карап көрүңүз.
 2. Которгуңуз келген, белгиленбеген макаланы тандаңыз.
 3. Ошол эле талкуулоого макаланын аталышы менен жорум кошуңуз, мисалы, `JavaScript'ке киришүү`. Ал макаланы сиз которуп жатканыңызды баары билиши үчүн, биздин ботубуз аны талкуулоодо белгилейт. Сиздин жорумуңуз макаланын аталышын гана камтышы керек.
 4. Репозиторийди көчүрүңүз ("Fork" баскычын басыңыз), андан кийин бир макаланы которуп, бүткөндөн кийин, биригүү сурамын жөнөтүңүз (Pull Request). Сурамдын аталышы сиз которгон макаланын аталышына дал келиши керек. Кээ бир макалаларда тапшырмалар, сүрөттөр ж.б. камтылган кошумча файлдар бар. Аларды да которуу керек.
 
+Котормо боюнча суроолоруңуз болсо, котормонун аталышы менен [талкуу (Issue) түзсөңүз болот](https://github.com/javascript-tutorial/ky.javascript.info/issues/new), мисалы: "Translation: Code quality > Debugging in Chrome".
+
+Сиз текстти каалаган редактордо түзөтө аласыз. Бул колдонмо түшүнүүгө оңой болгон кеңейтилген "markdown" форматын колдонот. Ал эми натыйжасын сайтта кандай көрүнөрүн көргүңүз келсе, колдонмону жергиликтүү түрдө иштетүү үчүн анын [сервери бар](https://github.com/javascript-tutorial/server).
+
+Маалымат дагы деле жетишсизби? Кененирээк [бул жерде (орус тилинде)](https://github.com/javascript-tutorial/ru.javascript.info/blob/master/CONTRIBUTING.md#%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D1%83%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA%D0%B0) окусаңыз болот. 
+
 Сураныч, салым кошуучуларга котормоңузду карап чыгууга жана бириктирүүгө же өзгөртүүнү талап кылууга уруксат бериңиз.
    
-If maintainers do not respond, or if you'd like to become a maintainer, write us at the [main repo](https://github.com/javascript-tutorial/en.javascript.info/issues/new).
+Салым кошуучулар жооп бербесе, же салым кошуучу болгуңуз келсе, бизге [негизги репозиторийге](https://github.com/javascript-tutorial/en.javascript.info/issues/new) жазыңыз. 
     
-**Let others know what you're translating, in message boards or chats in your language. Invite them to join!**
+🎉 Чоң ыракмат!
 
-🎉 Thank you!
+Котормо жарыяланганда сиздин атыңыз жана салымыңыздын көлөмү "About project" баракчасында көрүнөт.
 
-Your name and the contribution size will appear in the "About project" page when the translation gets published.
+P.S. Тилдердин толук тизмесин <https://javascript.info/translate> дарегинен тапсаңыз болот.
 
-P.S. The full list of languages can be found at <https://javascript.info/translate>.
+## Түзүлүшү 📋
 
-## Structure
+Ар бир бөлүм, макала же тапшырма өзүнүн папкасында жайгашкан.
 
-Every chapter, an article or a task resides in its own folder.
+`N-url` деп аталган папка, мында `N` – ылгоо үчүн сан (макалалар иреттелген), ал эми `url` - сайттагы URL аталышы болуп саналат.
 
-The folder is named `N-url`, where `N` – is the number for sorting (articles are ordered), and `url` is the URL-slug on the site.
+Папкада төмөнкү файлдардын бири бар:
 
-The folder has one of files:
+- бөлүм үчүн `index.md`,
+- макала үчүн `article.md`,
+- тапшырманы түзүү үчүн `task.md` (жана ошондой эле анын чечими менен `solution.md`, эгерде бар болсо).
 
-- `index.md` for a section,
-- `article.md` for an article,
-- `task.md` for a task formulation (+`solution.md` with the solution text if any).
+Файл `# Башжазуусу` менен башталат, андан кийин Markdown форматындагы текст болот. Аны жөнөкөй текст редакторунда түзөтүүгө болот.
 
-A file starts with the `# Title Header`, and then the text in Markdown-like format, editable in a simple text editor. 
+Макала же тапшырма үчүн кошумча булактар жана мисалдар да ошол эле папкада болот.
 
-Additional resources and examples for the article or the task, are also in the same folder.
+## Котормо боюнча кеңештер
 
-## Translation Tips
+Сураныч, саптарды жана абзацтарды "болгондой" калтырыңыз - жаңы саптарды кошпоңуз жана учурдагыларды алып салбаңыз. Келечектеги өзгөртүүлөрдү англисче версиясынан котормого бириктирүүнү жеңилдетет.
 
-Please keep line breaks and paragraphs "as is": don't add newlines and don't remove existing ones. Makes it easy to merge future changes from the English version into the translation. 
+Эгерде сиз англис тилиндеги версиясын жакшыртууга болорун көрсөңүз – өтө сонун, анда ага сунуш көрсөтүңүз.
 
-If you see that the English version can be improved – great, please send a PR to it.
+### Терминдер
 
-### Terms
-
-- Some specification terms are not to be translated, e.g. "Function Declaration" can be left "as is".
-- For other terms like `resolved promise`, `slash`, `regexp`, and so on - look for a glossary, hopefully there's one for your language already. If not, look for translations in manuals, such as [MDN](https://developer.mozilla.org/en-US/).
+- Кээ бир спецификация терминдерин которууга болбойт, мис. "Функцияны декларациялоо" "ошол бойдон" калат.
+- `resolved promise`, `slash`, `regexp`, жана башка терминдери үчүн глоссарийде карап көрүңүз. Болбосо, [MDN](https://developer.mozilla.org/en-US/) сыяктуу колдонмолордон котормолорду издеңиз.
 
 
-### Terms with meaning
+### Мааниси бар терминдер
 
 In English many terms have an obvious meaning. For a person who doesn't understand English, there's no such meaning.
 
@@ -68,14 +72,14 @@ Some people who read translations may not know English so well. So we can add a 
 `ReadableStream` ("flujo legible") permite leer datos fragmento por fragmento. 
 ```
 
-### Text in Code Blocks
+### Код блокторундагы текст
 
-- Translate comments.
-- Translate user-messages and example strings.
-- Don't translate variables, classes, identifiers.
-- Ensure that the code works after the translation :)
+- Комментарийлерди которуңуз.
+- Колдонуучунун билдирүүлөрүн жана мисал саптарын которуңуз.
+- Өзгөрмөлөрдү, класстарды, идентификаторлорду которбоңуз.
+- Котормодон кийин коддун иштешин текшериңиз :)
 
-Example:
+Мисалы:
 
 ```js
 // Example
@@ -83,22 +87,22 @@ const text = "Hello, world";
 document.querySelector('.hello').innerHTML = text;
 ```
 
-✅ DO (translate comment):
+✅ КЫЛЫҢЫЗ (комментарийди которуңуз):
 
 ```js
-// Ejemplo
-const text = 'Hola mundo';
+// Мисал
+const text = 'Салам, дүйнө';
 document.querySelector('.hello').innerHTML = text;
 ```
 
-❌ DON'T (translate class):
+❌ КЫЛБАҢЫЗ (классты которбоңуз):
 
 ```js
-// Ejemplo
-const text = 'Hola mundo';
-// ".hello" is a class
-// DO NOT TRANSLATE
-document.querySelector('.hola').innerHTML = text;
+// Мисал
+const text = 'Салам, дүйнө';
+// ".hello" бул класстын аталышы
+// КОТОРБОҢУЗ
+document.querySelector('.салам').innerHTML = text;
 ```
 
 Please note, that sometimes code is followed by pictures, and if you translate text `Hello` -> `Hola` in the code, you need to translate text in picturess as well.
@@ -110,25 +114,25 @@ In that case it's probably easier not to translate such text. See more about tra
 
 If an external link is to Wikipedia, e.g. `https://en.wikipedia.org/wiki/JavaScript`, and a version of that article exists in your language that is of decent quality, link to that version instead.
 
-Example:
+Мисалы:
 
 ```md
 [JavaScript](https://en.wikipedia.org/wiki/JavaScript) is a programming language.
 ```
 
-✅ OK (en -> es):
+✅ БОЛОТ (en -> ky):
 
 ```md
-[JavaScript](https://es.wikipedia.org/wiki/JavaScript) es un lenguaje de programación.
+[JavaScript](https://es.wikipedia.org/wiki/JavaScript) бул программалоо тили.
 ```
 
-For links to MDN, a partially translated version is ok.
+MDN шилтемелери үчүн жарым-жартылай которулган версиясы болот.
 
-If a linked article has no translated version, leave the link "as is".
+Шилтемедеги макаланын которулган версиясы жок болсо, шилтемени "ошол бойдон" калтырыңыз.
 
-### Metadata
+### Метамаалымат
 
-Some files, usually tasks, have YAML metadata at the top, delimited by `---`:
+Кээ бир файлдардын, көбүнчөсү тапшырмалардын жогору жагында `---` менен чектелген YAML метамаалыматы бар:
 
 ```md
 importance: 5
@@ -137,7 +141,7 @@ importance: 5
 ...
 ```
 
-Please don't translate "importance" (and other top metadata).
+Сураныч, "importance" (жана башка жогорудагы матамаалыматты) которбоңуз.
 
 ### Anchors
 
