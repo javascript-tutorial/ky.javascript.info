@@ -1,19 +1,16 @@
-# The Modern JavaScript Tutorial in Kyrgyz
+# Заманбап JavaScript колдонмосу Кыргыз тилинде
 
-This repository hosts the translation of <https://javascript.info> in Kyrgyz.
+Бул репозиторийде <https://javascript.info> колдонмосунун кыргыз тилиндеги котормосу сакталып жатат.
 
 
-**That's how you can contribute:**
+**Сиз кантип салым кошо аласыз:**
 
-- See the [Kyrgyz Translate Progress](https://github.com/javascript-tutorial/ky.javascript.info/issues/1) issue.
-- Choose an unchecked article you'd like to translate.
-- Add a comment with the article title to the issue, e.g. `An Introduction to JavaScript`.
-    - Our bot will mark it in the issue, for everyone to know that you're translating it.
-    - Your comment should contain only the title.
-- Fork the repository, translate and send a PR when done.
-    - PR title should match article title, the bot will write it's number into the issue.
+1. [Kyrgyz Translate Progress](https://github.com/javascript-tutorial/ky.javascript.info/issues/1) талкуулоосун караңыз.
+2. Которгуңуз келген, белгиленбеген макаланы тандаңыз.
+3. Ошол эле талкуулоого макаланын аталышы менен жорум кошуңуз, мисалы, `JavaScript'ке киришүү`. Ал макаланы сиз которуп жатканыңызды баары билиши үчүн, биздин ботубуз аны талкуулоодо белгилейт. Сиздин жорумуңуз макаланын аталышын гана камтышы керек.
+4. Репозиторийди көчүрүңүз ("Fork" баскычын басыңыз), андан кийин бир макаланы которуп, бүткөндөн кийин, биригүү сурамын жөнөтүңүз (Pull Request). Сурамдын аталышы сиз которгон макаланын аталышына дал келиши керек. Кээ бир макалаларда тапшырмалар, сүрөттөр ж.б. камтылган кошумча файлдар бар. Аларды да которуу керек.
 
-Please kindly allow maintainers to review and merge or request changes in your translation.
+Сураныч, салым кошуучуларга котормоңузду карап чыгууга жана бириктирүүгө же өзгөртүүнү талап кылууга уруксат бериңиз.
    
 If maintainers do not respond, or if you'd like to become a maintainer, write us at the [main repo](https://github.com/javascript-tutorial/en.javascript.info/issues/new).
     
