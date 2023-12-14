@@ -1,0 +1,422 @@
+# WARNING !!!
+# Due to the peculiarities of the Kyrgyz language,
+# which consists in syntactic differences from English,
+# this file may contain mistakes.
+# If you find any, please let us know, and suggest your option to correct it.
+
+
+code-style.svg:
+  "A space between parameters":
+    position: "center"
+    text: "Параметрлердин ортосундагы аралык"
+  "No space":
+    position: "center"
+    text: "Аралыгы жок"
+  "between the function name and parentheses":
+    position: "center"
+    text: "функциянын аты менен кашаалардын ортосунда"
+  "between the parentheses and the parameter":
+    position: "center"
+    text: "кашаалар менен параметрлердин ортосунда"
+  "Indentation":
+    position: "center"
+    text: "Чегинүү"
+  "2 spaces":
+    position: "center"
+    text: "2 аралык"
+  "A space ":
+    position: "center"
+    text: "Аралык"
+  "after for/if/while…":
+    position: "center"
+    text: "for/if/while…дан кийин"
+  "} else { without a line break": "} else { сапты которуусуз"
+  "Spaces around a nested call":
+    position: "center"
+    text: "Камтылган чакыруунун айланасындагы аралыктар"
+  "An empty line":
+    position: "center"
+    text: "Бош сап"
+  "between logical blocks":
+    position: "center"
+    text: "Логикалык блоктордун ортосунда"
+  "Lines are not very long": "Саптар өтө узун эмес"
+  "A semicolon ;": "Үтүрлүү чекит ;"
+  "is mandatory": "талап кылынат"
+  "Spaces":
+    position: "center"
+    text: "Аралыктар"
+  "around operators":
+    position: "center"
+    text: "операторлордун айланасында"
+  "Curly brace {":
+    position: "center"
+    text: "Тармал кашаа {"
+  "on the same line, after a space":
+    position: "center"
+    text: "ошол эле сапта, аралыктан кийин"
+  "A space":
+    position: "center"
+    text: "Аралык"
+  "between":
+    position: "center"
+    text: "ортосунда"
+  "parameters":
+    position: "center"
+    text: "параметрлердин"
+  "arguments":
+    position: "center"
+    text: "аргументтердин"
+  "A space between arguments":
+    position: "center"
+    text: "Аргументтердин ортосундагы аралык"
+
+try-catch-flow.svg:
+  "Begin":
+    text: "Башы"
+    position: "center"
+  "No Errors":
+    text: "Ката жок"
+    position: "center"
+  "An error occured in the code":
+    text: "Коддо ката кетти"
+    position: "center"
+  "// code...": "// код..."
+  "Ignore catch block":
+    text: "catch блогун тоотпоо"
+    position: "center"
+  "Ignore the rest of try":
+    text: "try калдыгын тооптоо"
+    position: "center"
+  "Execute catch block":
+    text: "catch блогун аткаруу"
+    position: "center"
+
+recursion-pow.svg:
+  "Yes":
+    text: "Ооба"
+    position: "center"
+  "No":
+    text: "Жок"
+  "recursive call until n==1": "n==1 чейин рекурсивдүү чакыруу"
+
+hello-world-render.svg:
+  "1. The browser shows this part": "1. Браузер бул бөлүгүн көрсөтөт"
+  "2. Then runs the script": "2. Андан кийин скриптти жүргүзөт"
+  "3. Then shows the rest": "3. Андан кийин калганын көрсөтөт"
+
+ifelse_task2.svg:
+  "Begin":
+    text: "Башы"
+    position: "center"
+  "Other":
+    text: "Башка"
+    position: "center"
+  "You don't know?":
+    text: "Билбейсизби?"
+    position: "center"
+  "Right!":
+    text: "Туура!"
+    position: "center"
+  "What's the":
+    text: "Эмне"
+    position: "center"
+  "“official” name of":
+    text: "\"расмий\" аталышы"
+    position: "center"
+  "Иначе": ""
+
+ifelse_task.svg:
+  "Begin": "Башы"
+  "Canceled":
+    position: "center"
+    text: "Жокко чыгарылды"
+  "Welcome!":
+    text: "Кош келдиңиз!"
+    position: "center"
+  "I don't know you": "Мен сизди билбейм"
+  "Wrong password":
+    position: "center"
+    text: "Туура эмес сырсөз"
+  "Who's there?":
+    position: "center"
+    text: "Ким бул?"
+  "Password?": "Сырсөзчү?"
+  "Cancel": "Жокко чыгарылды"
+  "Admin": "Админ"
+  "TheMaster": "Мен башчымын"
+  "Other": "Башка"
+
+chrome-sources-breakpoint.svg:
+  "here's the list":
+    text: "мына тизме"
+    position: "right"
+  "breakpoints":
+    text: "үзүү чекиттери"
+
+chrome-sources-debugger-pause.svg:
+  "see the outer call details":
+    text: "тышкы чакыруунун чоо-жайын көрүү"
+    position: "right"
+  "watch expressions":
+    text: "туюнтмаларды көрүү"
+    position: "right"
+  "current variables":
+    text: "азыркы өзгөрмөлөр"
+    position: "right"
+
+chrome-sources-debugger-trace-1.svg:
+  "nested calls":
+    text: "камтылган чакыруулар"
+    position: "right"
+
+chrome-open-sources.svg:
+  open sources: 'булак файлдарды ачуу'
+
+object-user-empty.svg:
+  empty:
+    text: бош
+    position: "center"
+
+garbage-collection-5.svg:
+  unreachables:
+    text: жеткиликсиз
+
+array-shift.svg:
+  clear:
+    text: тазалоо
+    position: "center"
+  move: жылдыруу
+  elements: элементтер
+  to the left: солго
+
+array-pop.svg:
+  clear:
+    text: тазалоо
+    position: "center"
+
+decorator-makecaching-wrapper.svg:
+  wrapper: 'каптама'
+  around the function: 'функциянын айланасында'
+
+xhr-another-domain.svg:
+  _defaults:
+    position: "center"
+  Browser: 'Браузер'
+  Server: 'Сервер'
+  HTTP-request: 'HTTP-сурам'
+  HTTP-response: 'HTTP-жооп'
+  '* OR https://javascript.info': '* ЖЕ https://javascript.info'
+  'if the header allows, then success,': 'эгерде башжазуусу жол берсе, анда ийгилик'
+  otherwise fail: 'болбосо ката'
+
+xhr-preflight.svg:
+  _defaults:
+    position: "center"
+  Browser: 'Браузер'
+  Server: 'Сервер'
+  Main HTTP-response: 'Башкы HTTP-жооп'
+  otherwise error: 'болбосо ката'
+  'if allowed: success,': 'уруксат берилсе, анда ийгилик,'
+  Main HTTP-request: 'Башкы HTTP-сурам'
+  preflight:
+    text: 'мурунку сурам'
+    position: 'right'
+  if allowed:
+    text: 'уруксат берилсе'
+    position: 'right'
+
+cors-gmail-messages.svg:
+  _defaults:
+    position: "center"
+  got the cookie?: 'куки барбы?'
+  okay!: 'макул!'
+
+websocket-handshake.svg:
+  _defaults:
+    position: "center"
+  Browser: 'Браузер'
+  Server: 'Сервер'
+  HTTP-request: 'HTTP-сурам'
+  '"Hey, server, let''s talk WebSocket?"': '"Эй, сервер, WebSocket`че сүйлөшөлүбү?"'
+  HTTP-response: 'HTTP-жооп'
+  '"Okay!"': 'Макул!'
+  WebSocket protocol: 'WebSocket протоколу'
+
+long-polling.svg:
+  _defaults:
+    position: "center"
+  Browser: 'Браузер'
+  Server: 'Сервер'
+  request: 'сурам'
+  connection: 'туташуу'
+  hangs: 'асылып турат'
+  connection breaks: 'туташуу үзүлдү'
+  end of request: 'сурамдын аягы'
+  data: 'маалымат'
+
+genYield2-2.svg:
+  _defaults:
+    position: "center"
+  Generator: 'Генератор'
+  Calling code: 'Чакыруучу код'
+
+genYield2.svg:
+  _defaults:
+    position: "center"
+  Generator: 'Генератор'
+  Calling code: 'Чакыруучу код'
+
+promise-handler-variants.svg:
+  _defaults:
+    position: "center"
+  ...with the result: '...натыйжасы менен'
+  of the new promise...: 'жаңы промистин...'
+  'the call of .then(handler) always returns a promise:': '.then(handler) чакыруу ар дайым промисти кайтарат:'
+  if handler ends with…: 'handler…'
+  return value: 'маанини кайтаруу менен аяктаганда'
+  return promise: 'промисти кайтаруу менен аяктаганда'
+  throw error: 'ката менен аяктаганда'
+  'that promise settles with:': 'бул промис:'
+
+promiseQueue.svg:
+  '"code finished"': '"код аяктады" менен аяктайт'
+  handler enqueued: 'handler кезекте'
+  queued handler runs: 'кезектеги handler жүргүзүлөт'
+  script execution finished: 'скрипттин аткарылышы аяктады'
+
+eventLoop-full.svg:
+  script: 'скрипт'
+  event:
+    text: 'окуялуу'
+    position: 'center'
+  loop:
+    text: 'кайталанма'
+    position: 'center'
+  microtasks: 'кичи тапшырмалар'
+  render: 'рендеринг'
+
+eventLoop.svg:
+  script: 'скрипт'
+  event:
+    text: 'окуялуу'
+    position: 'center'
+  loop:
+    text: 'цикл'
+    position: 'center'
+  macrotask:
+    text: 'чоң тапшырмалар'
+    position: 'center'
+  queue:
+    text: 'кезек'
+    position: 'center'
+
+cookie-xsrf.svg:
+  _defaults:
+    position: "center"
+  got the cookie?: 'куки барбы?'
+  okay!: 'жакшы!'
+
+lexical-environment-global-3.svg:
+  execution start: 'аткаруунун башталышы'
+
+lexenv-nested-makecounter-5.svg:
+  '&lt;empty&gt;':
+    text: '&lt;бош&gt;'
+    position: 'center'
+
+lexical-environment-global-2.svg:
+  execution start: 'аткаруунун башталышы'
+  '&lt;empty&gt;': '&lt;пусто&gt;'
+
+lexical-environment-global.svg:
+  'Lexical Environment':
+    text: 'Лексикалык Чөйрө'
+
+lexenv-makearmy.svg:
+  for block: 'блоктуу'
+
+lexical-environment-simple.svg:
+  'Lexical Environment of the call':
+    text: 'Чакыруунун Лексикалык Чөйрөсү'
+    position: 'center'
+
+lexenv-nested-makecounter-2.svg:
+  global LexicalEnvironment: 'makeCounter() чакыруусунун'
+  'of makeCounter() call': 'глобалдуу LexicalEnvironment'
+
+lexenv-nested-makecounter-6.svg:
+  modified here: 'бул жерле өзгөртүлдү'
+
+proxy-inherit.svg:
+  '_name: &quot;Guest&quot;': '_name: "Конок"'
+  user (proxied):
+    text: 'user (прокси)'
+    position: "center"
+  original user:
+    text: 'баштапкы user'
+    position: "center"
+
+
+proxy-inherit-admin.svg:
+  '_name: &quot;Guest&quot;': '_name: "Конок"'
+  '_name: &quot;Admin&quot;': '_name: "Админ"'
+  user (proxied):
+    text: 'user (прокси)'
+    position: "center"
+  original user:
+    text: 'баштапкы user'
+    position: "center"
+
+
+selection-firefox.svg:
+  selection: 'тандоо'
+
+selection-direction-backward.svg:
+  focus: 'фокус'
+  anchor: 'казык'
+
+selection-direction-forward.svg:
+  focus: 'фокус'
+  anchor: 'казык'
+
+object-prototype-empty.svg:
+  'prototype object': 'object прототиби'
+
+rabbit-prototype-constructor.svg:
+  'default "prototype"': '"prototype" демейки боюнча'
+
+function-prototype-constructor.svg:
+  'default "prototype"': '"prototype" демейки боюнча'
+
+rabbit-animal-independent-animal.svg:
+  'name: "My animal"': 'name: "Жаныбарым"'
+
+rabbit-animal-independent-rabbit.svg:
+  'name: "My rabbit"': 'name: "Коёнум"'
+
+animal-rabbit-extends.svg:
+  'name: "White Rabbit"': 'name: "Ак коён"'
+
+animal-rabbit-static.svg:
+  'name: "White Rabbit"': 'name: "Ак коён"'
+
+class-inheritance-rabbit-animal.svg:
+  'methods of Animal': 'Animal ыкмалары'
+  'methods of Rabbit': 'Rabbit ыкмалары'
+  'properties of rabbit': 'rabbit касиеттери'
+
+proto-animal-rabbit-walk-3.svg:
+  'name: "White Rabbit"': 'name: "Ак коён"'
+
+class-inheritance-rabbit-animal-2.svg:
+  'name: "White Rabbit"': 'name: "Ак коён"'
+
+event-order-bubbling.svg:
+  _defaults:
+    position: "center"
+  'Most deeply': 'Эң терең'
+  'nested element': 'камтылган элемент'
+
+variable-copy-value.svg:
+  '"Hello!"': '"Салам!"'
