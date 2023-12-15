@@ -11,7 +11,7 @@ The `if(...)` statement evaluates a condition in parentheses and, if the result 
 Мисалы:
 
 ```js run
-let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+let year = prompt('ECMAScript-2015 спецификациясы канчанчы жылы жарыяланган??', '');
 
 *!*
 if (year == 2015) alert( 'Туура айтасыз!' );
@@ -24,7 +24,7 @@ If we want to execute more than one statement, we have to wrap our code block in
 
 ```js
 if (year == 2015) {
-  alert( "Бул туура!" );
+  alert( "Туура!" );
   alert( "Сиз абдан акылдуусуз!" );
 }
 ```
@@ -72,7 +72,7 @@ if (cond) {
 
 Мисалы:
 ```js run
-let year = prompt('ECMAScript-2015 спецификациясы кайсы жылы жарыяланган?', '');
+let year = prompt('ECMAScript-2015 спецификациясы канчанчы жылы жарыяланган?', '');
 
 if (year == 2015) {
   alert( 'Туура таптыңыз!' );
@@ -88,7 +88,7 @@ if (year == 2015) {
 Мисалы:
 
 ```js run
-let year = prompt('ECMAScript-2015 спецификациясы кайсы жылы жарыяланган?', '');
+let year = prompt('ECMAScript-2015 спецификациясы канчанчы жылы жарыяланган?', '');
 
 if (year < 2015) {
   alert( 'Өтө эрте...' );
