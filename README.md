@@ -149,7 +149,7 @@ importance: 5
 
 ### Гипершилтемелер (Anchors)
 
-Кээ бир хедерлердин (header) аягында `[#anchor]` бар, мисалы:
+Кээ бир хедерлердин (header) аягында `[#anchor]` гипершилтемеси бар, мисалы:
 
 ```md
 ## Spread оператору [#spread-operator]
@@ -159,10 +159,6 @@ importance: 5
 
 
 ### Сүрөттөр
-
-Most illustrations use SVG format, the text in there can be replaced with a translated variant.
-
-The translated text is in `images.yml` file in the tutorial root.
 
 Көпчүлүк иллюстрацияларда SVG форматы колдонулат, андагы текстти которулган вариант менен алмаштырууга болот.
 
