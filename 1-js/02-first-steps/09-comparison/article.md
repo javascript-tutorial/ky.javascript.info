@@ -65,10 +65,10 @@ alert( 'Балдар' > 'Бал' ); // туура (true)
 2. `а` менен `а` барабар.
 3. `н` `л`ден чоңураак. Бул жерде салыштыруу бүтөт. Биринчи сап чоңураак.
 
-```smart header="Чыныгы алиппе эмес, Unicode коддоосу колдонулат"
-Жогоруда келтирилген салыштыруу алгоритми болжол менен сөздүктөрдө же телефон китептеринде колдонулган алгоритмге барабар, бирок так окшош эмес.
+```smart header="Чыныгы алиппе эмес, бирок Unicode коддоосу колдонулат"
+Жогоруда келтирилген салыштыруу алгоритми болжол менен сөздүктөрдө же телефон китептеринде колдонулган алгоритмиге барабар, бирок так окшош эмес.
 
-Мисалы, JavaScript'те белги регистри мааниге ээ. Баш `"A"` тамгасы кичине `"a"` тамгасына барабар эмес. Кайсынысы чоңураак? Бул кичине `"a"` тамгасы. Эмнеге? Анткени кичине тамгалар JavaScript (Unicode) колдонгон ички коддоо жадыбалында чоңураак кодго ээ. Бул коддоонун өзгөчөлүктөрүн жана натыйжаларын <info:string> бөлүмүндө карап чыгабыз.
+Мисалы, JavaScript'те белги регистри мааниге ээ. Баш `"A"` тамгасы кичине `"a"` тамгасына барабар эмес. Кайсынысы чоңураак? Кичине `"a"` тамгасы. Эмнеге? Анткени кичине тамгалар JavaScript (Unicode) колдонгон ички коддоо жадыбалында чоңураак кодго ээ. Бул коддоонун өзгөчөлүктөрүн жана натыйжаларын <info:string> бөлүмүндө карап чыгабыз.
 ```
 
 ## Ар кандай түрлөрдү салыштыруу
@@ -82,7 +82,7 @@ alert( '2' > 1 ); // true, '2' сабы 2 санына айланат
 alert( '01' == 1 ); // true, '01' сабы 1 санына айланат
 ```
 
-Логикалык `true` мааниси `1` болуп калат жана `false` мааниси `0` болуп калат.
+Логикалык `true` мааниси `1`, жана `false` мааниси `0` болуп калат.
 
 Мисалы:
 
@@ -109,10 +109,10 @@ alert( Boolean(b) ); // true
 alert(a == b); // true!
 ```
 
-From JavaScript's standpoint, this result is quite normal. An equality check converts values using the numeric conversion (hence `"0"` becomes `0`), while the explicit `Boolean` conversion uses another set of rules.
+JavaScript'тин көз карашын боюнча бул кадимки натыйжа. Теңдикти текшерүү маанилерди сандык айландырууну колдонуу менен өзгөртөт (ошондуктан `"0"` - `0` болуп калат), ал эми айкын `Boolean` айландыруусу башка эрежелер топтомун колдонот.
 ````
 
-## Катуу салыштыруу
+## Так салыштыруу
 
 Кадимки салыштыруу `==` операторунун көйгөйү бар. Ал `0` менен `false` маанилерин айырмалай албайт:
 
@@ -126,27 +126,27 @@ alert( 0 == false ); // true
 alert( '' == false ); // true
 ```
 
-This happens because operands of different types are converted to numbers by the equality operator `==`. An empty string, just like `false`, becomes a zero.
+Бул натыйжа ар кандай түрдөгү операнддар `==` теңдик оператору менен салыштырылганда, алар сандарга айландырылгандыктан пайда болот. Бош сап да, `false` да нөлгө айланат.
 
-What to do if we'd like to differentiate `0` from `false`?
+Биз `0` менен `false` ажыратууну кааласак, анда эмне кылыш керек?
 
-**A strict equality operator `===` checks the equality without type conversion.**
+**Так теңдик оператору `===` маанилердин теңдигин түрдү айландыруусуз текшерет.**
 
-In other words, if `a` and `b` are of different types, then `a === b` immediately returns `false` without an attempt to convert them.
+Башкача айтканда, эгерде `a` жана `b` түрлөрү ар кандай болсо, анда `a === b` аларды айландырууга аракет кылбастан дароо `false` кайтарат.
 
-Let's try it:
+Сынап көрөлү:
 
 ```js run
-alert( 0 === false ); // false, because the types are different
+alert( 0 === false ); // false, анткени түрлөрү ар кандай
 ```
 
-There is also a "strict non-equality" operator `!==` analogous to `!=`.
+Ошондой эле `!=` операторуна окшош "так теңсиздик" `!==` оператору бар.
 
 The strict equality operator is a bit longer to write, but makes it obvious what's going on and leaves less room for errors.
 
-## Comparison with null and undefined
+## null жана undefined салыштыруу
 
-There's a non-intuitive behavior when `null` or `undefined` are compared to other values.
+`null` же `undefined` башка маанилер менен салыштырылганда күтүлбөгөн кылык-жоруктары бар.
 
 For a strict equality check `===`
 : These values are different, because each of them is a different type.
