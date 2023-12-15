@@ -1,4 +1,4 @@
-# Шарттуу бутактануу: if, '?'
+# Шарттык бутактануу: if, '?'
 
 Sometimes, we need to perform different actions based on different conditions.
 
