@@ -5,6 +5,8 @@
 Бул колдонмо англис тилинен которулуп жатат. Котормолорубузда каталар болушу мүмкүн, андыктан каталарды тапсаңыз, алар жөнүндө [Issues](https://github.com/javascript-tutorial/ky.javascript.info/issues) бөлүмүндө билдирип койгонуңузду суранабыз.
 
 
+
+
 **Сиз кантип салым кошо аласыз:**
 
 1. [Kyrgyz Translate Progress](https://github.com/javascript-tutorial/ky.javascript.info/issues/1) талкуулоосун карап көрүңүз.
@@ -175,5 +177,9 @@ image.svg:        # сүрөт файлы
 ```
 
 
+
+
+
 **Көңүл бурганыңыз үчүн ыракмат!**
+
 Ариет Музирапов [@laindeso2](https://github.com/laindeso2)
