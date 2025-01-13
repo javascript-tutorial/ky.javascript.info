@@ -29,6 +29,7 @@ Windows үчүн Visual Studio да бар (Visual Studio Code менен чат
 
 Иш жүзүндө "жеңил" редакторлор көптөгөн плагиндерге, анын ичинде директория деңгээлиндеги синтаксис анализаторлору жана автокошумчалоолору ээ болушу мүмкүн, ошондуктан "жеңил" редактор менен IDE ортосунда катуу чеги жок.
 
+<<<<<<< HEAD
 Төмөнкү варианттар сиздин көңүлүңүздү бурууга татыктуу:
 - [Atom](https://atom.io) (кроссплатформалуу, акысыз)
 - [Sublime Text](http://www.sublimetext.com) (кроссплатформалуу, шарттуу акысыз).
@@ -36,9 +37,27 @@ Windows үчүн Visual Studio да бар (Visual Studio Code менен чат
 - [Vim](http://www.vim.org/) жана [Emacs](https://www.gnu.org/software/emacs/) кантип колдонгонун билсеңиз, алар да жакшы.
 
 ## Жаңжалдашпайлы
+=======
+There are many options, for instance:
+
+- [Sublime Text](https://www.sublimetext.com/) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](https://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> 34a80e70f8cce5794be259d25f815d7a7db7cbe3
 
 Жогоруда саналган редакторлор авторго көптөн бери белгилүү жана кесиптештеринин көптөгөн жакшы пикирлерине ээ болушкан.
 
 Албетте, башка көптөгөн сонун редакторлор бар. Сизге эң жактырганын тандаңыз.
 
+<<<<<<< HEAD
 Башка куралды сыяктуу эле редакторду тандоо жеке иш болуп саналат жана долбоорлоруңузга, адаттарыңызга жана жеке каалоолоруңузга жараша болот.
+=======
+There are other great editors in our big world. Please choose the one you like the most.
+
+The choice of an editor, like any other tool, is individual and depends on your projects, habits, and personal preferences.
+
+The author's personal opinion:
+
+- I'd use [Visual Studio Code](https://code.visualstudio.com/) if I develop mostly frontend.
+- Otherwise, if it's mostly another language/platform and partially frontend, then consider other editors, such as XCode (Mac), Visual Studio (Windows) or Jetbrains family (Webstorm, PHPStorm, RubyMine etc, depending on the language).
+>>>>>>> 34a80e70f8cce5794be259d25f815d7a7db7cbe3
