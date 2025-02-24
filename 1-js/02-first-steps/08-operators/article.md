@@ -50,8 +50,14 @@
 Мисалы үчүн:
 
 ```js run
+<<<<<<< HEAD
 alert( 5 % 2 ); // 1, 5ти 2ге бөлүүнүн калдыгы
 alert( 8 % 3 ); // 2, 8ди 3кө бөлүүнүн калдыгы
+=======
+alert( 5 % 2 ); // 1, the remainder of 5 divided by 2
+alert( 8 % 3 ); // 2, the remainder of 8 divided by 3
+alert( 8 % 4 ); // 0, the remainder of 8 divided by 4
+>>>>>>> 1dce5b72b16288dad31b7b3febed4f38b7a5cd8a
 ```
 
 ### Даражага көтөрүү **
@@ -68,7 +74,11 @@ alert( 2 ** 3 ); // 2³ = 8
 alert( 2 ** 4 ); // 2⁴ = 16
 ```
 
+<<<<<<< HEAD
 Математикадагыдай эле, даражага көтөрүү операторун бөлчөктүк сандар үчүн да колдонууга болот.
+=======
+Just like in maths, the exponentiation operator is defined for non-integer numbers as well.
+>>>>>>> 1dce5b72b16288dad31b7b3febed4f38b7a5cd8a
 
 Мисалы, чарчы тамыр бул ½ даражага көтөрүүсү:
 
@@ -80,7 +90,11 @@ alert( 8 ** (1/3) ); // 2 (1/3 даражасы кубдук тамыр мене
 
 ## Бинардык + менен саптарды кошуу
 
+<<<<<<< HEAD
 Келгиле, мектеп арифметикасынын алкагына кирбеген JavaScript операторлорунун өзгөчөлүктөрү менен таанышалы.
+=======
+Let's meet the features of JavaScript operators that are beyond school arithmetics.
+>>>>>>> 1dce5b72b16288dad31b7b3febed4f38b7a5cd8a
 
 Адатта, плюс оператору `+` сандарды кошот.
 
@@ -308,7 +322,7 @@ let n = 2;
 
 n *= 3 + 5; // алгач оң бөлүгү эсептелинет, n *= 8 менен бирдей
 
-alert( n ); // 16  
+alert( n ); // 16
 ```
 
 ## Инкремент/декремент
