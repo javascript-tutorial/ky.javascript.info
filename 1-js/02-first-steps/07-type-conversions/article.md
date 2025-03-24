@@ -34,7 +34,11 @@ alert(typeof value); // string
 
 ## Санга айландыруу
 
+<<<<<<< HEAD
 Сандарга айландыруу математикалык функцияларда жана туюнтмаларда автоматтык түрдө ишке ашат.
+=======
+Numeric conversion in mathematical functions and expressions happens automatically.
+>>>>>>> 3d7abb9cc8fa553963025547717f06f126c449b6
 
 Мисалы, бөлүү `/` сандар эместерге колдонулганда:
 
