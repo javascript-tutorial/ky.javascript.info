@@ -180,4 +180,4 @@ image.svg:        # сүрөт файлы
 
 ### Көңүл бурганыңыз үчүн ыракмат!
 
-**Ариет Музирапов [@lainde589](https://github.com/laindeso2)**
+**Ариет Музирапов [@lainde589](https://github.com/lainde589)**
