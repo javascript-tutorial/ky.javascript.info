@@ -22,7 +22,7 @@
 
 Көрүнүшү:
 
-![chrome](chrome.png)
+![chrome](chrome.webp)
 
 Иштеп чыгуучу куралдардын так көрүнүшү Chrome версияңыздан көз каранды. Анда-санда өзгөрүп турат, бирок, жалпысынан, көрүнүшү мурунку версияларга окшош бойдон калууда.
 
@@ -48,9 +48,13 @@
 ## Safari
 
 
+<<<<<<< HEAD
 Safari (Mac браузери, Windows/Linux тарабынан колдоого алынбайт) бул жерде бир аз өзгөчө. Адегенде "Иштеп чыгуу менюсун" ("Developer menu") күйгүзүшүбүз керек.
 
 Орнотууларды (Preferences) ачып, "Өркүндөтүлгөндөр" (Advanced) панелине өтүңүз. Төмөндө чекбокс бар:
+=======
+Open Settings and go to the "Advanced" pane. There's a checkbox at the bottom:
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 ![safari](safari.png)
 

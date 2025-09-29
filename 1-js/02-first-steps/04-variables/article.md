@@ -88,16 +88,26 @@ let user = 'Жакыя'
 *!*var*/!* message = 'Салам';
 ```
 
+<<<<<<< HEAD
 `var` ачкыч сөзү `let` менен *дээрлик* бирдей. Ал өзгөрмөнү жарыялайт, бирок бир аз башкача, "эскирген" жол менен.
 
 `let` жана `var` ортосунда назик айырмачылыктар бар, бирок алар биз үчүн азырынча маанилүү эмес. Биз аларды <info:var> бөлүмүндө кененирээк карап чыгабыз.
+=======
+The `var` keyword is *almost* the same as `let`. It also declares a variable but in a slightly different, "old-school" way.
+
+There are subtle differences between `let` and `var`, but they do not matter to us yet. We'll cover them in detail in the chapter <info:var>.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 ````
 
 ## Жашоодогу аналогия
 
 Эгерде өзгөрмөнү берилмелер үчүн уникалдуу аталышы бар "куту" катары элестетсек, биз "өзгөрмө" түшүнүгүн оңой эле түшүнө алабыз.
 
+<<<<<<< HEAD
 Мисалы үчүн, `message` өзгөрмөсүн `"билдирүү"` деп аталган жана анын ичиндеги `"Салам!"` мааниси бар куту катары элестетүүгө болот.
+=======
+For instance, the variable `message` can be imagined as a box labelled `"message"` with the value `"Hello!"` in it:
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 ![](variable.svg)
 
@@ -150,12 +160,21 @@ let message = "Ошол"; // SyntaxError: 'message' has already been declared
 Ошондуктан, биз өзгөрмөнү бир гана жолу жарыялап, ага `let`'сиз кайрылышыбыз керек.
 ````
 
+<<<<<<< HEAD
 ```smart header="Функционалдуу тилдер"
 Өзгөрмө маанилерин өзгөртүүгө тыюу салган [Scala](http://www.scala-lang.org/) же [Erlang](http://www.erlang.org/) сыяктуу [функционалдуу](https://en.wikipedia.org/wiki/Functional_programming) программалоо тилдери бар экенин белгилей кетүү кызык.
+=======
+```smart header="Functional languages"
+It's interesting to note that there exist so-called [pure functional](https://en.wikipedia.org/wiki/Purely_functional_programming) programming languages, such as [Haskell](https://en.wikipedia.org/wiki/Haskell), that forbid changing variable values.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 Мындай тилдерде бир жолу "кутуда" сакталган маани түбөлүккө ошол жерде калат. Эгер башка нерсени сактоо керек болсо, тил бизди жаңы кутуча түзүүгө (жаңы өзгөрмө жарыялоого) мажбурлайт. Биз эски өзгөрмөнү колдоно албайбыз.
 
+<<<<<<< HEAD
 Бир караганда бул бир аз кызыктай көрүнгөнү менен, бул тилдер олуттуу иштеп чыгууга жөндөмдүү. Мындан тышкары, бул чектөө кээ бир артыкчылыктарды берген параллелдүү эсептөөлөр сыяктуу аймактар бар. Мындай тилди үйрөнүү (сиз аны жакында колдонууну пландабасаңыз да) акыл-эсти кеңейтүү үчүн сунушталат.
+=======
+Though it may seem a little odd at first sight, these languages are quite capable of serious development. More than that, there are areas like parallel computations where this limitation confers certain benefits.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 ```
 
 ## Өзгөрмөлөрдү атоо [#variable-naming]
@@ -197,15 +216,24 @@ let my-name; // атта '-' дефисти коюуга болбойт
 `apple` жана `APPLE` деп аталган өзгөрмөлөр -- бул эки башка өзгөрмө.
 ```
 
+<<<<<<< HEAD
 ````smart header="Латын эмес тамгаларга уруксат берилет, бирок сунушталбайт"
 Каалаган тилди, анын ичинде кирил тамгаларын же жадаганда иероглифтерди колдонууга болот:
+=======
+````smart header="Non-Latin letters are allowed, but not recommended"
+It is possible to use any language, including Cyrillic letters, Chinese logograms and so on, like this:
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 ```js
 let аталыш = '...';
 let 我 = '...';
 ```
 
+<<<<<<< HEAD
 Техникалык жактан бул жерде ката жок. Мындай аттарга уруксат берилген, бирок өзгөрмө аттарында англис тилин колдонуу боюнча эл аралык келишим бар. Кичинекей скрипт жазып жатсак да, анын алдында өмүрү узун болушу мүмкүн. Башка өлкөлөрдөн келгендер аны бир нече жолу окууга туура келиши мүмкүн.
+=======
+Technically, there is no error here. Such names are allowed, but there is an international convention to use English in variable names. Even if we're writing a small script, it may have a long life ahead. People from other countries may need to read it sometime.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 ````
 
 ````warn header="Резервделген аттар"
@@ -260,11 +288,19 @@ const myBirthday = '18.04.1982';
 myBirthday = '01.01.2001'; // ката, константаны өзгөртүүгө болбойт!
 ```
 
+<<<<<<< HEAD
 Эгерде программист өзгөрмө эч качан өзгөрбөйт деп ишенсе, ал муну кепилдей алат жана аны `const` аркылуу жарыялоо менен ар бирине так кабарлай алат.
+=======
+When a programmer is sure that a variable will never change, they can declare it with `const` to guarantee and communicate that fact to everyone.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 ### Баш тамгадагы константалар
 
+<<<<<<< HEAD
 Скрипт аткарылганга чейин белгилүү болгон эстеп калууга кыйын маанилер үчүн константаларды тергеме ат катары колдонуу тажрыйбасы кеңири таралган.
+=======
+There is a widespread practice to use constants as aliases for difficult-to-remember values that are known before execution.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 Мындай константалардын аталыштары баш тамгалар жана ылдыйкы сызыкчалар менен жазылат.
 
@@ -289,7 +325,11 @@ alert(color); // #FF7F00
 
 Качан константа үчүн баш тамгаларды колдонушубуз керек жана качан аны кадимкидей аташыбыз керек? Келгиле, бул маселени чечели.
 
+<<<<<<< HEAD
 "Константа" болуу жөн гана өзгөрмөнүн мааниси эч качан өзгөрбөй турганын билдирет. Бирок аткарылганга чейин белгилүү болгон константалар бар (кызыл түстүн он алтылык мааниси сыяктуу) жана скрипттин аткарылышы учурунда *эсептелүүчү*, бирок алар башында жарыялангандан кийин өзгөрбөй турган константалар да бар.
+=======
+Being a "constant" just means that a variable's value never changes. But some constants are known before execution (like a hexadecimal value for red) and some constants are *calculated* in run-time, during the execution, but do not change after their initial assignment.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 Мисалы үчүн:
 
@@ -297,7 +337,11 @@ alert(color); // #FF7F00
 const pageLoadTime = /* веб-баракчаны жүктөөгө сарпталган убакыт */;
 ```
 
+<<<<<<< HEAD
 `pageLoadTime` константасынын мааниси баракчаны жүктөөдөн мурун белгилүү эмес, андыктан ал кадимкидей аталат. Бирок ал дагы эле константа, анткени жарыялангандан кийин өзгөрбөйт.
+=======
+The value of `pageLoadTime` is not known before the page load, so it's named normally. But it's still a constant because it doesn't change after the assignment.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 Башкача айтканда, баш тамгалар менен аталган константалар "катуу коддолгон" маанилер үчүн тергеме ат катары гана колдонулат.
 
@@ -307,18 +351,31 @@ const pageLoadTime = /* веб-баракчаны жүктөөгө сарпта�
 
 Өзгөрмөнүн аталышы ал сактаган берилмелерди сыпаттаган таза, анык мааниге ээ болушу керек.
 
+<<<<<<< HEAD
 Өзгөрмөлөрдү атоо -- бул программалоодогу эң маанилүү жана татаал көндүмдөрдүн бири. Өзгөрмөлөрдүн аттарына тез караш кайсы кодду башталгыч же тажрыйбалуу иштеп чыгуучу жазганын көрсөтө алат.
 
 Чыныгы долбоордо көп убакыт нөлдөн толугу менен өзүнчө бир нерсени жазууга эмес, учурдагы код базасын өзгөртүүгө жана кеңейтүүгө жумшалат. Бир аз убакытка башка бир нерсе кылгандан кийин кодго кайтып келгенде, жакшы белгиленген маалыматты табуу далай жеңил болот. Же, башкача айтканда, өзгөрмөлөр жакшы аттарга ээ болгондо.
+=======
+Variable naming is one of the most important and complex skills in programming. A glance at variable names can reveal which code was written by a beginner versus an experienced developer.
+
+In a real project, most of the time is spent modifying and extending an existing code base rather than writing something completely separate from scratch. When we return to some code after doing something else for a while, it's much easier to find information that is well-labelled. Or, in other words, when the variables have good names.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 Сураныч, өзгөрмөнү жарыялоодон мурун анын туура аталышы жөнүндө ойлонууга убакыт бөлүңүз. Ушундай кылыңыз, ошондо сиз сыйланасыз.
 
 Бир нече жакшы эрежелер:
 
+<<<<<<< HEAD
 - `userName` же `shoppingCart` сыяктуу окууга оңой аттарды колдонуңуз.
 - Эмне кылып жатканыңызды так билбесеңиз, `a`, `b`, `c` сыяктуу кыскартуулардан же кыска аталыштардан алыс болуңуз.
 - Аттарды максималдуу түрдө сыпаттоочу жана кыска кылыңыз. Жаман аттардын мисалдары: `data` жана `value`. Мындай ысымдар эч нерсени айтпайт. Аларды коддун контекстинен өзгөрмө кандай маалыматтарды сактай турганы анык болсо гана колдонсо болот.
 - Колдонулган терминдер боюнча командаңыз менен макулдашыңыз. Эгер сайтка кирүүчү "user" деп аталса, анда аны менен байланышкан өзгөрмөлөрдү, мисалы, `currentVisitor` же `newManInTown` эмес, `currentUser` же `newUser` деп аташыбыз керек.
+=======
+- Use human-readable names like `userName` or `shoppingCart`.
+- Stay away from abbreviations or short names like `a`, `b`, and `c`, unless you know what you're doing.
+- Make names maximally descriptive and concise. Examples of bad names are `data` and `value`. Such names say nothing. It's only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.
+- Agree on terms within your team and in your mind. If a site visitor is called a "user" then we should name related variables `currentUser` or `newUser` instead of `currentVisitor` or `newManInTown`.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 Жөнөкөй угулабы? Чынында эле ошондой, бирок тажрыйбада түшүнүктүү жана кыска өзгөрмө аттарын түзүү -- бул сейректик. Алга.
 
