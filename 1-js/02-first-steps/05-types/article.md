@@ -92,6 +92,7 @@ const bigInt = 1234567890123456789012345678901234567890n;
 
 `BigInt` сандары сейрек талап кылынгандыктан, биз аларды бөлөк <info:bigint> бөлүмүндө караштырабыз. Ушунчалык чоң сандар керек болгондо аны окуңуз.
 
+<<<<<<< HEAD
 ```smart header="Шайкештик көйгөйлөрү"
 Азыркы учурда `BigInt` Firefox/Chrome/Edge/Safari браузерлеринде колдоого алынат, бирок IE'де - жок.
 ```
@@ -99,6 +100,9 @@ const bigInt = 1234567890123456789012345678901234567890n;
 я Браузердин кайсы версиялары колдоого алынарын билүү үчүн [*MDN* BigInt шайкештик жадыбалын](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility) карап көрсөңүз болот.
 
 ## Сап (string)
+=======
+## String
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 JavaScript'те сап тырмакчага алынышы керек.
 
@@ -222,7 +226,11 @@ alert(age); // "undefined"
 
 ## typeof оператору [#type-typeof]
 
+<<<<<<< HEAD
 `typeof` оператору аргументинин түрүн кайтарат. Бул ар кандай түрдөгү маанилерди башкача иштеткибиз келгенде же жөн гана тез текшерүүнү каалаганыбызда пайдалуу.
+=======
+The `typeof` operator returns the type of the operand. It's useful when we want to process values of different types differently or just want to do a quick check.
+>>>>>>> 51bc6d3cdc16b6eb79cb88820a58c4f037f3bf19
 
 `typeof x` чалуусу түрү аталышы менен сапты кайтарат:
 
