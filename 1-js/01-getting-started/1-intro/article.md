@@ -75,7 +75,12 @@ JavaScript'тин браузердеги мүмкүнчүлүктөрү колд
 
     Бул чектөө, дагы бир жолу, колдонуучунун коопсуздугу үчүн кажет. Колдонуучу ачкан `https://anysite.com` баракчасы `https://gmail.com` URL дареги бар башка браузер салмасына кире албашы керек жана ал жерден маалыматты уурдай албашы керек.
 
+<<<<<<< HEAD
 - JavaScript учурдагы баракча келген серверге желе аркылуу оңой байланыша алат. Бирок анын башка сайттардан/домендерден маалыматтарды алуу жөндөмдүүлүгү чектелген. Негизи бул мүмкүн болсо да, ал алыскы тарап менен ачык макулдукту (HTTP баштарында көрсөтүлгөн) талап кылат. Дагы деле, бул коопсуздук чектөөсү.
+=======
+    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com`, for example, and steal information from there.
+- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is severely limited. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+>>>>>>> 20208769e528337949e946f526534d61d38bac47
 
 ![](limitations.svg)
 
