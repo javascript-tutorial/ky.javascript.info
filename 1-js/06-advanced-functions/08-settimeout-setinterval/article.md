@@ -27,7 +27,7 @@ Usually, that's a function. For historical reasons, a string of code can be pass
 : The delay before run, in milliseconds (1000 ms = 1 second), by default 0.
 
 `arg1`, `arg2`...
-: Arguments for the function (not supported in IE9-)
+: Arguments for the function
 
 For instance, this code calls `sayHi()` after one second:
 
@@ -218,7 +218,7 @@ And here is the picture for the nested `setTimeout`:
 
 ![](settimeout-interval.svg)
 
-**The nested `setTimeout` guarantees the fixed delay (here 100ms).**
+**The nested `setTimeout` ensures a minimum delay (100ms here) between the end of one call and the beginning of the subsequent one.**
 
 That's because a new call is planned at the end of the previous one.
 
